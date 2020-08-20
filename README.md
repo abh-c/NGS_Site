@@ -1,3 +1,3 @@
-# NGS_Site
+# Next Gen Stem
 
 html code for nextgenstem.co
