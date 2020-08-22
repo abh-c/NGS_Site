@@ -1,13 +1,169 @@
 <!DOCTYPE html>
 <html lang="en-US">
+<!-- Note to self: option + shift + f to format code -->
+<!-- Note: maybe implement vw later -->
 <head>
-    <meta charset="utf-8"/> 
+    <meta charset="utf-8" />
     <meta name="keywords" content="HTML, CSS, JavaScript, Java, Python">
     <meta name="description" content="Free programming tutorials">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Next Gen Stem</title>
+    <style>
+        body {
+            background: "ffffff";
+            font-family: Helvetica, arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Style the top nav bar with flexbox */
+        .nav-top {
+            background: rgb(12, 62, 101);
+            padding: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Style the top nav bar links */
+        .nav-top-link {
+            float: left;
+            display: block;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 3px;
+            font-size: 20px;
+        }
+
+        /* Change the color of the links when hovred over */
+        .nav-top-link:hover {
+            color: rgb(12, 62, 101);
+            background: rgb(255, 255, 255);
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        ul li {
+            display: list-item;
+        }
+
+        header {
+            background: rgb(27, 150, 121);
+            color: rgb(255, 255, 255);
+            padding-top: 80px;
+            padding-bottom: 100px;
+            text-align: center;
+        }
+
+        /* Make header h1 bigger */
+        header h1 {
+            font-size: 70px;
+        }
+
+        section p {
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-size: 20px;
+            color:rgb(75, 75, 75);
+        }
+
+        h2 {
+            margin-top: 80px;
+            text-align: center;
+            color:rgb(12, 62, 101);
+            font-size: 25px;
+        }
+
+        /* Style the bottom nav bar with flexbox */
+        .nav-bottom {
+            background: rgb(155, 155, 155);
+            padding: 40px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Style the bottom nav bar links */
+        .nav-bottom-link {
+            float: left;
+            display: block;
+            color: rgb(255, 255, 255);
+            background:rgb(0, 0, 0);
+            text-align: center;
+            text-decoration: none;
+            width: 200px;
+            padding: 100px 100px;
+            margin: 3px;
+        }
+
+        footer {
+            padding: 20px;
+            background: rgb(12, 62, 101);
+            text-align: center;
+            color: #f0f8ff;
+        }
+
+    </style>
 </head>
+
 <body>
-    
+    <nav class="nav-top">
+        <ul>
+            <!-- TODO: Fill in links -->
+            <li><a href="#" class="nav-top-link">Home</a></li>
+            <li><a href="#" class="nav-top-link">Learn to Code</a></li>
+            <li><a href="#" class="nav-top-link">About</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>NEXT GEN STEM</h1>
+        <p>Leading the next generation of STEM students</p>
+    </header>
+    <section>
+        <p>
+            Next Gen STEM is a completely free resource made to
+            encourage students to learn computer programming,
+            a skill that is indispensable in a world increasingly
+            dependent on software and technology.
+        </p>
+        <p>
+            Utilizing video, written, and live chat instruction
+            (through the icon on the bottom right of your screen)
+            Next Gen STEM provides learning resources that fit the needs of any student.
+        </p>
+        <h2>
+            <b>LEARN TO CODE TODAY</b> 
+        </h2>
+    </section>
+    <nav class="nav-bottom">
+        <ul>
+            <!-- TODO: Fill in links -->
+            <li><a href="#" class="nav-bottom-link">JAVASCRIPT</a></li>
+            <li><a href="#" class="nav-bottom-link">HTML + CSS</a></li>
+            <li><a href="#" class="nav-bottom-link">PYTHON</a></li>
+            <li><a href="#" class="nav-bottom-link">JAVA</a></li>
+        </ul>
+    </nav>
+    <footer>
+        <p>
+            NEXT GEN STEM <br> CONNECTICUT, USA
+        </p>
+    </footer>
 </body>
+
 </html>
