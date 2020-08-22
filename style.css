@@ -56,7 +56,6 @@
     background-position: inherit;
     height: 600px;
     justify-content: center;
-    font-size: 100px;
     color: rgb(255, 255, 255);
     padding-top: 200px;
     padding-bottom: 100px;
@@ -64,7 +63,7 @@
 }
 
 /* Style the button in the header */
-.header-button {
+.homepage-header-button {
     font-size: 20px;
     padding: 7px;
     font-family: 'Montserrat', Helvetica, sans-serif;
@@ -78,7 +77,7 @@
 }
 
 /* Change header color when hovered over */
-.header-button:hover {
+.homepage-header-button:hover {
     background-color: #9b9b9b;
     color: #033254;
 }
@@ -89,9 +88,11 @@
 }
 
 /* For the subtitle below NEXT GEN STEM in the header */
-.homepage-header-p {
+.homepage-header p {
     font-size: 24px;
     color: hsl(240, 100%, 95%);
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .homepage-p {
@@ -104,7 +105,8 @@
 }
 
 .homepage-h2 {
-    margin-top: 80px;
+    margin-top: 40px;
+    margin-bottom: 30px;
     text-align: center;
     color: #033254;
     font-size: 25px;
@@ -165,4 +167,44 @@ footer {
     background: #033254;
     text-align: center;
     color: #f0f8ff;
+}
+
+/* Change screen when the screen width is smaller than 466px */
+@media only screen and (max-width:466px) {
+
+    /* Make the top nav bar a column */
+    .nav-top-ul {
+        flex-direction: column;
+    }
+
+    /* Decrease the bottom padding of the top mav bar */
+    .nav-top {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    /* Decrease the text size of the header text */
+    .homepage-header h1{
+        font-size: 40px;
+    }
+
+    .homepage-header p {
+        font-size: 20px;
+    }
+
+    .homepage-header-button {
+        font-size: 16px;
+    }
+
+    /* Decrease the paragraph text size of the homepage paragraphs */
+    /* TODO: Probably edit later */
+    .homepage-p {
+        font-size: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .homepage-h2 {
+        font-size: 21px;
+    }
 }
