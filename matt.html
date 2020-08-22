@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!-- Note to self: option + shift + f to format code -->
+<!-- Note: maybe implement vw later -->
+
+<head>
+
+  	<meta charset="utf-8" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Java, Python">
+    <meta name="description" content="Free programming tutorials">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Gen Stem</title>
+    <style>
+      body {
+            background: "ffffff";
+            font-family: Montserrat, Helvetica, arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        		
+        }
+
+        /* Style the top nav bar with flexbox */
+        .nav-top {
+            background: #033254;
+            padding: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Style the top nav bar links */
+        .nav-top-link {
+            float: left;
+            display: block;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 3px;
+            font-size: 20px;
+        }
+
+        /* Change the color of the links when hovred over */
+        .nav-top-link:hover {
+          background-color: #ffffff;
+          color:#033254;
+          transition-duration: .1s;
+          border-radius: 2px;
+
+          
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        ul li {
+            display: list-item;
+        }
+
+        header {
+        	  
+            background-image:url('ezgif.com-video-to-gif.gif');
+            background-size: cover;
+            background-position: inherit;
+            height: 600px;    
+            justify-content: center;
+            font-size: 100px;
+ 			color: rgb(255, 255, 255);            
+          	padding-top: 200px;
+            padding-bottom: 100px;
+            text-align: center; 
+
+        }
+       button {
+     		
+            font-size: 20px;
+         	padding: 7px;
+     		font-family: 'Montserrat', Helvetica, sans-serif;
+     		background-color: ffffff;
+   			color: #000000;
+   			text-align: center;
+  			align-items: center;
+         	border: 0px;
+         	border-radius: 3px;
+            width: 190px;
+         
+
+       }
+      
+      button:hover {
+           background-color: #e6e6e6;
+           color:#033254; 
+      }
+
+        /* Make header h1 bigger */
+        header h1 {
+            font-size: 70px;
+          
+        }
+
+        section p {
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-size: 30px;
+            color:#080808;
+
+        }
+
+        h2 {
+            margin-top: 80px;
+            text-align: center;
+            color: #033254;
+            font-size: 25px;
+            
+        }
+
+        /* Style the bottom nav bar with flexbox */
+        .nav-bottom {
+            background: rgb(155, 155, 155);
+            padding: 40px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Style the bottom nav bar links */
+        .nav-bottom-link {
+            float: left;
+            display: block;
+            color: rgb(255, 255, 255);
+            background:rgb(0, 0, 0);
+            text-align: center;
+            text-decoration: none;
+            width: 200px;
+            padding: 100px 100px;
+            margin: 3px;
+            }
+
+        footer {
+            padding: 20px;
+            background: #033254;
+            text-align: center;
+            color: #f0f8ff;
+        }
+        p {
+        	  font-size: 24px;
+
+        }
+      
+         </style>
+</head>
+
+<body>
+ 
+  
+  <nav class="nav-top">
+        <ul>
+            <!-- TODO: Fill in links -->
+            <li><b><a href="#" class="nav-top-link">Home</a></b></li>
+            <li><b><a href="#" class="nav-top-link">Learn to Code</a></b></li>
+            <li><b><a href="#" class="nav-top-link">About</a></b></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>NEXT GEN STEM</h1>
+        <p>Leading the next generation of STEM students</p>
+      	<nav>
+                <ul>
+                    <a href="myblog.html"><button>Learn to Code</button></a>
+                </ul>
+        </nav>               
+    </header>
+    <section>
+        <p>
+          <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+  
+            Next Gen STEM is a completely free resource made to
+            encourage students to learn computer programming,
+            a skill that is indispensable in a world increasingly
+            dependent on software and technology.
+        </p>
+        <p>
+            Utilizing video, written, and live chat instruction
+            (through the icon on the bottom right of your screen)
+            Next Gen STEM provides learning resources that fit the needs of any student.
+        </p>
+        <h2>
+            <b><link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+LEARN TO CODE TODAY</b> 
+        </h2>
+    </section>
+    <nav class="nav-bottom">
+        <ul>
+            <!-- TODO: Fill in links -->
+               
+            <div class="javascript">
+               <img src="4906597504_d3d1ee9274_b.jpg" style="width:400px; height:400px">
+               <li><a href="#" class="nav-bottom-link"></a></li>
+               
+            
+            <div class="htmlcss">
+                <img src="desk-keyboard-mouse-white.jpg" style="width:400px; height:400px">
+                <li><a href="#" class="nav-bottom-link">HTML + CSS</a></li>
+            </div>
+            <div class="python">
+                <img src="laptopngt.jpg" style="width:400px; height:400px">
+                <li><a href="#" class="nav-bottom-link">PYTHON</a></li>
+            </div>
+            <div class="java">
+                <img src="ordinateur-apple-ipad.jpg" style="width:400px; height:400px">
+                <li><a href="#" class="nav-bottom-link">JAVA</a></li>
+            </div>
+        </ul>
+    </nav>
+    <footer>
+        <p>
+            NEXT GEN STEM <br> CONNECTICUT, USA
+        </p>
+        <img src="Mail-Icon-White-on-Grey.jpg" style="width:65px; height:65px">
+    </footer>
+</body>
+  <div id="app_settings" style="display:none;">
+
+ <label class='app_text_label'>Chat SiteID: </label>
+ <input class='app_field_input' type="text" name="siteID"><br>
+ <label class='app_text_label info'>* To start receiving chats go to <a href='http://www.tawk.to' target='blank'>tawk.to</a> and get your chat site ID. <br>Tawk dashboard -> Admin (at the top of the dashboard) -> Property Settings -> Site ID. </label>
+
+</div>
+
+<div id="app_settings" style="display:none;">
+
+    <label class='app_text_label'>Chat SiteID: </label>
+    <input class='app_field_input' type="text" name="siteID"><br>
+    <label class='app_text_label info'>* To start receiving chats go to <a href='http://www.tawk.to' target='blank'>tawk.to</a> and get your chat site ID. <br>Tawk dashboard -> Admin (at the top of the dashboard) -> Property Settings -> Site ID. </label>
+   
+   </div>
+   
+   <script type="text/javascript">
+   
+       //*****
+       //Change these params 
+       //Go to tawk.to and sign up for a user, enter your site domain and replace the following URL with the one they give you.
+       var /*<{*/siteID/*}*/ = /*{*/"5f29c48fed9d9d2627082f71"/*}>*/;
+       var chatSiteURL = 'https://embed.tawk.to/'+siteID+'/default';
+         
+       //*****
+       
+       <!--Start of Tawk.to Script-->
+       
+       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+       (function(){
+       var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+       s1.async=true;
+       s1.src=chatSiteURL;
+       s1.charset='UTF-8';
+       s1.setAttribute('crossorigin','*');
+       s0.parentNode.insertBefore(s1,s0);
+       })();
+   
+       <!--End of Tawk.to Script-->
+   
+   </script>
+     
+  
+</html>
