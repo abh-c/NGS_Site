@@ -1,1 +1,168 @@
-/* Will determine the styling of all lesson web pages */
+* {
+    background: "ffffff";
+    font-family: Montserrat, Helvetica, arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* Style the top nav bar with flexbox */
+.nav-top {
+    background: #033254;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Style the top nav bar links */
+.nav-top-link {
+    float: left;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 3px;
+    font-size: 20px;
+}
+
+/* Change the color of the links when hovered over */
+.nav-top-link:hover {
+    background-color: #ffffff;
+    color: #033254;
+    transition-duration: .1s;
+    border-radius: 2px;
+}
+
+/* Format the lists for the top nav bar (every page) and bottom nav bar (homepage)*/
+.nav-top-ul,
+.nav-bottom-ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Style the header (only for the homepage) */
+.homepage-header {
+    background-image: url("images/ezgif.com-video-to-gif.gif");
+    background-size: cover;
+    background-position: inherit;
+    height: 600px;
+    justify-content: center;
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+    padding-top: 200px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+/* Style the button in the header */
+.header-button {
+    font-size: 20px;
+    padding: 7px;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    background-color: ffffff;
+    color: #000000;
+    text-align: center;
+    align-items: center;
+    border: 0px;
+    border-radius: 3px;
+    width: 190px;
+}
+
+/* Change header color when hovered over */
+.header-button:hover {
+    background-color: #9b9b9b;
+    color: #033254;
+}
+
+/* Make header h1 bigger */
+.homepage-header h1 {
+    font-size: 70px;
+}
+
+/* For the subtitle below NEXT GEN STEM in the header */
+.homepage-header-p {
+    font-size: 24px;
+    color: hsl(240, 100%, 95%);
+}
+
+.homepage-p {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #080808;
+}
+
+.homepage-h2 {
+    margin-top: 80px;
+    text-align: center;
+    color: #033254;
+    font-size: 25px;
+}
+
+/* Style the bottom nav bar with flexbox */
+.nav-bottom {
+    background: rgb(155, 155, 155);
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Style the bottom nav bar links */
+.nav-bottom-link {
+    float: left;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    width: 300px;
+    padding: 100px;
+    margin: 3px;
+}
+
+/* Additional css for the images of each of the course links*/
+#javascript {
+    background: url(images/4906597504_d3d1ee9274_b.jpg) no-repeat;
+    background-size: cover;
+}
+
+#htmlcss {
+    background: url(images/desk-keyboard-mouse-white.jpg) no-repeat;
+    background-size: cover;
+    background-position-y: center;
+}
+
+#python {
+    background: url(images/laptopngt.jpg) no-repeat;
+    background-size: cover;
+    background-position-y: center;
+}
+
+#java {
+    background: url(images/ordinateur-apple-ipad.jpg) no-repeat;
+    background-size: cover;
+    background-position-y: center;
+}
+
+/* Format the footer (for every page) */
+footer {
+    padding: 20px;
+    background: #033254;
+    text-align: center;
+    color: #f0f8ff;
+}
