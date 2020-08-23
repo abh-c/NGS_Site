@@ -209,6 +209,12 @@ footer {
         padding-bottom: 0;
     }
 
+    .nav-top-link {
+        text-align: center;
+        display: inline-block;
+        width: 100px;
+    }
+
     /* Decrease the text size of the header text */
     .homepage-header h1{
         font-size: 40px;
