@@ -212,7 +212,7 @@ footer {
     .nav-top-link {
         text-align: center;
         display: inline-block;
-        width: 100px;
+        width: 100%;
     }
 
     /* Decrease the text size of the header text */
