@@ -1,16 +1,100 @@
 * {
     background: "ffffff";
-    font-family: "Helvetica Neue", arial, sans-serif;
+    font-family: Montserrat, Helvetica, arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
 }
 
+/* Style for the coding courses header on learn to code page */
+section.courses div {
+    color: #033254;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 35px;
+    padding: 40px;
+    padding-top: 60px;
+}
+/* Style for the general coding information on learn to code page*/
+section p.coding-info {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 25px;
+    margin: 40px;
+    justify-content: left;
+    height: 90%;
+
+}
+/* Style for the general course descriptions on learn to code page*/
+section p.course-descriptions {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    font-size: 25px;
+    justify-content: left;
+    height: 50%;
+    text-indent: 100px;
+
+}
+/* Style for the general course descriptions on learn to code page (java specifically to add bottom padding)*/
+section p.course-descriptions-java {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    font-size: 25px;
+    justify-content: left;
+    height: 50%;
+    text-indent: 100px;
+    padding-bottom: 30px;
+}
+/*Email button*/
+
+section button.email-button {
+    font-size: 18px;
+    padding: 7px;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    background-color: lightgray;
+    color: #033254;
+    text-align: center;
+    align-items: center;
+    border: 0px;
+    border-radius: 3px;
+    width: 300px;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 5px;
+}
+
+/*Email button hover*/
+
+section button.email-button:hover {
+    background-color: #033254;
+    color: #ffffff;
+    transition-duration: .1s;
+    border-radius: 2px;
+    justify-content: center;
+
+}
+
 /* Style the top nav bar with flexbox */
 .nav-top {
     background: #033254;
-    padding: 30px;
+    padding: 40px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -103,12 +187,14 @@
     color: hsl(0, 0%, 27%);
 }
 
+/* For any header on a webpage link to this css */
 .homepage-h2 {
     margin-top: 40px;
     margin-bottom: 30px;
     text-align: center;
     color: #033254;
-    font-size: 25px;
+    font-size: 40px;
+    padding: 30px;
 }
 
 /* Style the bottom nav bar with flexbox */
@@ -136,33 +222,34 @@
     padding-bottom: 100px;
     margin: 5px;
     box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.21), 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.35s cubic-bezier(.24, .8, .24, 1);
+    transition: all 0.35s cubic-bezier(.24, .8, .24, 1);
 }
 
 .nav-bottom-link:hover {
     box-shadow: 0 4px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background-blend-mode: darken;
 }
 
 /* Additional css for the images of each of the course links*/
 #javascript {
-    background: url(images/4906597504_d3d1ee9274_b.jpg) no-repeat;
+    background: rgba(0, 0, 0, .25) url(images/4906597504_d3d1ee9274_b.jpg) no-repeat;
     background-size: cover;
 }
 
 #htmlcss {
-    background: url(images/desk-keyboard-mouse-white.jpg) no-repeat;
+    background: rgba(0, 0, 0, .25) url(images/desk-keyboard-mouse-white.jpg) no-repeat;
     background-size: cover;
     background-position-y: center;
 }
 
 #python {
-    background: url(images/laptopngt.jpg) no-repeat;
+    background: rgba(0, 0, 0, .25) url(images/laptopngt.jpg) no-repeat;
     background-size: cover;
     background-position-y: center;
 }
 
 #java {
-    background: url(images/ordinateur-apple-ipad.jpg) no-repeat;
+    background: rgba(0, 0, 0, .25) url(images/ordinateur-apple-ipad.jpg) no-repeat;
     background-size: cover;
     background-position-y: center;
 }
@@ -247,4 +334,5 @@ footer {
     .homepage-h2 {
         font-size: 21px;
     }
+    
 }
