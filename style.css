@@ -133,6 +133,12 @@ section button.email-button:hover {
     list-style-type: none;
 }
 
+/* Picture hover effect */
+.nav-bottom-effect:hover {
+    opacity: .6;
+    transition-duration:.25s;
+}
+
 /* Style the header (only for the homepage) */
 .homepage-header {
     background-image: url("images/ezgif.com-video-to-gif.gif");
