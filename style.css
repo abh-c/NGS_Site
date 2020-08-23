@@ -1,5 +1,4 @@
 * {
-    background: "ffffff";
     font-family: Montserrat, Helvetica, arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -288,10 +287,6 @@ footer {
     .section-1 h1, .section-1 p {
         margin: 20px 5%;
     }
-}
-
-/* Change screen when the screen width is smaller than 466px */
-@media only screen and (max-width:466px) {
 
     /* Make the top nav bar a column */
     .nav-top-ul {
@@ -334,5 +329,4 @@ footer {
     .homepage-h2 {
         font-size: 21px;
     }
-    
 }
