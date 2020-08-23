@@ -1,16 +1,100 @@
 * {
     background: "ffffff";
-    font-family: "Helvetica Neue", arial, sans-serif;
+    font-family: Montserrat, Helvetica, arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
 }
 
+/* Style for the coding courses header on learn to code page */
+section.courses div {
+    color: #033254;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 35px;
+    padding: 40px;
+    padding-top: 60px;
+}
+/* Style for the general coding information on learn to code page*/
+section p.coding-info {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 25px;
+    margin: 40px;
+    justify-content: left;
+    height: 90%;
+
+}
+/* Style for the general course descriptions on learn to code page*/
+section p.course-descriptions {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    font-size: 25px;
+    justify-content: left;
+    height: 50%;
+    text-indent: 100px;
+
+}
+/* Style for the general course descriptions on learn to code page (java specifically to add bottom padding)*/
+section p.course-descriptions-java {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    font-size: 25px;
+    justify-content: left;
+    height: 50%;
+    text-indent: 100px;
+    padding-bottom: 30px;
+}
+/*Email button*/
+
+section button.email-button {
+    font-size: 18px;
+    padding: 7px;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    background-color: lightgray;
+    color: #033254;
+    text-align: center;
+    align-items: center;
+    border: 0px;
+    border-radius: 3px;
+    width: 300px;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 5px;
+}
+
+/*Email button hover*/
+
+section button.email-button:hover {
+    background-color: #033254;
+    color: #ffffff;
+    transition-duration: .1s;
+    border-radius: 2px;
+    justify-content: center;
+
+}
+
 /* Style the top nav bar with flexbox */
 .nav-top {
     background: #033254;
-    padding: 30px;
+    padding: 40px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -104,12 +188,14 @@
     color: #080808;
 }
 
+/* For any header on a webpage link to this css */
 .homepage-h2 {
     margin-top: 40px;
     margin-bottom: 30px;
     text-align: center;
     color: #033254;
-    font-size: 25px;
+    font-size: 40px;
+    padding: 30px;
 }
 
 /* Style the bottom nav bar with flexbox */
@@ -169,32 +255,6 @@ footer {
     color: #f0f8ff;
 }
 
-/* Styling for a lesson page */
-.section-1 h1, .section-1 p {
-    max-width: 540px;
-    text-align: left;
-    margin: 20px auto;
-}
-
-.section-1 h1 {
-    color: rgb(70, 70, 70);
-    font-size: 35px;
-    line-height: 1.125;
-}
-
-.section-1 p {
-    color: rgb(96, 96, 96);
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-/* Change screen when the screen width is smaller than 540px */
-@media only screen and (max-width:540px) {
-    .section-1 h1, .section-1 p {
-        margin: 20px 5%;
-    }
-}
-
 /* Change screen when the screen width is smaller than 466px */
 @media only screen and (max-width:466px) {
 
@@ -207,12 +267,6 @@ footer {
     .nav-top {
         padding-top: 0;
         padding-bottom: 0;
-    }
-
-    .nav-top-link {
-        text-align: center;
-        display: inline-block;
-        width: 100%;
     }
 
     /* Decrease the text size of the header text */
@@ -238,4 +292,5 @@ footer {
     .homepage-h2 {
         font-size: 21px;
     }
+    
 }
