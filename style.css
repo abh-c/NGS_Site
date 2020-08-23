@@ -200,8 +200,7 @@ footer {
     /* TODO: Probably edit later */
     .homepage-p {
         font-size: 20px;
-        margin-left: 0;
-        margin-right: 0;
+        margin: 6%;
     }
 
     .homepage-h2 {
