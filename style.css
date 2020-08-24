@@ -375,6 +375,52 @@ footer {
     list-style-type: decimal;
 }
 
+/* Style a horizontal divider line */
+.hr-1 {
+    max-width: 540;
+    margin: 10px auto;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgb(96, 96, 96);
+}
+
+.course-nav {
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.course-nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    max-width: 1365;
+}
+
+.course-nav ul a {
+    display: block;
+    color: rgb(96, 96, 96);
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 3px;
+    font-size: 18px;
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.25);
+}
+
+.course-nav ul a:hover {
+    background-color: #033254;
+    color: rgb(255, 255, 255);
+    transition-duration: .1s;
+    border-radius: 2px;
+}
+
 /* TODO: Media querry for bigger screens? */
 /* Change screen when the screen width is smaller than 540px */
 @media only screen and (max-width:540px) {
@@ -405,6 +451,10 @@ footer {
     .section-1 ol,
     .section-2 ol {
         font-size: 14px;
+    }
+
+    .hr-1 {
+        margin: 10px 5%;
     }
 
     /* Make the top nav bar a column */
