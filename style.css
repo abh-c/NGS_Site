@@ -18,6 +18,7 @@ section.courses div {
     padding: 40px;
     padding-top: 60px;
 }
+
 /* Style for the general coding information on learn to code page*/
 section p.coding-info {
     color: black;
@@ -32,6 +33,7 @@ section p.coding-info {
     height: 90%;
 
 }
+
 /* Style for the general course descriptions on learn to code page*/
 section p.course-descriptions {
     color: black;
@@ -45,6 +47,7 @@ section p.course-descriptions {
     text-indent: 100px;
 
 }
+
 /* Style for the general course descriptions on learn to code page (java specifically to add bottom padding)*/
 section p.course-descriptions-java {
     color: black;
@@ -58,6 +61,7 @@ section p.course-descriptions-java {
     text-indent: 100px;
     padding-bottom: 30px;
 }
+
 /*Email button*/
 
 section button.email-button {
@@ -225,7 +229,7 @@ section button.email-button:hover {
 }
 
 .nav-bottom-link:hover {
-    box-shadow: 0 4px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 4px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     background-blend-mode: darken;
 }
 
@@ -262,8 +266,14 @@ footer {
 }
 
 /* Styling for a lesson page */
-.section-1 p, .section-1 h1, .section-1 h2, 
-.section-2 p, .section-2 h1, .section-2 h2, .section-2 ol {
+.section-1 p,
+.section-1 h1,
+.section-1 h2,
+.section-1 ol,
+.section-2 p,
+.section-2 h1,
+.section-2 h2,
+.section-2 ol {
     max-width: 540px;
     text-align: left;
     margin: 20px auto;
@@ -297,6 +307,18 @@ footer {
     margin-bottom: 5px;
     padding-left: 50px;
     color: rgb(96, 96, 96);
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: normal;
+    list-style-type: decimal;
+}
+
+.section-1 ol {
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 50px;
+    color: rgb(74, 74, 74);
     font-size: 18px;
     line-height: 1.5;
     letter-spacing: normal;
@@ -353,11 +375,36 @@ footer {
     list-style-type: decimal;
 }
 
+/* TODO: Media querry for bigger screens? */
 /* Change screen when the screen width is smaller than 540px */
 @media only screen and (max-width:540px) {
-    .section-1 h1, .section-1 h2, .section-1 p,
-    .section-2 h1, .section-2 h2, .section-2 p {
+
+    /* Change format for smaller screens */
+    .section-1 h1,
+    .section-1 h2,
+    .section-1 p,
+    .section-2 h1,
+    .section-1 h2,
+    .section-2 p {
         margin: 20px 5%;
+    }
+
+    /* Decrease text size for smaller screens */
+    .section-1 h1,
+    .section-2 h1 {
+        font-size: 25px;
+    }
+
+    .section-1 h2,
+    .section-1 h2 {
+        font-size: 20px;
+    }
+
+    .section-1 p,
+    .section-2 p,
+    .section-1 ol,
+    .section-2 ol {
+        font-size: 14px;
     }
 
     /* Make the top nav bar a column */
@@ -376,10 +423,11 @@ footer {
         display: inline-block;
         width: 100%;
         margin: 3px;
+        font-size: 14px;
     }
 
     /* Decrease the text size of the header text */
-    .homepage-header h1{
+    .homepage-header h1 {
         font-size: 40px;
     }
 
