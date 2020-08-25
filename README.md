@@ -2,7 +2,18 @@
 
 html code for nextgenstem.co
 
-# TO CONTRIBUTORS:
+## TO CONTRIBUTORS:
+
+Every html page should be surrounded by `<html>` tags and begin with a declaration of doctype (html5):
+
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+    
+    # The rest of the code # 
+    
+</html>
+```
 
 Every html page should have an appropriate `<head>` section with important information in it:
 
