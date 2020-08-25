@@ -520,9 +520,12 @@ footer {
 .code {
     background: rgb(230, 230, 230);
     overflow: scroll;
-    max-width: 880px;
-    margin: 10px auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: calc(50% - 270px);
+    margin-right: 0px;
     padding: 10px;
+    padding-right: 0px;
     border: solid #033254;
     border-width: 0 0 0 5px;
     border-radius: 6px 0 0 6px;
@@ -552,6 +555,7 @@ footer {
 .code code {
     padding: 0;
     display: inline-block;
+    width: 100%;
     counter-increment: line;
 }
 
@@ -616,13 +620,6 @@ code.hl {
     color: rgb(255, 255, 255);
     transition-duration: .1s;
     border-radius: 2px;
-}
-
-/* Handle code blocks on screens smaller than 1080px wide */
-@media only screen and (max-width:900px) {
-    .code {
-        margin-left: 5%;
-    }
 }
 
 /* TODO: Media querry for bigger screens? */
