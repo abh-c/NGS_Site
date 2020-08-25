@@ -425,6 +425,12 @@ footer {
     -webkit-user-select: none;
 }
 
+/* Styling for highlighted code */
+code.hl {
+    background: rgb(181, 181, 181); /* Fallback solid color */
+    background: rgba(108, 108, 108, 0.42);
+}
+
 /* Style a horizontal divider line */
 .hr-1 {
     max-width: 540;
