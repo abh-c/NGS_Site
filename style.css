@@ -479,7 +479,7 @@ code.hl {
 }
 
 /* Handle code blocks on screens smaller than 1080px wide */
-@media only screen and (max-width:1090px) {
+@media only screen and (max-width:900px) {
     .code {
         margin-left: 5%;
     }
