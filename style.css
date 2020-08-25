@@ -375,6 +375,56 @@ footer {
     list-style-type: decimal;
 }
 
+/* Code section */
+/* NOTE: USE THE <code> tag in text */
+.code {
+    background: rgb(230, 230, 230);
+    overflow: scroll;
+    max-width: 880px;
+    margin: 10px auto;
+    padding: 10px;
+    border: solid #033254;
+    border-width: 0 0 0 5px;
+    border-radius: 6px 0 0 6px;
+}
+
+.code p,
+.code code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    color: rgb(58, 58, 58);
+    /* NOTE: Edit white-space in .code code and .code pre to edit left margin */
+    /* white-space: pre-wrap; */
+}
+
+.code p {
+    display: inline-block;
+    margin-left: 3em;
+}
+
+/* Use CSS counters to put line numbers before the code */
+.code pre {
+    overflow-x: scroll;
+    white-space: pre;
+    counter-reset: line;
+}
+
+.code code {
+    padding: 0;
+    display: inline-block;
+    counter-increment: line;
+}
+
+.code code:before {
+    content: counter(line) ": ";
+    display: inline-block;
+    width: 3em;
+    padding-left: auto;
+    margin-left: auto;
+    text-align: right;
+    -webkit-user-select: none;
+}
+
 /* Style a horizontal divider line */
 .hr-1 {
     max-width: 540;
@@ -422,6 +472,13 @@ footer {
     border-radius: 2px;
 }
 
+/* Handle code blocks on screens smaller than 1080px wide */
+@media only screen and (max-width:1090px) {
+    .code {
+        margin-left: 5%;
+    }
+}
+
 /* TODO: Media querry for bigger screens? */
 /* Change screen when the screen width is smaller than 540px */
 @media only screen and (max-width:540px) {
@@ -432,7 +489,8 @@ footer {
     .section-1 p,
     .section-2 h1,
     .section-1 h2,
-    .section-2 p {
+    .section-2 p,
+    .code {
         margin: 20px 5%;
     }
 

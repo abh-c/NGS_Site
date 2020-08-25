@@ -36,7 +36,7 @@
     <section class="section-1">
         <h2>This Course</h2>
         <p>
-            This course will focus on the fundemental aspects of JavaScript 
+            This course will focus on the fundemental aspects of JavaScript
             to get you a basic understanding of the language. The end project
             is a simple game that you can run in your browser.
         </p>
@@ -49,21 +49,38 @@
         <p>
             <!-- TODO: Style link -->
             <!-- TODO: Add the bottom navigation panel -->
-            To develop code more easily, most developers use a program 
-            called an Integrated Development Environment (IDE), which 
-            has many useful features, like a debugger and syntax highlighting. 
-            An IDE is not necessary for learning the basics of JS, but it is 
-            very convenient. This course will make use of the 
-            <a href="https://code.visualstudio.com" target="_blank">Visual Studio 
-            Code</a>, text editor because it is free and versatile. If you like, 
-            you could use any other editor or IDE suitable for developing JavaScript, 
-            like Atom or Sublime Text. For the purposes of learning, you could 
+            To develop code more easily, most developers use a program
+            called an Integrated Development Environment (IDE), which
+            has many useful features, like a debugger and syntax highlighting.
+            An IDE is not necessary for learning the basics of JS, but it is
+            very convenient. This course will make use of the
+            <a href="https://code.visualstudio.com" target="_blank">Visual Studio
+                Code</a>, text editor because it is free and versatile. If you like,
+            you could use any other editor or IDE suitable for developing JavaScript,
+            like Atom or Sublime Text. For the purposes of learning, you could
             even use an online tool, like <a href="https://jsfiddle.net" target="_blank">
-            https://jsfiddle.net</a>, to run simple 
-            JS code. Search something like “run js online” for more options. 
+                https://jsfiddle.net</a>, to run simple
+            JS code. Search something like “run js online” for more options.
             You could even write code in a simple text document, if you wanted to.
         </p>
     </section>
+
+    <!-- TODO: maybe use <script> tag to set left margin of code blocks -->
+    <section class="code">
+        <pre>
+            <code>let playerScore = 0; </code>
+            <code>let opponentScore = 0; </code>
+            <p>...</p>
+            <code>function drawScore() { </code>
+            <code>context.font = "64px Courier New"; </code>
+            <code>context.textAlign = "center"; </code>
+            <code>context.fillStyle = "e0e0e0"; </code>
+            <code>context.fillText(`${playerScore} ${opponentScore}`, canvas.width / 2, 60);</code>
+            <code>}</code>
+        </pre>
+        <!-- TODO: possibly set the left margin of the code block with JS -->
+    </section>
+
     <nav class="course-nav">
         <ul>
             <li><a href="js1.html">Home</a></li>
