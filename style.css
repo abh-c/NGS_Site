@@ -423,6 +423,10 @@ footer {
     margin: 20px auto;
 }
 
+.section-1 iframe {
+    margin: 20px auto;
+}
+
 /* A kind of section with a white background */
 .section-1 h1 {
     color: rgb(70, 70, 70);
