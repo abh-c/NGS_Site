@@ -436,6 +436,8 @@ footer {
     display: block;
     padding: 20px;
     margin: auto;
+    width: 560px;
+    height: 315px;
 }
 
 /* A kind of section with a white background */
