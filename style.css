@@ -5,6 +5,7 @@
     box-sizing: border-box;
 
 }
+
 /* Style for course requirements */
 section.course-requirements {
     background-color: lightgray;
@@ -93,6 +94,7 @@ section p.feedback2 {
     margin: 40px;
     height: 90%;
 }
+
 /* Style for the map*/
 section section.map {
     padding-top: 50px;
@@ -142,7 +144,7 @@ section table.team {
     flex-direction: row;
     flex-wrap: wrap;
     overflow: hidden;
-} 
+}
 
 /*Email button about page*/
 
@@ -179,6 +181,7 @@ section button.email-button-about:hover {
     border-color: black;
 
 }
+
 /* Style for our names in the table */
 
 section table tr.table-header {
@@ -189,6 +192,7 @@ section table tr.table-header {
     text-indent: 10px;
     padding-bottom: 15px;
 }
+
 /* Style for the information in the table */
 
 section table td.table {
@@ -554,8 +558,8 @@ footer {
 
 .code code {
     padding: 0;
-    display: inline-block;
-    width: 100%;
+    /* TODO: maybe use js to set the width with inline-block to extend the highlight  */
+    display: inline;
     counter-increment: line;
 }
 
@@ -572,7 +576,8 @@ footer {
 
 /* Styling for highlighted code */
 code.hl {
-    background: rgb(181, 181, 181); /* Fallback solid color */
+    background: rgb(181, 181, 181);
+    /* Fallback solid color */
     background: rgba(108, 108, 108, 0.42);
 }
 
