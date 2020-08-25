@@ -5,7 +5,16 @@
     box-sizing: border-box;
 
 }
+/* Style for videos */
 
+section.video {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    padding: 20px;
+    }
 /* Style for course requirements */
 section.course-requirements {
     background-color: lightgray;
