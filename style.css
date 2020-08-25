@@ -573,7 +573,7 @@ code.hl {
 
 /* Style a horizontal divider line */
 .hr-1 {
-    max-width: 540;
+    max-width: 540px;
     margin: 10px auto;
     height: 1px;
     border: 0;
