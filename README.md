@@ -28,7 +28,9 @@ Every html page should have an appropriate `<head>` section with important infor
 </head>
 ```
 
-Between the body tags, you should have the header, navigation panel, and footer
+Between the body tags, you should have the header, navigation panel, next and previous buttons and footer. 
+
+Remember to add the appropriate links to the previous and next elements.
 
 ```html
 <body>
@@ -43,6 +45,11 @@ Between the body tags, you should have the header, navigation panel, and footer
   
   # YOUR LESSON CODE GOES HERE #
   
+  <!-- Add the appropriate links to each <a> tag -->
+  <section class="next-previous-wrapper">
+        <a href="" class="previous">&lt; Previous</a>
+        <a href="" class="next">Next &gt;</a>
+  </section>
   
   <nav class="course-nav">
         <ul>
