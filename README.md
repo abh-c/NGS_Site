@@ -122,10 +122,13 @@ Images can be inserted with the `<img>` tag.
             <code class="hl">}</code>
         </pre>
 </section>
+```
 
 When you are finihed copy and paste the following lines of code in. This is the live help.
+
+```html
 <!-- TODO: put the stuff below in the <body> tag -->
-<!-- 
+ 
     <div id="app_settings" style="display:none;">
     <label class='app_text_label'>Chat SiteID: </label>
     <input class='app_field_input' type="text" name="siteID"><br>
@@ -140,8 +143,7 @@ When you are finihed copy and paste the following lines of code in. This is the 
             target='blank'>tawk.to</a> and get your chat site ID. <br>Tawk dashboard -> Admin (at the top of the
         dashboard) -> Property Settings -> Site ID. </label>
 </div>
- -->
-<!-- 
+ 
     <script type="text/javascript">
    
        //*****
@@ -167,16 +169,9 @@ When you are finihed copy and paste the following lines of code in. This is the 
        //  End of Tawk.to Script
    
    </script>
-    -->
+    
 
 </html>
-
-
-
-
-
-
-
 ```
 
 Copy paste each line of code into separate `<code>` tags and preserve the spacing.
