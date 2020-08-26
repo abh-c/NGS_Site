@@ -88,6 +88,8 @@ as well as headings `<h1>` and `<h2>`. Example:
 </section>
 ```
 
+You can add inline code with the `<code>` tag inside a `<p>` pararaph inside a class `section-1` section.
+
 Horizontal division lines can be added with `<hr class="hr-1">`.
 
 Look at the `course-landing-page-template.html` file for more examples.
