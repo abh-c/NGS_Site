@@ -105,8 +105,8 @@ for more details.
 </section>
 ```
 
-Code blocks can be inserted with the section class `code`, as seen below. Code lines can be highlighted using the code class `hl`.
-Images can be inserted with the `<img>` tag.
+Code blocks can be inserted with the section class `code`, as seen below. Copy paste each line of code into separate `<code>` tags and preserve the spacing.
+Code lines can be highlighted using the code class `hl`.
 
 ```html
 <section class="code">
@@ -123,6 +123,9 @@ Images can be inserted with the `<img>` tag.
         </pre>
 </section>
 ```
+
+Images can be inserted with the `<img>` tag.
+
 
 When you are finihed copy and paste the following lines of code in. This is the live help.
 
@@ -173,8 +176,6 @@ When you are finihed copy and paste the following lines of code in. This is the 
 
 </html>
 ```
-
-Copy paste each line of code into separate `<code>` tags and preserve the spacing.
 
 [Link to website in progress](https://abh-c.github.io/NGS_Site/)
 
