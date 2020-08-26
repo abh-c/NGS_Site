@@ -88,6 +88,8 @@ as well as headings `<h1>` and `<h2>`. Example:
 </section>
 ```
 
+You can add inline code with the `<code>` tag inside a `<p>` pararaph inside a class `section-1` section.
+
 Horizontal division lines can be added with `<hr class="hr-1">`.
 
 Look at the `course-landing-page-template.html` file for more examples.
@@ -103,7 +105,8 @@ for more details.
 </section>
 ```
 
-Code blocks can be inserted with the section class `code`, as seen below. Code lines can be highlighted using the code class `hl`.
+Code blocks can be inserted with the section class `code`, as seen below. Copy paste each line of code into separate `<code>` tags and preserve the spacing.
+Code lines can be highlighted using the code class `hl`.
 
 ```html
 <section class="code">
@@ -121,7 +124,58 @@ Code blocks can be inserted with the section class `code`, as seen below. Code l
 </section>
 ```
 
-Copy paste each line of code into separate `<code>` tags and preserve the spacing.
+Images can be inserted with the `<img>` tag.
+
+
+When you are finihed copy and paste the following lines of code in. This is the live help.
+
+```html
+<!-- TODO: put the stuff below in the <body> tag -->
+ 
+    <div id="app_settings" style="display:none;">
+    <label class='app_text_label'>Chat SiteID: </label>
+    <input class='app_field_input' type="text" name="siteID"><br>
+    <label class='app_text_label info'>* To start receiving chats go to <a href='http://www.tawk.to'
+            target='blank'>tawk.to</a> and get your chat site ID. <br>Tawk dashboard -> Admin (at the top of the
+        dashboard) -> Property Settings -> Site ID. </label>
+</div>
+<div id="app_settings" style="display:none;">
+    <label class='app_text_label'>Chat SiteID: </label>
+    <input class='app_field_input' type="text" name="siteID"><br>
+    <label class='app_text_label info'>* To start receiving chats go to <a href='http://www.tawk.to'
+            target='blank'>tawk.to</a> and get your chat site ID. <br>Tawk dashboard -> Admin (at the top of the
+        dashboard) -> Property Settings -> Site ID. </label>
+</div>
+ 
+    <script type="text/javascript">
+   
+       //*****
+       //Change these params 
+       //Go to tawk.to and sign up for a user, enter your site domain and replace the following URL with the one they give you.
+       var /*<{*/siteID/*}*/ = /*{*/"5f29c48fed9d9d2627082f71"/*}>*/;
+       var chatSiteURL = 'https://embed.tawk.to/'+siteID+'/default';
+         
+       //*****
+       
+       // Start of Tawk.to Script
+       
+       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+       (function(){
+       var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+       s1.async=true;
+       s1.src=chatSiteURL;
+       s1.charset='UTF-8';
+       s1.setAttribute('crossorigin','*');
+       s0.parentNode.insertBefore(s1,s0);
+       })();
+   
+       //  End of Tawk.to Script
+   
+   </script>
+    
+
+</html>
+```
 
 [Link to website in progress](https://abh-c.github.io/NGS_Site/)
 
