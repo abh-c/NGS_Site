@@ -102,3 +102,27 @@ for more details.
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
 ```
+
+Code blocks can be inserted with the section class `code`, as seen below. Code lines can be highlighted using the code class `hl`.
+
+```html
+<section class="code">
+        <pre>
+            <code>let playerScore = 0; </code>
+            <code>let opponentScore = 0; </code>
+            <p>...</p>
+            <code class="hl">function drawScore() { </code>
+            <code class="hl">   context.font = "64px Courier New"; </code>
+            <code class="hl">   context.textAlign = "center"; </code>
+            <code class="hl">   context.fillStyle = "e0e0e0"; </code>
+            <code class="hl">   context.fillText(`${playerScore} ${opponentScore}`, canvas.width / 2, 60);</code>
+            <code class="hl">}</code>
+        </pre>
+</section>
+```
+
+Copy paste each line of code into separate `<code>` tags and preserve the spacing.
+
+[Link to website in progress] (https://abh-c.github.io/NGS_Site/)
+[Link to template](https://abh-c.github.io/NGS_Site/)
+[Link to video template] (https://abh-c.github.io/NGS_Site/)
