@@ -106,6 +106,7 @@ for more details.
 ```
 
 Code blocks can be inserted with the section class `code`, as seen below. Code lines can be highlighted using the code class `hl`.
+Images can be inserted with the `<img>` tag.
 
 ```html
 <section class="code">
