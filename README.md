@@ -124,5 +124,7 @@ Code blocks can be inserted with the section class `code`, as seen below. Code l
 Copy paste each line of code into separate `<code>` tags and preserve the spacing.
 
 [Link to website in progress](https://abh-c.github.io/NGS_Site/)
+
 [Link to template](https://abh-c.github.io/NGS_Site/templates/course-landing-page-template.html)
+
 [Link to video template](https://abh-c.github.io/NGS_Site/templates/video-course-template.html)
