@@ -510,6 +510,37 @@ footer {
     flex-wrap: wrap;
 }
 
+.next-previous-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    max-width: 580px;
+    margin: 20px auto;
+}
+
+.next-previous-wrapper a {
+    background: #033254;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px auto;
+    padding: 8px 16px;
+}
+
+.next-previous-wrapper a:hover {
+    background: rgb(211, 211, 211);
+    color: #033254;
+}
+
+.previous {
+    
+}
+
+.next {}
+
 /* Another kind of section with a gray background */
 .section-2 {
     background: rgb(200, 200, 200);
