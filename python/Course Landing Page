@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Java, Python" />
+    <meta name="description" content="Free programming tutorials" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Next Gen Stem</title>
+</head>
+
+<body>
+    <nav class="nav-top">
+        <ul class="nav-top-ul">
+            <li><b><a href="../index.html" class="nav-top-link">Home</a></b></li>
+            <li><b><a href="../learntocode.html" class="nav-top-link">Learn to Code</a></b></li>
+            <li><b><a href="../about.html" class="nav-top-link">About</a></b></li>
+        </ul>
+    </nav>
+
+    <section class="section-1">
+        <!-- Course Name -->
+        <h1>Language...</h1>
+        <p>
+            <!-- Info on your language. Copy and paste from folder or nextenstem.co under your section -->
+            Python is one of the most broad and diverse programming languages used today. Although
+            having a wide range of uses from creating games to even automotive tasks! This language
+            is not just used with software developers but also scientists, data analysts, engineers, 
+            and many more! One of the reasons for this wide use is that the language is extremely efficient 
+            and relatively easy to learn.
+        </p>
+    </section>
+    <hr class="hr-1">
+    <section class="section-1">
+        <h2>
+            This Course
+        </h2>
+        <p>
+            <!-- Info on your course. Copy and paste from folder or nextenstem.co under your section -->
+            This course will teach the basic functions of the Python language with the culminating project of 
+            creating a Word Guessing Game!
+        </p>
+        <!-- Course Reqs. Copy and paste from folder or nextenstem.co under your section-->
+        <ol>
+            <li>1) A computer on which you can create files (it would help if you could download software on it as well)</li>
+            <li>2) Python Idle code writing software</li>
+            <li>3) A browser </li>
+        </ol>
+    </section>
+
+    <!-- Example code block -->
+    <section class="code">
+        <pre>
+            <code>let playerScore = 0; </code>
+            <code>let opponentScore = 0; </code>
+            <p>...</p>
+            <code class="hl">function drawScore() { </code>
+            <code class="hl">   context.font = "64px Courier New"; </code>
+            <code class="hl">   context.textAlign = "center"; </code>
+            <code class="hl">   context.fillStyle = "e0e0e0"; </code>
+            <code class="hl">   context.fillText(`${playerScore} ${opponentScore}`, canvas.width / 2, 60);</code>
+            <code class="hl">}</code>
+        </pre>
+    </section>
+
+    <!-- Add the appropriate links to each <a> tag -->
+    <section class="next-previous-wrapper">
+        <a href="#">&lt; Previous</a>
+        <a href="#">Next &gt;</a>
+    </section>
+
+    <nav class="course-nav">
+        <ul>
+            <!-- Replace # with html file names of pages -->
+            <li><a href="course-landing-page-template.html">Introduction</a></li>
+            <li><a href="#">Lesson 1</a></li>
+            <li><a href="#">Lesson 2</a></li>
+            <li><a href="#">Lesson 3</a></li>
+            <li><a href="#">Lesson 4</a></li>
+            <li><a href="#">Lesson 5</a></li>
+            <li><a href="#">Lesson 6</a></li>
+            <li><a href="#">Lesson 7</a></li>
+            <li><a href="#">Lesson 8</a></li>
+            <li><a href="#">Lesson 9</a></li>
+            <li><a href="#">Lesson 10</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>
+            NEXT GEN STEM <br> CONNECTICUT, USA
+        </p>
+        <img src="../images/Mail-Icon-White-on-Grey.jpg" style="width:65px; height:65px">
+    </footer>
+</body>
+
+</html>
