@@ -1,9 +1,9 @@
 * {
     font-family: Montserrat, Helvetica, arial, sans-serif;
+    font-size: 18px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 /* Style for videos */
@@ -424,14 +424,43 @@ footer {
 .section-1 p,
 .section-1 h1,
 .section-1 h2,
+.section-1 h3,
 .section-1 ol,
 .section-2 p,
 .section-2 h1,
 .section-2 h2,
 .section-2 ol {
-    max-width: 540px;
+    max-width: 40rem;
     text-align: left;
     margin: 20px auto;
+}
+
+/* Style a horizontal divider line */
+.hr-1 {
+    max-width: 40rem;
+    margin: 10px auto;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgb(96, 96, 96);
+}
+
+/* For when it gets below 720px/40em */
+@media only screen and (max-width: 720px) {
+    .section-1 p,
+    .section-1 h1,
+    .section-1 h2,
+    .section-1 h3,
+    .section-1 ol,
+    .section-2 p,
+    .section-2 h1,
+    .section-2 h2,
+    .section-2 ol {
+        margin: 20px 5%;
+    }
+
+    .hr-1 {
+        margin: 10px 5%;
+    }
 }
 
 .section-1 iframe {
@@ -453,6 +482,13 @@ footer {
 .section-1 h2 {
     color: rgb(70, 70, 70);
     font-size: 28px;
+    line-height: 1.25;
+    letter-spacing: normal;
+}
+
+.section-1 h3 {
+    color: rgb(70, 70, 70);
+    font-size: 20px;
     line-height: 1.25;
     letter-spacing: normal;
 }
@@ -508,6 +544,14 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.img-gallery img {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .next-previous-wrapper {
@@ -592,7 +636,7 @@ footer {
     overflow: scroll;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: calc(50% - 270px);
+    margin-left: calc(50% - 20rem);
     margin-right: 0px;
     padding: 10px;
     padding-right: 0px;
@@ -647,15 +691,6 @@ code.hl {
     background: rgba(108, 108, 108, 0.42);
 }
 
-/* Style a horizontal divider line */
-.hr-1 {
-    max-width: 540px;
-    margin: 10px auto;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid rgb(96, 96, 96);
-}
-
 .course-nav {
     padding: 40px;
     display: flex;
@@ -701,6 +736,7 @@ code.hl {
     /* Change format for smaller screens */
     .section-1 h1,
     .section-1 h2,
+    .section-1 h3,
     .section-1 p,
     .section-2 h1,
     .section-1 h2,
@@ -723,8 +759,13 @@ code.hl {
         font-size: 20px;
     }
 
+    .section-1 h3 {
+        font-size: 16;
+    }
+
     .section-1 p,
     .section-2 p,
+    .section-1 p code,
     .section-1 ol,
     .section-2 ol {
         font-size: 14px;
