@@ -426,41 +426,25 @@ footer {
 .section-1 h2,
 .section-1 h3,
 .section-1 ol,
+.section-1 ul,
+.section-1 table,
 .section-2 p,
 .section-2 h1,
 .section-2 h2,
 .section-2 ol {
-    max-width: 40rem;
+    max-width: 30rem;
     text-align: left;
     margin: 20px auto;
 }
 
 /* Style a horizontal divider line */
+hr,
 .hr-1 {
-    max-width: 40rem;
+    max-width: 30rem;
     margin: 10px auto;
     height: 1px;
     border: 0;
     border-top: 1px solid rgb(96, 96, 96);
-}
-
-/* For when it gets below 720px/40em */
-@media only screen and (max-width: 720px) {
-    .section-1 p,
-    .section-1 h1,
-    .section-1 h2,
-    .section-1 h3,
-    .section-1 ol,
-    .section-2 p,
-    .section-2 h1,
-    .section-2 h2,
-    .section-2 ol {
-        margin: 20px 5%;
-    }
-
-    .hr-1 {
-        margin: 10px 5%;
-    }
 }
 
 .section-1 iframe {
@@ -500,6 +484,18 @@ footer {
     letter-spacing: normal;
 }
 
+.section-1 p em {
+    font-size: inherit;
+}
+
+.section-1 p b {
+    font-size: inherit;
+}
+
+.section-1 p a {
+    font-size: inherit;
+}
+
 .section-1 p code {
     color: rgb(96, 96, 96);
     font-size: 18px;
@@ -520,16 +516,51 @@ footer {
     list-style-type: decimal;
 }
 
-.section-1 ol {
+.section-1 ol li {
+    color: rgb(96, 96, 96);
+    font-size: inherit;
+    line-height: 1.5;
+}
+
+.section-1 table {
+    color: rgb(96, 96, 96);
+    font-size: 18px;
+    border-collapse: collapse;
+    border: 1px solid rgb(200, 200, 200);
+    letter-spacing: normal;
+}
+
+.section-1 table caption {
+    padding: 5px;
+}
+
+.section-1 td,
+.section-1 th {
+    border: 1px solid rgb(200, 200, 200);
+    padding: 7px 10px;
+    font-size: inherit;
+}
+
+.section-1 th {
+    background-color: rgb(235, 235, 235);
+}
+
+.section-1 ul {
     padding-bottom: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
     padding-left: 50px;
-    color: rgb(74, 74, 74);
+    color: rgb(96, 96, 96);
     font-size: 18px;
     line-height: 1.5;
     letter-spacing: normal;
-    list-style-type: decimal;
+    list-style-type: none;
+}
+
+.section-1 ul li {
+    color: rgb(96, 96, 96);
+    font-size: inherit;
+    line-height: 1.5;
 }
 
 .section-1 img {
@@ -633,20 +664,18 @@ footer {
 /* NOTE: USE THE <code> tag in text */
 .code {
     background: rgb(230, 230, 230);
-    overflow: scroll;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: calc(50% - 20rem);
+    margin-left: calc(50% - 15rem);
     margin-right: 0px;
-    padding: 10px;
     padding-right: 0px;
     border: solid #033254;
     border-width: 0 0 0 5px;
     border-radius: 6px 0 0 6px;
 }
 
-.code p,
-.code code {
+.code pre p,
+.code pre code {
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     color: rgb(58, 58, 58);
@@ -661,8 +690,8 @@ footer {
 
 /* Use CSS counters to put line numbers before the code */
 .code pre {
-    overflow-x: scroll;
     white-space: pre;
+    overflow-x: scroll;
     counter-reset: line;
 }
 
@@ -671,6 +700,11 @@ footer {
     /* TODO: maybe use js to set the width with inline-block to extend the highlight  */
     display: inline;
     counter-increment: line;
+}
+
+/* Add some padding to the top of the first text line */
+.code pre:first-child {
+    padding-top: 10px;
 }
 
 /* Add the line numbers */
@@ -734,14 +768,21 @@ code.hl {
 @media only screen and (max-width:540px) {
 
     /* Change format for smaller screens */
+    .section-1 p,
     .section-1 h1,
     .section-1 h2,
     .section-1 h3,
-    .section-1 p,
+    .section-1 ol,
+    .section-2 p,
     .section-2 h1,
-    .section-1 h2,
-    .section-2 p {
+    .section-2 h2,
+    .section-2 ol {
         margin: 20px 5%;
+    }
+
+    hr,
+    .hr-1 {
+        margin: 10px 5%;
     }
 
     .code {
@@ -766,13 +807,13 @@ code.hl {
     .section-1 p,
     .section-2 p,
     .section-1 p code,
+    .section-1 table,
+    .section-1 table caption,
+    .section-1 table tr,
     .section-1 ol,
+    .section-1 ul,
     .section-2 ol {
         font-size: 14px;
-    }
-
-    .hr-1 {
-        margin: 10px 5%;
     }
 
     /* Make the top nav bar a column */
