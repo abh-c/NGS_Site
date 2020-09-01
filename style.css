@@ -685,7 +685,7 @@ hr,
 
 .code p {
     display: inline-block;
-    margin-left: 3em;
+    margin-left: 2em;
 }
 
 /* Use CSS counters to put line numbers before the code */
@@ -711,7 +711,7 @@ hr,
 .code code:before {
     content: counter(line) ": ";
     display: inline-block;
-    width: 3em;
+    width: 2em;
     padding-left: auto;
     margin-left: auto;
     text-align: right;
