@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Java, Python" />
+    <meta name="description" content="Free programming tutorials" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Next Gen Stem</title>
+</head>
+<!-- NOTE to self: alt + w to wrap text in a tag -->
+
+<body>
+    <nav class="nav-top">
+        <ul class="nav-top-ul">
+            <li><b><a href="../index.html" class="nav-top-link">Home</a></b></li>
+            <li><b><a href="../learntocode.html" class="nav-top-link">Learn to Code</a></b></li>
+            <li><b><a href="../about.html" class="nav-top-link">About</a></b></li>
+        </ul>
+    </nav>
+
+    <section class="section-1">
+        <h1>JavaScript - Lesson 4</h1>
+        <p>
+            In this lesson we will begin to make a simple game using html and JavaScript!
+        </p>
+        <hr class="hr-1">
+        <p>
+            We will now be using all the knowledge you now have of JavaScript to make a simple game that you can run in
+            your browser! We will be using pure JavaScript for this game, but you can later learn about frameworks that
+            you can use to help making them. The game will consist of two paddles passing a ball between each other. You
+            control one paddle and earn points by getting the ball past the other paddle, which will move on its own.
+            The game is over when the opponent has 10 points. The game will look something like this:
+        </p>
+        <video controls class="vid-1">
+            <source src="jsimages/bonk.mp4" type="video/mp4">
+            <p>
+                Your browser doesn't support mp4 videos. Here is
+                a <a href="jsimages/bonk.mp4">link</a> to the video instead.
+            </p>
+        </video>
+        <p>Table of Contents:</p>
+        <ol>
+            <li>Drawing on a Canvas</li>
+            <li>Drawing the Game Elements</li>
+            <li>Moving the Ball and Adding Collision with the Walls</li>
+            <li>Moving the Paddles with the Keyboard and Mouse</li>
+            <li>Adding Collision Between the Ball and the Paddles</li>
+            <li>Gaining Points and Winning</li>
+        </ol>
+        <hr>
+        <h3>1 – Drawing on a Canvas</h3>
+        <p>Create a file called <code>index.html</code> and set it up like this: </p>
+        <section class="code">
+            <pre>
+                <code>&lt;!DOCTYPE html&gt;</code>
+                <code>&lt;html&gt;</code>
+                <code>&lt;head&gt;</code>
+                <code>    &lt;meta charset="utf-8"/&gt; </code>
+                <code>    &lt;title&gt;game&lt;/title&gt;</code>
+                <code>    &lt;style&gt;</code>
+                <code>        canvas { background: #202020; display: block; margin: 0 auto; }</code>
+                <code>    &lt;/style&gt;</code>
+                <code>&lt;/head&gt;</code>
+                <code>&lt;body&gt;</code>
+                <code></code>
+                <code>&lt;canvas id="gameCanvas" width="800" height="600"&gt;</code>
+                <code>    &lt;script src="game.js"&gt;&lt;/script&gt;</code>
+                <code>&lt;/body&gt;</code>
+                <code>&lt;/html&gt;</code>
+            </pre>
+        </section>
+        <p>
+            The canvas CSS sets the background to gray and centers the canvas on the screen. The canvas is 800px wide
+            and 600px high. The JavaScript used will be stored in the game.js file, which we will now create. If you
+            open the index.html file in the browser now, it should look like this:
+        </p>
+        <img src="jsimages/game1.png" alt="">
+        <p>
+            Create a file called "game.js" in the same folder as the index.html file. To actually start drawing on the
+            canvas, we need to create a variable storing the canvas and the context. To do so, add these lines of code
+            at the beginning of the game.js file:
+        </p>
+        <p>
+            With this, we get declare the canvas variable getting the element with id <code>"gameCanvas"</code>, which
+            is what I named my canvas in the html file. Whatever you call your canvas, make your you write the correct
+            id string in the <code>getElementByID</code> function. We need to get the 2d context of the canvas in order
+            to actually draw on it. <code></code>
+        </p>
+        <p>
+            You have many ways of drawing on the canvas, and I recommend looking up ways to draw shapes or text if you
+            are confused or if you want a different way of doing things. Here is one way to draw a rectangle on the
+            canvas:
+        </p>
+        <section class="code">
+            <pre>
+                <code>// draws a white rectangle</code>
+                <code>context.beginPath();</code>
+                <code>context.rect(50, 50, 100, 100);</code>
+                <code>context.fillStyle = "#ffffff";</code>
+                <code>context.fill();</code>
+                <code>context.closePath();</code>
+            </pre>
+        </section>
+    </section>
+
+    <section class="next-previous-wrapper">
+        <a href="js5.html">&lt; Previous</a>
+        <a href="js7.html">Next &gt;</a>
+    </section>
+
+    <nav class="course-nav">
+        <ul>
+            <li><a href="js1.html">Introduction</a></li>
+            <li><a href="js2.html">Lesson 1</a></li>
+            <li><a href="js3.html">Lesson 2</a></li>
+            <li><a href="js4.html">Lesson 3</a></li>
+            <li><a href="js5.html">Lesson 4</a></li>
+            <li><a href="js6.html">Lesson 5</a></li>
+            <li><a href="js7.html">Lesson 6</a></li>
+            <li><a href="js8.html">Lesson 7</a></li>
+            <li><a href="js9.html">Lesson 8</a></li>
+            <li><a href="js10.html">Lesson 9</a></li>
+            <li><a href="js11.html">Lesson 10</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>
+            NEXT GEN STEM <br> CONNECTICUT, USA
+        </p>
+        <img src="../images/Mail-Icon-White-on-Grey.jpg" style="width:65px; height:65px">
+    </footer>
+</body>
+
+</html>

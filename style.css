@@ -571,6 +571,12 @@ hr,
     height: auto;
 }
 
+.section-1 video.vid-1 {
+    max-width: 540px;
+    display: block;
+    margin: 10px auto;
+}
+
 .img-gallery {
     display: flex;
     flex-direction: row;
@@ -814,6 +820,10 @@ code.hl {
     .section-1 ul,
     .section-2 ol {
         font-size: 14px;
+    }
+
+    .section-1 video.vid-1 {
+        width: 100%;
     }
 
     /* Make the top nav bar a column */
