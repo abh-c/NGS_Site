@@ -689,8 +689,19 @@ hr,
     /* white-space: pre-wrap; */
 }
 
+.code pre code span {
+    font-family: inherit;
+    font-size: inherit;
+    /* Fallback solid color */
+    background: rgb(181, 181, 181);
+    background: rgba(108, 108, 108, 0.42);
+}
+
 .code p {
     display: inline-block;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     margin-left: 2em;
 }
 
@@ -726,8 +737,8 @@ hr,
 
 /* Styling for highlighted code */
 code.hl {
-    background: rgb(181, 181, 181);
     /* Fallback solid color */
+    background: rgb(181, 181, 181);
     background: rgba(108, 108, 108, 0.42);
 }
 

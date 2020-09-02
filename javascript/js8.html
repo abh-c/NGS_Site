@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Java, Python" />
+    <meta name="description" content="Free programming tutorials" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Next Gen Stem</title>
+</head>
+<!-- NOTE to self: alt + w to wrap text in a tag -->
+
+<body>
+    <nav class="nav-top">
+        <ul class="nav-top-ul">
+            <li><b><a href="../index.html" class="nav-top-link">Home</a></b></li>
+            <li><b><a href="../learntocode.html" class="nav-top-link">Learn to Code</a></b></li>
+            <li><b><a href="../about.html" class="nav-top-link">About</a></b></li>
+        </ul>
+    </nav>
+
+    <section class="section-1">
+        <h1>JavaScript - Game Part 3</h1>
+        <p>
+            In this lesson we will move the ball and add collision with the walls.
+        </p>
+        <hr>
+        <p>
+            Moving the ball is simple and only takes two lines of code in the <code>draw()</code> function.
+        </p>
+        <section class="code">
+            <pre>
+            <code>function draw() {</code>
+            <code>    drawBall();</code>
+            <code>    drawPaddle(playerPaddle);</code>
+            <code>    drawPaddle(opponentPaddle);</code>
+            <code>    requestAnimationFrame(draw);</code>
+            <code class='hl'>    ballX += 4;</code>
+            <code class='hl'>    ballY += 4;</code>
+            <code>}</code>
+            </pre>
+        </section>
+        <p>
+            With this, we increase the ball's x and y coordinates by 4 each frame. This will cause the ball to move
+            toward the bottom right of the screen. If you launch the html file in a browser now, this is what you should
+            see:
+        </p>
+        <img src="jsimages/game7.png" alt="">
+        <p>
+            It looks like this because we keep drawing new circles without erasing the old ones. In order to create the
+            effect of animation, we need to clear the whole canvas before each frame. We can do so easily like this:
+        </p>
+        <section class="code">
+            <pre>
+            <code>function draw() {</code>
+            <code class='hl'>    context.clearRect(0, 0, canvas.width, canvas.height);</code>
+            <code>    drawBall();</code>
+            <code>    drawPaddle(playerPaddle);</code>
+            <code>    drawPaddle(opponentPaddle);</code>
+            <code>    requestAnimationFrame(draw);</code>
+            <code>    ballX += 4;</code>
+            <code>    ballY += 4;</code>
+            <code>}</code>
+            <code></code>
+            </pre>
+        </section>
+        <p>
+            This function clears a rectangle that takes up the entire canvas. Now the ball looks like it's moving!
+            However, it keeps going off the screen. To keep it in bounds, we can create a collision function. First, we
+            need to be able to change the amount that the ball's x and y coordinates change every frame, so let's create
+            variables for those values and place them in the program:
+        </p>
+        <section class="code">
+            <pre>
+            <code>let ballX = canvas.width / 2;</code>
+            <code>let ballY = canvas.height / 2;</code>
+            <code class='hl'>let ballDX = 4;</code>
+            <code class='hl'>let ballDY = 4;</code>
+            <p>...</p>
+            <code>function draw() {</code>
+            <code>    context.clearRect(0, 0, canvas.width, canvas.height);</code>
+            <code>    drawBall();</code>
+            <code>    drawPaddle(playerPaddle);</code>
+            <code>    drawPaddle(opponentPaddle);</code>
+            <code>    requestAnimationFrame(draw);</code>
+            <code>    ballX += <span>ballDX</span>;</code>
+            <code>    ballY += <span>ballDY</span>;</code>
+            <code>}</code>
+            <code></code>
+            </pre>
+        </section>
+        <p>
+            The <code>ballDX</code> and <code>ballDY</code> variables store the number of pixels by which the x and y
+            values of the ball will respectively change each frame. They are named so because they represent the
+            <em>difference</em> in x and y every frame.
+        </p>
+        <p>
+            Now we can write a collision function. For now, we can write it so that either <code>ballDY</code> variable
+            changes sign at when the ball hits a wall:
+        </p>
+        <section class="code">
+            <pre>
+            <code>function handleCollision() {</code>
+            <code class='hl'>    // Handle collision with the walls</code>
+            <code class='hl'>    if (ballY + ballDY &lt; 0 || ballY + ballDY > canvas.height) {</code>
+            <code class='hl'>        ballDY = -ballDY;</code>
+            <code class='hl'>    }</code>
+            <code>}</code>
+            <p>...</p>
+            <code>function draw() {</code>
+            <code>    context.clearRect(0, 0, canvas.width, canvas.height);</code>
+            <code>    drawBall();</code>
+            <code>    drawPaddle(playerPaddle);</code>
+            <code>    drawPaddle(opponentPaddle);</code>
+            <code class='hl'>    handleCollision();</code>
+            <code>    requestAnimationFrame(draw);</code>
+            <code>    ballX += ballDX;</code>
+            <code>    ballY += ballDY;</code>
+            <code>}</code>
+            </pre>
+        </section>
+        <p>
+            This will make it so that if the ball is about to go out of bounds on the top or bottom of the canvas (hence
+            the <code>+ ballDY</code>), it will bounce off the wall, and that is what you should see. However, the
+            <code>ballY</code> variable stores the y coordinate of the center of the ball, so the ball actually clips
+            into the wall a bit before bouncing off. There are many ways to fix this, but her is one that will make it
+            easier to understand the math. First, we need new <code>ballTop</code> and <code>ballBottom</code> variables
+            to store the y coordinates of the top and bottom of the ball. Then, we calculate the value of those
+            variables each time <code>handleCollision()</code> runs and do math with them.
+        </p>
+        <section class="code">
+            <pre>
+            <code>let ballDX = 4;</code>
+            <code>let ballDY = 4;</code>
+            <code class='hl'>let ballTop;</code>
+            <code class='hl'>let ballBottom;</code>
+            <p>...</p>
+            <code>function handleCollision() {</code>
+            <code>    ballTop = ballY - BALL_SIZE;</code>
+            <code>    ballBottom = ballY + BALL_SIZE;</code>
+            <code></code>
+            <code>    // Handle collision with the walls</code>
+            <code>    if (<span>ballTop</span> + ballDY &lt; 0 || <span>ballBottom</span> &gt; canvas.height) {</code>
+            <code>        ballDY = -ballDY;</code>
+            <code>    }</code>
+            <code>}</code>
+            </pre>
+        </section>
+        <p>
+            Now the ball should bounce off the wall more convincingly. We haven't made the ball bounce off the left or
+            right walls because when the ball touches those walls, the player or the opponent should gain points, and
+            the ball should be reset to the center. We will implement that later.
+        </p>
+        <p><a href="https://github.com/abh-c/gameDemo3" target="_blank">Source code</a></p>
+    </section>
+
+    <section class="next-previous-wrapper">
+        <a href="js7.html">&lt; Previous</a>
+        <a href="js9.html">Next &gt;</a>
+    </section>
+
+    <nav class="course-nav">
+        <ul>
+            <li><a href="js1.html">Introduction</a></li>
+            <li><a href="js2.html">Lesson 1</a></li>
+            <li><a href="js3.html">Lesson 2</a></li>
+            <li><a href="js4.html">Lesson 3</a></li>
+            <li><a href="js5.html">Lesson 4</a></li>
+            <li><a href="js6.html">Lesson 5</a></li>
+            <li><a href="js7.html">Lesson 6</a></li>
+            <li><a href="js8.html">Lesson 7</a></li>
+            <li><a href="js9.html">Lesson 8</a></li>
+            <li><a href="js10.html">Lesson 9</a></li>
+            <li><a href="js11.html">Lesson 10</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>
+            NEXT GEN STEM <br> CONNECTICUT, USA
+        </p>
+        <img src="../images/Mail-Icon-White-on-Grey.jpg" style="width:65px; height:65px">
+    </footer>
+</body>
+
+</html>

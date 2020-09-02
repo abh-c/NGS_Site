@@ -21,7 +21,7 @@
     </nav>
 
     <section class="section-1">
-        <h1>JavaScript - Lesson 4</h1>
+        <h1>JavaScript - Game Part 1</h1>
         <p>
             In this lesson we will begin to make a simple game using html and JavaScript!
         </p>
@@ -82,6 +82,12 @@
             canvas, we need to create a variable storing the canvas and the context. To do so, add these lines of code
             at the beginning of the game.js file:
         </p>
+        <section class="code">
+            <pre>
+            <code>let canvas = document.getElementById("gameCanvas");</code>
+            <code>let context = canvas.getContext("2d");</code>
+            </pre>
+        </section>
         <p>
             With this, we get declare the canvas variable getting the element with id <code>"gameCanvas"</code>, which
             is what I named my canvas in the html file. Whatever you call your canvas, make your you write the correct
@@ -103,6 +109,63 @@
                 <code>context.closePath();</code>
             </pre>
         </section>
+        <p>
+            You draw the shape between the begin and end path functions. First, you draw a rectangle with the
+            <code>.rect(x, y, w, h)</code> function with parameters x position, y position, width, and height in pixels.
+            Note: the x and y values code for the x and y coordinates of the top-left corner of the rectangle. Then, you
+            set the <code>fillStyle</code> property of the context to a color, in this case a hexadecimal color code.
+            Then, you fill the shape with the color and end the path. The result should look like this:
+        </p>
+        <img src="jsimages/game2.png" alt="">
+        <p>
+            The coordinate grid in the canvas may be different from what you expect. The top left corner is actually (0,
+            0), so the x value increases to the right and becomes negative to the left of the canvas, and the y value
+            increases downward and becomes negative above the canvas.
+        </p>
+        <img src="jsimages/game3.png" alt="">
+        <p>
+            You can also draw a circle like this:
+        </p>
+        <section class="code">
+            <pre>
+            <code>// draws a white circle</code>
+            <code>context.beginPath();</code>
+            <code>context.arc(200, 200, 10, 0, Math.PI * 2);</code>
+            <code>context.fillStyle = "#ffffff";</code>
+            <code>context.fill();</code>
+            <code>context.closePath();</code>
+            </pre>
+        </section>
+        <p>
+            The parameters for the arc function in order are the x coordinate of the center of the arc, the y coordinate
+            of the center, the radius, the starting angle in radians, the ending angle in radians, (and another optional
+            parameter that determines direction to draw the arc, not used here). Since this arc starts at 0 radians and
+            ends at 2 PI radians, it actually draws an entire circle, so the direction of the arc is irrelevant.
+        </p>
+        <p>You can draw text like this:</p>
+        <section class="code">
+            <pre>
+            <code>// draws blue arial text</code>
+            <code>context.font = "32px arial";</code>
+            <code>context.fillStyle = "#0000ff";</code>
+            <code>context.fillText("Text", 300, 300);</code>
+            </pre>
+        </section>
+        <p>
+            The <code>fillText</code> parameters in order are the text string, the x coordinate, and the y
+            coordinate (you can also add an optional maximum width parameter, not used here).
+        </p>
+        <p>Here is what the browser screen now looks like:</p>
+        <img src="jsimages/game4.png" alt="">
+        <p>
+            That's all you need to know for this tutorial, but if you are ever confused about the functions used or
+            their parameters, don't be afraid to look them up. There are other ways to draw as well, like using
+            <code>canvas.strokeStyle</code> and <code>canvas.stroke()</code> to draw outlines of shapes or text, so you
+            can explore those as well.
+        </p>
+        <p>
+            <a href="https://github.com/abh-c/gameDemo1" target="_blank">Lesson source code</a>
+        </p>
     </section>
 
     <section class="next-previous-wrapper">
