@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Java, Python" />
+    <meta name="description" content="Free programming tutorials" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Next Gen Stem</title>
+</head>
+<!-- NOTE to self: alt + w to wrap text in a tag -->
+
+<body>
+    <nav class="nav-top">
+        <ul class="nav-top-ul">
+            <li><b><a href="../index.html" class="nav-top-link">Home</a></b></li>
+            <li><b><a href="../learntocode.html" class="nav-top-link">Learn to Code</a></b></li>
+            <li><b><a href="../about.html" class="nav-top-link">About</a></b></li>
+        </ul>
+    </nav>
+
+    <section class="section-1">
+        <h1>JavaScript - Game Part 6</h1>
+        <p>In this lesson we will add gaining points and winning the game.</p>
+        <hr>
+        <p>
+            Now we've gotten all the hard stuff out of the way, so we can handle gaining points and winning the game.
+            The way I am going to code it is that once the opponent gets 10 points, the game is over, but with what you
+            will learn, you can change the rules as you wish.
+        </p>
+        <p>
+            We can handle all this in the collision function, since that detects if the ball has hit the edges. Let's
+            declare score variables for each player and set up a function that displays the score. Remember how to
+            display text with JavaScript. Let's also call the function in the <code>draw()</code> function.
+        </p>
+        <section class="code">
+            <pre>
+            <code class='hl'>let playerScore = 0;</code>
+            <code class='hl'>let opponentScore = 0;</code>
+            <p>...</p>
+            <code class='hl'>function drawScore() {</code>
+            <code class='hl'>    context.font = "64px Courier New";</code>
+            <code class='hl'>    context.textAlign = "center";</code>
+            <code class='hl'>    context.fillStyle = "e0e0e0";</code>
+            <code class='hl'>    context.fillText(`${playerScore}                ${opponentScore}`, canvas.width / 2, 60);</code>
+            <code class='hl'>}</code>
+            <p>...</p>
+            <code>function draw() {</code>
+            <code>    context.clearRect(0, 0, canvas.width, canvas.height);</code>
+            <code>    drawBall();</code>
+            <code>    moveOpponentPaddle();</code>
+            <code>    drawPaddle(playerPaddle);</code>
+            <code>    drawPaddle(opponentPaddle);</code>
+            <code>    handleCollision();</code>
+            <code class='hl'>    drawScore();</code>
+            <code>    requestAnimationFrame(draw);</code>
+            <p>...</p>
+            </pre>
+        </section>
+        <p>
+            The large space between the player score and the opponent score in the printed string is on purpose to
+            separate the two numbers across the canvas. The screen should look something like this now:
+        </p>
+        <img src="jsimages/game8.png" alt="">
+        <p>
+            Now we need to update the score every time the ball hits the left or right edges by editing the collision
+            function:
+        </p>
+        <section class="code">
+            <pre>
+            <code>function handleCollision() {</code>
+            <code>    ballTop = ballY - BALL_SIZE;</code>
+            <code>    ballBottom = ballY + BALL_SIZE;</code>
+            <code></code>
+            <code>    if (ballX &lt; 0) {</code>
+            <code class='hl'>        opponentScore++;</code>
+            <code>        reposition();</code>
+            <code>    }</code>
+            <code>    else if (ballX &gt; canvas.width) {</code>
+            <code class='hl'>        playerScore++;</code>
+            <code>        reposition();</code>
+            <code>    }</code>
+            </pre>
+        </section>
+        <p>
+            Now the score should update with every point gained. All we have to do now to restart the game every time
+            the opponent gets 10 points. We can also do this in the collision function:
+        </p>
+        <section class="code">
+            <pre>
+            <code> function handleCollision() {</code>
+            <code>     ballTop = ballY - BALL_SIZE;</code>
+            <code>     ballBottom = ballY + BALL_SIZE;</code>
+            <code> </code>
+            <code>     if (ballX &lt; 0) {</code>
+            <code>         opponentScore++;</code>
+            <code>         reposition();</code>
+            <code class='hl'>         if (opponentScore === 10) {</code>
+            <code class='hl'>             alert(`GAME OVER, Score:${playerScore}`);</code>
+            <code class='hl'>             document.location.reload();</code>
+            <code class='hl'>         }     </code>
+            <code>     }</code>
+            </pre>
+        </section>
+        <p>
+            This will alert the browser with the player's score and then reload with the
+            <code>document.location.reload();</code> statement.
+        </p>
+        <p>
+            And that's all for this simple game. Now that you've written all this code, try to understand what each part
+            does and how each part works, and try to tweak the game to your liking or even make your own game! If you
+            want to make more complicated games, you can start researching using JS frameworks, like Phaser. Have fun!
+        </p>
+        <p><a href="https://github.com/abh-c/gameDemo6">Final Source Code</a></p>
+    </section>
+
+    <section class="next-previous-wrapper">
+        <a href="js9.html">&lt; Previous</a>
+        <a href="js11.html">Next &gt;</a>
+    </section>
+
+    <nav class="course-nav">
+        <ul>
+            <li><a href="js1.html">Introduction</a></li>
+            <li><a href="js2.html">Lesson 1</a></li>
+            <li><a href="js3.html">Lesson 2</a></li>
+            <li><a href="js4.html">Lesson 3</a></li>
+            <li><a href="js5.html">Lesson 4</a></li>
+            <li><a href="js6.html">Lesson 5</a></li>
+            <li><a href="js7.html">Lesson 6</a></li>
+            <li><a href="js8.html">Lesson 7</a></li>
+            <li><a href="js9.html">Lesson 8</a></li>
+            <li><a href="js10.html">Lesson 9</a></li>
+            <li><a href="js11.html">Lesson 10</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>
+            NEXT GEN STEM <br> CONNECTICUT, USA
+        </p>
+        <img src="../images/Mail-Icon-White-on-Grey.jpg" style="width:65px; height:65px">
+    </footer>
+</body>
+
+</html>
