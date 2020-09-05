@@ -325,6 +325,7 @@ section button.email-button:hover {
 /* Make header h1 bigger */
 .homepage-header h1 {
     font-size: 70px;
+    text-shadow: 0 2px 7px #000000;
 }
 
 /* For the subtitle below NEXT GEN STEM in the header */
@@ -333,6 +334,7 @@ section button.email-button:hover {
     color: hsl(0, 0%, 98%);
     margin-top: 10px;
     margin-bottom: 20px;
+    text-shadow: 0 2px 7px #000000;
 }
 
 .homepage-p {
