@@ -292,7 +292,7 @@ section button.email-button:hover {
 
 /* Style the header (only for the homepage) */
 .homepage-header {
-    background-image: url("images/ezgif.com-video-to-gif.gif");
+    background-image: url("images/code-2.mp4");
     background-size: cover;
     background-position: inherit;
     height: 600px;
@@ -336,8 +336,8 @@ section button.email-button:hover {
 }
 
 .homepage-p {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin: 30px auto;
+    max-width: 30rem;
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: 24px;
