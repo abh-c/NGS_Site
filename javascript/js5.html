@@ -32,45 +32,48 @@
             use objects. These are the basics.
         </p>
         <p>
-            You can instantiate objects using the <code>new</code> keyword or by using an <em>object initializer</em>.
+            You can <em>instantiate</em>, or create, objects using the <code>new</code> keyword or by using an
+            <em>object initializer</em>.
         </p>
         <p><code>new</code> keyword syntax:</p>
         <section class="code">
             <pre>
-                <code>let myObject = new Object();</code>
-                <code>myObject.key1 = 1;</code>
-                <code>myObject.key2 = "2";</code>
-                <code>myObject.key3 = false;</code>
+        <code>let myObject = new Object();</code>
+        <code>myObject.key1 = 1;</code>
+        <code>myObject.key2 = "2";</code>
+        <code>myObject.key3 = false;</code>
             </pre>
         </section>
         <p>Object initializer:</p>
         <section class="code">
             <pre>
-                <code>let myObject = {</code>
-                <code>	key1: 1,</code>
-                <code>	key2: "2",</code>
-                <code>	key3: false</code>
-                <code>};</code>
+        <code>let myObject = {</code>
+        <code>	key1: 1,</code>
+        <code>	key2: "2",</code>
+        <code>	key3: false</code>
+        <code>};</code>
             </pre>
         </section>
         <p>
-            Both these techniques have the same effect. As you can see, each property of an object has a key associated
-            with a value. The key is basically just a variable, and you can access it using dot notation
+            Both these techniques have the same effect. As you can see, each property of an object has a <em>key</em>
+            associated
+            with a value. The key is basically just a variable, and you can access it using dot notation like this
             <code>objectName.propertyName</code>. You can also declare new properties like in the first example by just
             saying <code>objectName.newPropertyName = [value]</code>, and you can reassign existing property names in
-            the same way as well. Any piece of data can be a value, even arrays and functions.
+            the same way as well. Properties can store any data type, even arrays and functions.
         </p>
         <p>
-            It is good to think about objects in an intuitive way. Real world physical objects also have names and
+            A good way to get a more intuitive understanding of Objects is to compare them to real-life objects.. Real
+            world physical objects also have names and
             properties, and those traits can be expressed in an object. For example:
         </p>
         <section class="code">
             <pre>
-                <code>let cat = {</code>
-                <code>    name: "Mittens",</code>
-                <code>    furColorRBG: [148, 112, 91],</code>
-                <code>    sound: () => { alert("meow"); },</code>
-                <code>};</code>
+        <code>let cat = {</code>
+        <code>    name: "Mittens",</code>
+        <code>    furColorRBG: [148, 112, 91],</code>
+        <code>    sound: () => { alert("meow"); },</code>
+        <code>};</code>
             </pre>
         </section>
         <p>
@@ -80,7 +83,7 @@
             <code>cat.sound()</code>. The alert function creates a pop-up alert in the browser.
         </p>
         <p>
-            Something you should know is that you can be some basic coding in the console itself. You can do anything
+            Something you should know is that you can do some basic coding in the console itself. You can do anything
             you can do in regular JS, like creating variables and running functions. Try entering
             <code>cat.sound();</code> into the console. You should see an alert.
         </p>
@@ -96,22 +99,26 @@
         <hr>
         <h3>Classes</h3>
         <p>
-            Sometimes you want to make multiple of the same type of object. You can do this by defining a class, which
+            Sometimes you want to make multiple of the same type of object. You can do this by defining a
+            <em>class</em>, which
             you can think of as a blueprint for creating objects. You can define a class using the <code>class</code>
             keyword. Classes require a constructor function which set the values of its properties when an object is
-            <em>instantiated</em> or created. An object is instantiated because it is known as an <em>instance</em> of a
+            <em>instantiated</em>, or created. The creation of an object is called instantiatiation because an object is
+            known
+            as an <em>instance</em> of
+            a
             class. Let's say we want to make a <code>Cat</code> class to create multiple cats easily. Here is how you
             could do that:
         </p>
         <section class="code">
             <pre>
-                <code>class Cat {</code>
-                <code>    constructor(name, furColor, sound) {</code>
-                <code>        this.name = name;</code>
-                <code>        this.furColorRBG = furColor;</code>
-                <code>        this.sound = sound;</code>
-                <code>    }</code>
-                <code>}</code>
+        <code>class Cat {</code>
+        <code>    constructor(name, furColor, sound) {</code>
+        <code>        this.name = name;</code>
+        <code>        this.furColorRBG = furColor;</code>
+        <code>        this.sound = sound;</code>
+        <code>    }</code>
+        <code>}</code>
             </pre>
         </section>
         <p>
@@ -122,7 +129,7 @@
         </p>
         <section class="code">
             <pre>
-                <code>let myCat = new Cat("Mittens", [148, 112, 91], () => { alert("meow"); });</code>
+        <code>let myCat = new Cat("Mittens", [148, 112, 91], () => { alert("meow"); });</code>
             </pre>
         </section>
         <p>
@@ -130,23 +137,24 @@
         </p>
         <section class="code">
             <pre>
-                <code>let myCat2 = new Cat("John", [0, 0, 0], () => { alert("meow"); });</code>
+        <code>let myCat2 = new Cat("John", [0, 0, 0], () => { alert("meow"); });</code>
             </pre>
         </section>
         <p>This cat is named John and has black fur.</p>
         <p>
             You can also make a default values for parameters just like in function definitions. Here is an example
-            where the third parameter is set to the default function:
+            where the third parameter is set to the sound function if no third parameter is used during
+            instantiatiation:
         </p>
         <section class="code">
             <pre>
-                <code>class Cat {</code>
-                <code>    constructor(name, furColor, sound = () => { alert("meow"); }) {</code>
-                <code>        this.name = name;</code>
-                <code>        this.furColorRBG = furColor;</code>
-                <code>        this.sound = sound;</code>
-                <code>    }</code>
-                <code>}</code>
+        <code>class Cat {</code>
+        <code>    constructor(name, furColor, sound = () => { alert("meow"); }) {</code>
+        <code>        this.name = name;</code>
+        <code>        this.furColorRBG = furColor;</code>
+        <code>        this.sound = sound;</code>
+        <code>    }</code>
+        <code>}</code>
             </pre>
         </section>
         <p>
@@ -160,9 +168,9 @@
         </p>
         <section class="code">
             <pre>
-                <code>([parameters]) => {[code]}</code>
+        <code>([parameters]) => {[code]}</code>
                             <p>OR</p>
-                <code>([parameters]) => [expression of code] // returns the expression</code>
+        <code>([parameters]) => [expression of code] // returns the expression</code>
             </pre>
         </section>
         <p>
@@ -176,12 +184,13 @@
         <p>
             There are other differences between regular functions and arrow functions, which you may want to research.
             Generally, arrow functions are not used in class definitions and are not used when declaring a function that
-            you want to reuse with the <code>variable.method()</code> syntax.
+            you want to reuse with the <code>variable.functionName()</code> syntax.
         </p>
         <p>
-            This concludes our basic overview of JavaScript. There are many, many more important and useful aspect of JS
-            that we have not explored yet, of course. Some to look into would be the rest syntax, destructuring, the
-            many uses of arrow functions, and the many methods used in actual JS development.
+            This concludes our basic overview of JavaScript. There are many more important and useful aspects of JS
+            that we have not explored yet, of course. Some to look into would be the <em>rest</em> syntax,
+            destructuring, the
+            many uses of arrow functions, and the many common methods used in actual JS development.
         </p>
     </section>
 
@@ -197,12 +206,12 @@
             <li><a href="js3.html">Lesson 2</a></li>
             <li><a href="js4.html">Lesson 3</a></li>
             <li><a href="js5.html">Lesson 4</a></li>
-            <li><a href="js6.html">Lesson 5</a></li>
-            <li><a href="js7.html">Lesson 6</a></li>
-            <li><a href="js8.html">Lesson 7</a></li>
-            <li><a href="js9.html">Lesson 8</a></li>
-            <li><a href="js10.html">Lesson 9</a></li>
-            <li><a href="js11.html">Lesson 10</a></li>
+            <li><a href="js6.html">Game 1</a></li>
+            <li><a href="js7.html">Game 2</a></li>
+            <li><a href="js8.html">Game 3</a></li>
+            <li><a href="js9.html">Game 4</a></li>
+            <li><a href="js10.html">Game 5</a></li>
+            <li><a href="js11.html">Game 6</a></li>
         </ul>
     </nav>
 

@@ -28,50 +28,53 @@
         <hr class="hr-1">
         <p>
             <b>
-                A note: capitalization is very important in JS. Keywords like <em>var</em> and <em>while</em> must have
-                the proper capitalization, which is no caps in this case. If your code is giving you errors, make sure
+                A note: capitalization is very important in JavaScript. Keywords like <em>var</em> and <em>while</em>
+                must have
+                the proper capitalization, which is all lower-case in this case. If your code is giving you errors or
+                is not working, make sure
                 you have the right capitalization.
             </b>
         </p>
         <p>
             <b>
-                There are some restrictions on what you can name your variables as
-                well, but common practice is to use camel casing, or capitalizing the
+                Common practice for variable names is to use camel casing, or capitalizing the
                 beginning of every word except the first, like this: <code>exampleVariableName</code>. Another thing to
                 note is that the first character
-                of a variable name cannot be a number.
+                of a variable name cannot be a number, and variable names cannot include spaces.
             </b>
         </p>
         <hr>
         <h3>While Loops</h3>
         <p>
-            Loops are used when you want to repeat a specific section of code multiple times.
+            Loops are used when you want to repeat a specific section of code multiple times. Loops run while the
+            <em>condition</em> is true and end when the condition is detected as false at the start of a loop.
         </p>
         <p>
             <em>While loops</em> are one kind of loop with this syntax:
         </p>
         <section class="code">
             <pre>
-                <code>While ([condition]) {</code>
-                <code>  [run this section of code]</code>
-                <code>}</code>
+        <code>while ([condition is true]) {</code>
+        <code>  [run this section of code]</code>
+        <code>}</code>
             </pre>
         </section>
         <p>This is an example:</p>
         <section class="code">
             <pre>
-                <code>let i = 0;</code>
-                <code>while (i &lt; 10) {</code>
-                <code>  console.log(i);</code>
-                <code>  i++;</code>
-                <code>}</code>
+        <code>let i = 0;</code>
+        <code>while (i &lt; 10) {</code>
+        <code>  console.log(i);</code>
+        <code>  i++;</code>
+        <code>}</code>
             </pre>
         </section>
         <p>
             In English, this loop means "While the variable <code>i</code> is less than 10, log <code>i</code> to the
             console and increment <code>i</code> by
             1". This means that the loop will run 10 times and print the numbers 0 through 9 to the console. The loop
-            will not print the 10 to the console, because 10 is not less than 10, so the condition is false and the loop
+            will not print the 10 to the console, because 10 is not less than 10, so the condition is <code>false</code>
+            and the loop
             ends. If we wanted to include 10 in the loop we could have made the condition <code>i &lt;= 10</code>, or
             <code>i</code> is less than
             or equal to 10. Here is a list of important comparison operators in JS:
@@ -114,15 +117,15 @@
             </tr>
         </table>
         <p>Notice that the equality operators are not single equals signs because that is already the operator used to
-            assign values to variables.</p>
+            assign values to variables, the <em>assignment operator</em>.</p>
         <p>You may have noticed that there are two equality operators, <code>==</code> and <code>===</code>. The
             difference is that the double equals sign operator tries to ignore the variable type of the values being
             compared. For example, the expression
             <code>2 == "2"</code> would return <code>true</code>. The triple equals sign operator takes type into
             account, so <code>2 === "2"</code> would return <code>false</code>. The same principle applies to the
             inequality operators. So <code>2 != "2"</code> would
-            return <code>false</code>, because this operator thinks that the values are equal, and the inequality
-            operator only returns <code>true</code> if the
+            return <code>false</code>, because this operator thinks that the values are equal, and inequality
+            operators only return <code>true</code> if the
             two values are NOT equal. Likewise, <code>2 !== "2"</code> would return <code>true</code>, because the
             operator thinks that
             <code>2</code> and <code>"2"</code> are NOT equal.</p>
@@ -130,7 +133,8 @@
             <b>
                 To avoid bugs in your code, you should probably stick to using the strict equality and inequality
                 operators
-                <code>===</code> and <code>!==</code>.
+                <code>===</code> and <code>!==</code>. The <code>==</code> and <code>!=</code> operators may be useful
+                in specific cases.
             </b>
         </p>
         <p>
@@ -150,23 +154,24 @@
             again for every time the condition is true. Here is the format:</p>
         <section class="code">
             <pre>
-                <code>do {</code>
-                <code>  [run this section of code]</code>
-                <code>} while ([condition])</code>
+        <code>do {</code>
+        <code>  [run this section of code]</code>
+        <code>} while ([condition])</code>
             </pre>
         </section>
         <p>For example:</p>
         <section class="code">
             <pre>
-                <code>let i = 0;</code>
-                <code>do {</code>
-                <code>  console.log(i);</code>
-                <code>  i++;</code>
-                <code>} while(i &lt; -1)</code>
+        <code>let i = 0;</code>
+        <code>do {</code>
+        <code>  console.log(i);</code>
+        <code>  i++;</code>
+        <code>} while(i &lt; -1)</code>
             </pre>
         </section>
         <p>
-            This will console log 0 once before the loop ends, even though the condition is never <code>true</code>.
+            This will console log <code>0</code> once before the loop ends, even though the condition is never
+            <code>true</code>.
             This may be useful occasionally.
         </p>
         <hr>
@@ -178,23 +183,26 @@
         </p>
         <section class="code">
             <pre>
-                <code>for ([initialize variable]; [condition]; [iteration]) {</code>
-                <code>	[run this section of code]</code>
-                <code>}</code>
+        <code>for ([initialize variable]; [condition]; [iteration]) {</code>
+        <code>	[run this section of code]</code>
+        <code>}</code>
             </pre>
         </section>
-        <p>All three values are actually optional, but you have to put in the semicolons either way.</p>
+        <p>
+            You usually declare an iterator variable as the first statement, write the condition as the second
+            statement, and iterate the variable in the third statement.
+        </p>
         <p>This is an example:</p>
         <section class="code">
             <pre>
-                <code>for (let i = 0; i &lt; 10; i++) {</code>
-                <code>  console.log(i);</code>
-                <code>}</code>
+        <code>for (let i = 0; i &lt; 10; i++) {</code>
+        <code>  console.log(i);</code>
+        <code>}</code>
             </pre>
         </section>
         <p>This results in the same output as the first example while loop, but much more efficiently.</p>
         <p>Note: you can put in any statement for the iteration, not just <code>i++</code>. Something like <code>i +=
-                1</code> would also be valid, for example.</p>
+                2</code> would also be valid, for example.</p>
         <p>There are some other kinds of loops, but these are the most common.</p>
         <hr>
         <h3>Arrays</h3>
@@ -204,7 +212,7 @@
         </p>
         <section class="code">
             <pre>
-                <code>let arr = [1, "string", true, 2];</code>
+        <code>let arr = [1, "string", true, 2];</code>
             </pre>
         </section>
         <p>
@@ -213,20 +221,20 @@
         </p>
         <section class="code">
             <pre>
-                <code>let arr = [[1, 0, 1],</code>
-                <code>           [0, 1, 0],</code>
-                <code>           [1, 0, 1]];</code>
+        <code>let arr = [[1, 0, 1],</code>
+        <code>           [0, 1, 0],</code>
+        <code>           [1, 0, 1]];</code>
             </pre>
         </section>
         <p>
-            Access array elements using bracket notation. Each element in an array is given a number, starting with 0.
+            Access array elements using <em>bracket notation</em>. Each element in an array is given a number, starting
+            with 0.
             Access elements like this: <code>arrayName[index]</code>. For example:
         </p>
         <section class="code">
             <pre>
-                <code>let arr = [1, "string", true, 2];</code>
-                <code>let a = arr[0];</code>
-                <code>console.log(a);</code>
+        <code>let arr = [1, "string", true, 2];</code>
+        <code>console.log(arr[0]);</code>
             </pre>
         </section>
         <p>
@@ -241,29 +249,28 @@
             can do <code>arr[arr.length – 1]</code> to get the last element of an array. You can use
             <code>arr[arr.length – 2]</code> for the second to last element, etc.
         </p>
-        <p>Accessing properties like this is called <em>dot notation</em>.</p>
         <p>To access nested arrays, simply add as many brackets as you need. For example:</p>
         <section class="code">
             <pre>
-                <code>let arr = [[1, 0, 1],</code>
-                <code>           [0, 1, 0],</code>
-                <code>           [1, 0, 1]];</code>
-                <code>console.log(arr[1][0]);</code>
+        <code>let arr = [[1, 0, 1],</code>
+        <code>           [0, 1, 0],</code>
+        <code>           [1, 0, 1]];</code>
+        <code>console.log(arr[1][0]);</code>
             </pre>
         </section>
         <p>
-            The first bracket <code>[1]</code> accesses the second element, <code>[0, 1, 0]</code> and the
+            The first bracket <code>[1]</code> accesses the second element, <code>[0, 1, 0]</code>, and the
             <code>[0]</code> accesses the first element of that array, which is <code>0</code>.
         </p>
         <p>A triple-layer array would require three bracket indexes, etc.</p>
         <p>Note: you can access strings the same way. Example:</p>
         <section class="code">
             <pre>
-                <code>let str = "Hello world!";</code>
-                <code>console.log(str[0]);</code>
+        <code>let str = "Hello world!";</code>
+        <code>console.log(str[0]);</code>
             </pre>
         </section>
-        <p>The result would be <code>"H"</code></p>
+        <p>The result would be <code>"H"</code>.</p>
         <hr>
         <h3>Accessing Arrays with For Loops</h3>
         <p>
@@ -271,30 +278,32 @@
         </p>
         <section class="code">
             <pre>
-                <code>let arr = [0, 1, 2, 3, 4, 5];</code>
-                <code>for (let i = 0; i &lt; arr.length; i++) {</code>
-                <code>	console.log(arr[i]);</code>
-                <code>}</code>
+        <code>let arr = [0, 1, 2, 3, 4, 5];</code>
+        <code>for (let i = 0; i &lt; arr.length; i++) {</code>
+        <code>	console.log(arr[i]);</code>
+        <code>}</code>
             </pre>
         </section>
         <p>This would print every element in the array.</p>
         <p>Arrays with nested arrays can also be accessed with nested loops:</p>
         <section class="code">
             <pre>
-                <code>let arr = [[1, 0, 1],</code>
-                <code>           [0, 1, 0],</code>
-                <code>           [1, 0, 1]];</code>
-                <code>}</code>
-                <code>for (let i = 0; i &lt; arr.length; i++) {</code>
-                <code>	for (let j = 0; j &lt; arr[i].length; j++) {</code>
-                <code>		console.log(arr[i][j]);</code>
-                <code>	}</code>
-                <code>}</code>
+        <code>let arr = [[1, 0, 1],</code>
+        <code>           [0, 1, 0],</code>
+        <code>           [1, 0, 1]];</code>
+        <code>for (let i = 0; i &lt; arr.length; i++) {</code>
+        <code>  for (let j = 0; j &lt; arr[i].length; j++) {</code>
+        <code>      console.log(arr[i][j]);</code>
+        <code>  }</code>
+        <code>}</code>
             </pre>
         </section>
         <p>
             This prints out every element in order. Notice for the inner loop, the length of the array elements have to
-            be accessed, which is why we access <code>arr[i].length</code> instead of <code>arr.length</code>.
+            be accessed, which is why we access <code>arr[i].length</code>.
+        </p>
+        <p>
+            You could use these loops to manipulate the elements of arrays in some way.
         </p>
         <hr>
         <h3>Manipulating Arrays</h3>
@@ -304,28 +313,31 @@
         </p>
         <section class="code">
             <pre>
-                <code>varName.functionName([parameters]);</code>
+        <code>varName.functionName([parameters]);</code>
             </pre>
         </section>
         <p>
             Methods are called with a dot and take in parameters between the braces. Parameters are separated by commas.
-            There could be any number of parameters and a variable amount depending on the method. There could also be
+            There could be any number of parameters and a varying amount depending on how the method is used. There
+            could also be
             zero parameters with nothing between the braces.
         </p>
         <p>
             For example, if we wanted to add an element to the end of an array, we would use the <code>.push()</code>
-            method. This method takes in any number of new elements separated by commas and "pushes" them onto the end
+            method. This method takes in any number of new elements separated by commas and appends them onto the end
             of an array. For example:
         </p>
         <section class="code">
             <pre>
-                <code>let arr = [1, 2, 3];</code>
-                <code>arr.push(4, 5);</code>
+        <code>let arr = [1, 2, 3];</code>
+        <code>arr.push(4, 5);</code>
             </pre>
         </section>
         <p>
             The resulting array stores <code>[1, 2, 3, 4, 5]</code>. The new elements have been appended to the end.
-            Each method also returns some value, which could be useful. For example, the <code>.push()</code> method
+        </p>
+        <p>
+            Methods also return potentially useful values. For example, the <code>.push()</code> method
             returns the length of the new array. So, doing <code>console.log(arr.push(4, 5))</code> in this instance
             would output <code>5</code>, because that is the new length of the array.
         </p>
@@ -341,8 +353,8 @@
         </p>
         <section class="code">
             <pre>
-                <code>let arr = [1, 2, 3, 4, 5];</code>
-                <code>let lastElement = arr.pop(); // lastElement is now 5</code>
+        <code>let arr = [1, 2, 3, 4, 5];</code>
+        <code>let lastElement = arr.pop(); // lastElement is now 5</code>
             </pre>
         </section>
         <p>
@@ -353,7 +365,7 @@
         </p>
         <section class="code">
             <pre>
-                <code>let lastElement = [1, 2, 3, 4, 5].pop();</code>
+        <code>let lastElement = [1, 2, 3, 4, 5].pop();</code>
             </pre>
         </section>
         <p>
@@ -401,12 +413,12 @@
         </p>
         <section class="code">
             <pre>
-                <code>// global scope outside any surrounding structure</code>
-                <code>var i = 0;</code>
-                <code>while (i &lt; 10) {</code>
-                <code>	// the scope of the while loop between the curly braces</code>
-                <code>	i++;</code>
-                <code>}</code>
+        <code>// global scope outside any surrounding structure</code>
+        <code>var i = 0;</code>
+        <code>while (i &lt; 10) {</code>
+        <code>  // the scope of the while loop between the curly braces</code>
+        <code>  i++;</code>
+        <code>}</code>
             </pre>
         </section>
         <p>
@@ -433,9 +445,9 @@
         </p>
         <section class="code">
             <pre>
-                <code>if ([condition]) {</code>
-                <code>	[run this code]</code>
-                <code>}</code>
+        <code>if ([condition]) {</code>
+        <code>  [run this code]</code>
+        <code>}</code>
             </pre>
         </section>
         <p>
@@ -443,12 +455,12 @@
         </p>
         <section class="code">
             <pre>
-                <code>if ([condition]) {</code>
-                <code>	[run this code if the condition is true]</code>
-                <code>}</code>
-                <code>else {</code>
-                <code>	[run this code if the condition is false]</code>
-                <code>}</code>
+        <code>if ([condition]) {</code>
+        <code>  [run this code if the condition is true]</code>
+        <code>}</code>
+        <code>else {</code>
+        <code>  [run this code if the condition is false]</code>
+        <code>}</code>
             </pre>
         </section>
         <p>
@@ -456,75 +468,78 @@
         </p>
         <section class="code">
             <pre>
-                <code>if ([condition 1]) {</code>
-                <code>	[run this code if condition 1 is true]</code>
-                <code>}</code>
-                <code>else if ([condition 2]) {</code>
-                <code>	[run this code if condition 1 is false and condition 2 is true]</code>
-                <code>}</code>
+        <code>if ([condition 1]) {</code>
+        <code>  [run this code if condition 1 is true]</code>
+        <code>}</code>
+        <code>else if ([condition 2]) {</code>
+        <code>  [run this code if condition 1 is false and condition 2 is true]</code>
+        <code>}</code>
             </pre>
         </section>
         <p>
-            You link as many else-if statements as you want, and a simple else statement must be the last statement in
+            You link as many else-if statements as you want, and a simple else statement should be the last statement in
             the if chain. For example, here is an if statement that prints the letter grade corresponding to a number
             grade:
         </p>
         <section class="code">
             <pre>
-                <code>let letterGrade = 86;</code>
-                <code></code>
-                <code>if (letterGrade >= 90) {</code>
-                <code>	console.log("A");</code>
-                <code>}</code>
-                <code>else if (letterGrade >= 80) {</code>
-                <code>	console.log("B");</code>
-                <code>}</code>
-                <code>else if (letterGrade >= 70) {</code>
-                <code>	console.log("C");</code>
-                <code>}</code>
-                <code>else if (letterGrade >= 60) {</code>
-                <code>	console.log("D");</code>
-                <code>}</code>
-                <code>else {</code>
-                <code>	console.log("F");</code>
-                <code>}</code>
+        <code>let letterGrade = 86;</code>
+        <code></code>
+        <code>if (letterGrade >= 90) {</code>
+        <code>  console.log("A");</code>
+        <code>}</code>
+        <code>else if (letterGrade >= 80) {</code>
+        <code>  console.log("B");</code>
+        <code>}</code>
+        <code>else if (letterGrade >= 70) {</code>
+        <code>  console.log("C");</code>
+        <code>}</code>
+        <code>else if (letterGrade >= 60) {</code>
+        <code>  console.log("D");</code>
+        <code>}</code>
+        <code>else {</code>
+        <code>  console.log("F");</code>
+        <code>}</code>
             </pre>
         </section>
+        <p>This should return <code>"B"</code>.</p>
         <p>
             The difference between a series of independent if statements and a chain of else-if statements is that after
             one of the else-if statements' condition is true and its code runs, no other else-if or else statement will
-            run. Each in a series of if statements has the capability of running.
+            run. Each in a series of if statements is checked and could run.
         </p>
         <p>
             You can also use multiple conditions in a single if statement using the <em>and operator</em>
             <code>&&</code> and <em>or operator</em> <code>||</code>. Statements with the and operator return true if
             both statements compared are true, and statements with the or operator return true if at least one of the
-            statements are true. Parentheses and help decide which conditions to resolve first. For example:<em></em>
+            statements are true. Parentheses help decide which conditions to resolve first. For example:<em></em>
         </p>
         <section class="code">
             <pre>
-                <code>let a = true;</code>
-                <code>let b = true;</code>
-                <code>let c = false;</code>
-                <code></code>
-                <code>consle.log(a || (b && c)); // this returns true</code>
+        <code>let a = true;</code>
+        <code>let b = true;</code>
+        <code>let c = false;</code>
+        <code></code>
+        <code>consle.log(a || (b && c)); // this returns true</code>
             </pre>
         </section>
         <p>
             The <code>b && c</code> expression returns <code>false</code> because <code>c</code> is <code>false</code>.
-            However, since <code>a</code> is <code>true</code>, the whole expression is <code>true</code>.<code></code>
+            However, since <code>a</code> is <code>true</code>, the whole expression is <code>true</code> because of the
+            or operator.
         </p>
         <p>
-            Something else to consider is that you can end a loop early with a break statement, most effectively by
+            Something else to consider is that you can end a loop early with a <code>break</code> statement, most
+            effectively by
             using an if statement. For example:
         </p>
         <section class="code">
             <pre>
-                <code>for (let i = 0, i &lt; 10; i++) {</code>
-                <code>	if (i === 5) {</code>
-                <code>		break; // this ends the loop prematurely when i is 5</code>
-                <code>	}</code>
-                <code>}</code>
+        <code>for (let i = 0, i &lt; 10; i++) {</code>
+        <code>  if (i === 5) {</code>
+        <code>      break; // this ends the loop prematurely when i is 5</code>
+        <code>  }</code>
+        <code>}</code>
             </pre>
         </section>
         <p>This may be useful in various circumstances.</p>
@@ -537,9 +552,9 @@
         <p>Here is the syntax for writing a function:</p>
         <section class="code">
             <pre>
-                <code>function functionName([parameters]) {</code>
-                <code>	[code]</code>
-                <code>}</code>
+        <code>function functionName([parameters]) {</code>
+        <code>  [code]</code>
+        <code>}</code>
             </pre>
         </section>
         <p>
@@ -547,21 +562,23 @@
         </p>
         <p>
             Let's write an example function – a function that returns the factorial of an integer. The factorial of an
-            integer is the product of the number and every number fewer than it. For example, 4 factorial is equal to 4
-            * 3 *2 * 1 = 24. We can replicate this using a while loop. Try to figure this out for yourself first, then
+            integer is the product of the number and every positive integer fewer than it. For example, 4 factorial is
+            equal to 4
+            * 3 * 2 * 1 = 24. We can replicate this using a while loop. Try to figure this out for yourself first, then
             look at one possible answer:
+            <br><br><br>
         </p>
         <section class="code">
             <pre>
-                <code>function factorial(num) {</code>
-                <code>	let result = 1;</code>
-                <code>	while (num &gt; 0) {</code>
-                <code>		result *= num;</code>
-                <code>		num--;</code>
-                <code>	}</code>
-                <code></code>
-                <code>	return result;</code>
-                <code>}</code>
+        <code>function factorial(num) {</code>
+        <code>  let result = 1;</code>
+        <code>  while (num &gt; 0) {</code>
+        <code>      result *= num;</code>
+        <code>      num--;</code>
+        <code>  }</code>
+        <code></code>
+        <code>  return result;</code>
+        <code>}</code>
             </pre>
         </section>
         <p>
@@ -583,9 +600,9 @@
         </p>
         <section class="code">
             <pre>
-                <code>function factorial(num = 1) { // 1 is the default parameter</code>
-                <code>	[code]</code>
-                <code>}</code>
+        <code>function factorial(num = 1) { // 1 is the default parameter</code>
+        <code>  [code]</code>
+        <code>}</code>
             </pre>
         </section>
         <p>
@@ -606,12 +623,12 @@
             <li><a href="js3.html">Lesson 2</a></li>
             <li><a href="js4.html">Lesson 3</a></li>
             <li><a href="js5.html">Lesson 4</a></li>
-            <li><a href="js6.html">Lesson 5</a></li>
-            <li><a href="js7.html">Lesson 6</a></li>
-            <li><a href="js8.html">Lesson 7</a></li>
-            <li><a href="js9.html">Lesson 8</a></li>
-            <li><a href="js10.html">Lesson 9</a></li>
-            <li><a href="js11.html">Lesson 10</a></li>
+            <li><a href="js6.html">Game 1</a></li>
+            <li><a href="js7.html">Game 2</a></li>
+            <li><a href="js8.html">Game 3</a></li>
+            <li><a href="js9.html">Game 4</a></li>
+            <li><a href="js10.html">Game 5</a></li>
+            <li><a href="js11.html">Game 6</a></li>
         </ul>
     </nav>
 

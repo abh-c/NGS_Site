@@ -29,9 +29,9 @@
         <h3>Comments</h3>
         <p>
             When you are developing code with a team of other people or even if you are working alone writing a sizable
-            program, it is sometimes incredibly unclear what a specific part of code actually does, or why it does it in
-            that way. Other people may have coding styles different from your own, and you may even forget what you
-            meant certain parts of your own code to do over time. This is where comments come in.
+            program, it is sometimes unclear what a specific part of code actually does, or why it does it in
+            that way. Other people may have coding styles different from your own, and you may even forget how your own
+            code works over time. This is where comments come in.
         </p>
     </section>
 
@@ -77,7 +77,7 @@
         <h3>Intro to Variables</h3>
         <p>
             Any program needs to store and manipulate values. A convenient way to do this in JS is through the use of
-            variables. For example, let’s say we want to store the user’s name and then output it. Some code could
+            variables. For example, let’s say we want to store the user’s name and then output it. The code could
             look like this:
         </p>
     </section>
@@ -91,17 +91,18 @@
 
     <section class="section-1">
         <p>
-            A quick syntax lesson: every statement in JS should end in a semicolon (;). This isn't actually necessary in
+            <b>A quick syntax lesson:</b> every statement in JS should end in a semicolon (;). This isn't actually
+            necessary in
             JavaScript now, but I recommend doing it for clarity.
         </p>
         <p>
             In this case, the variable is <code>name</code>. Every variable in JavaScript has to be <em>declared</em>
             with a certain <em>keyword</em>. The keyword used in this example was <code>var</code>, but others may be
-            used in different situations. The single equals sign is the <em>assignment operator</em>. That operator
+            used in different situations. The single equals sign is the <em>assignment operator</em>. This operator
             assigns the value of what is to the right of the operator to the variable on the left of the operator.
         </p>
         <p>
-            This is a lot of terminology, and we'll get into it more down the road, but basically, we have just created
+            This is a lot of terminology, and we'll get into it more down the road, but, basically, we have just created
             a variable that stores the value <code>"Bob"</code>. We can <code>console.log</code> the variable name, and
             the output in the console should be the stored value, <code>"Bob"</code>.
         </p>
@@ -113,7 +114,8 @@
         <h3>Writing Strings</h3>
         <p>
             Before we get more into the details of variables, we can try manipulating strings as an example. Strings are
-            a type of variable which are basically a string (hence the name) of characters. A simple string like the
+            a type of variable which are basically a collection, or <em>string</em>, of characters. A simple string like
+            the
             previous example works just fine, but what happens if you want a string with
             quotation marks in it?
         </p>
@@ -122,8 +124,8 @@
             because it thinks that the string is closed at the second quotation mark.
         </p>
         <p>
-            One option is to replace the inner quotes with single quotes or the outer quotes with single quotes, because
-            as long as the quotes are different types, no error will occur. Both these examples work:
+            One option is to replace the inner quotes with single quotes or the outer quotes with single quotes because
+            as long as the inner and outer quotes are different types, no error will occur. Both these examples work:
         </p>
     </section>
 
@@ -136,7 +138,8 @@
 
     <section class="section-1">
         <p>
-            Another option is using something called an escape character. The escape character is just a backslash \ but
+            Another option is using something called an escape character. The escape character is just a backslash
+            <code>\</code> but
             if you put it directly before a quotation mark, the IDE will allow you to put a quote in the string. For
             example this is a valid string:
         </p>
@@ -150,8 +153,9 @@
 
     <section class="section-1">
         <p>
-            This would print out <code>"This is a "string with quotes"!"</code> in the console.
-            You can also escape single quotes in the same way like this: <code>\'</code> and insert actual backslashes
+            This would print out <code>This is a "string with quotes"!</code> in the console.
+            You can also escape single quotes in the same way like this: <code>\'</code>. And you can insert actual
+            backslashes
             by escaping a backslash like this: <code>\\</code>.
         </p>
         <p>
@@ -194,11 +198,12 @@
     <section class="section-1">
         <p>This is what results in the console:</p>
         <img src="jsimages/string2.png" alt="">
-        <p>The line break shows up and the variable <code>num</code> is shown as the value it stores.</p>
+        <p>The line break shows up and the variable <code>num</code> is shown as <code>42</code>, the value it stores.
+        </p>
         <p>
-            Using the <code>${}</code> interpolation syntax, any JS code can be run between those curly braces. For
+            Using the <code>${}</code> interpolation syntax, any JS code can be run between the curly braces. For
             example, replacing <code>${num}</code> with <code>${6 * 7}</code> would print the same result to the
-            console.
+            console because the code <code>6 * 7</code> would return <code>42</code>.
         </p>
     </section>
 
@@ -231,7 +236,7 @@
             </tr>
             <tr>
                 <td>%</td>
-                <td>Modulus</td>
+                <td>Modulo</td>
             </tr>
             <tr>
                 <td>**</td>
@@ -243,7 +248,7 @@
             You may not be familiar with the modulo operator. All it does is return the remainder of a division. For
             example, <code>3 % 2 = 1</code> because the remainder of 3/2 is 1. One use for this operator is determining
             if a number is divisible by another number because the result should be zero. For instance, you can tell if
-            a number is even if it modulo 2 is 0.
+            a number is even if that number modulo 2 is equal to 0.
         </p>
         <p>
             Try doing math with JavaScript to get used to the operators! Here is an example:
@@ -287,7 +292,8 @@
         <p>
             To increase the value stored in <code>num</code> by 3, you can reassign <code>num</code> to the current
             value
-            of <code>num</code> increased by 3. This extremely common phrase has a shortcut that looks like this:
+            of <code>num</code> increased by 3. Reassigning a variable to a value equal to itself plus another number
+            is extremely common. This has a shortcut that looks like this:
         </p>
     </section>
 
@@ -329,20 +335,20 @@
 
         <section class="code">
             <pre>
-                <code>num++; // This is equivalent to num += 1</code>
-                <code>num--; // This is equivalent to num -= 1</code>
+            <code>num++; // This is equivalent to num += 1</code>
+            <code>num--; // This is equivalent to num -= 1</code>
             </pre>
         </section>
 
         <hr class="hr-1">
         <h3>String Concatenation</h3>
         <p>
-            You can use one of these symbols to <em>concatenate</em>, or conjoin, strings. For example, the code:
+            You can the "plus" symbol to <em>concatenate</em>, or conjoin, strings. For example, the code:
         </p>
 
         <section class="code">
             <pre>
-                <code>console.log("Hello " + "there!");</code>
+            <code>console.log("Hello " + "there!");</code>
             </pre>
         </section>
 
@@ -364,18 +370,22 @@
         </p>
         <p>
             <em>Number</em>: one of the numerical data types in JavaScript, stores numbers, as you would expect. <br>
-            For example: <code>1, 2.0, 1412321, 3.1415</code>.
+            Examples: <code>1, 2.0, 1412321, 3.1415</code>.
         </p>
         <p>
-            <em>Boolean</em>: can only store the values true and false. <br>
+            <em>Boolean</em>: can only store the values <code>true</code> and <code>false</code>. These values are not
+            the same as
+            the strings <code>"true"</code> and <code>"false"</code>. They are unique Boolean-type values that are
+            written without enclosing quotes.<br>
         </p>
         <p>
             <em>String</em>: stores a "string" of characters. <br>
-            For example: <code>"The quick brown fox jumps over the lazy dog"</code>.
+            Example: <code>"The quick brown fox jumps over the lazy dog"</code>.
         </p>
         <p>
             Strings in JS are <em>immutable</em>, meaning they cannot be directly changed once created. A
-            variable can be assigned to another string, but no methods (which we will talk about later) can change
+            variable can be assigned to another string, but no methods/functions (which we will talk about later) can
+            change
             the string once assigned.
         </p>
         <p>
@@ -384,16 +394,20 @@
             organize your strings.
         </p>
         <p>
-            Variables can also be of type <code>null</code>, which only returns the value <code>null</code>. Variables
+            Variables can also be of type <code>null</code>, which only returns the value <code>null</code>.
+        </p>
+        <p>
+            Variables
             can also be of type <code>undefined</code>, which means that a variable has not been assigned a value yet.
         </p>
         <p>
             For example, the statement <code>let num;</code> does not assign the variable <code>num</code> a value, so
-            its type is <code>undefined</code>.
+            its type is <code>undefined</code> until it is assigned a value with the assignment operator.
         </p>
         <p>
-            The types listed so far are <em>primitive values</em>. Values of these types cannot be changed with
-            methods/functions (which we will talk about later).
+            The variable types listed so far are <em>primitive values</em>. Values of these types cannot be changed with
+            methods/functions (which we will talk about later). You can reassign a variable to a different primitive
+            value, but you cannot use a function to change the value.
         </p>
         <p>
             Variables that are not primitive types are known as Objects. These can be thought of as custom types of data
@@ -413,12 +427,12 @@
             <li><a href="js3.html">Lesson 2</a></li>
             <li><a href="js4.html">Lesson 3</a></li>
             <li><a href="js5.html">Lesson 4</a></li>
-            <li><a href="js6.html">Lesson 5</a></li>
-            <li><a href="js7.html">Lesson 6</a></li>
-            <li><a href="js8.html">Lesson 7</a></li>
-            <li><a href="js9.html">Lesson 8</a></li>
-            <li><a href="js10.html">Lesson 9</a></li>
-            <li><a href="js11.html">Lesson 10</a></li>
+            <li><a href="js6.html">Game 1</a></li>
+            <li><a href="js7.html">Game 2</a></li>
+            <li><a href="js8.html">Game 3</a></li>
+            <li><a href="js9.html">Game 4</a></li>
+            <li><a href="js10.html">Game 5</a></li>
+            <li><a href="js11.html">Game 6</a></li>
         </ul>
     </nav>
 

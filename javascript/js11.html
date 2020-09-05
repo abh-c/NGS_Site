@@ -27,7 +27,7 @@
         <p>
             Now we've gotten all the hard stuff out of the way, so we can handle gaining points and winning the game.
             The way I am going to code it is that once the opponent gets 10 points, the game is over, but with what you
-            will learn, you can change the rules as you wish.
+            have learned, you can change the rules as you wish.
         </p>
         <p>
             We can handle all this in the collision function, since that detects if the ball has hit the edges. Let's
@@ -36,31 +36,32 @@
         </p>
         <section class="code">
             <pre>
-            <code class='hl'>let playerScore = 0;</code>
-            <code class='hl'>let opponentScore = 0;</code>
-            <p>...</p>
-            <code class='hl'>function drawScore() {</code>
-            <code class='hl'>    context.font = "64px Courier New";</code>
-            <code class='hl'>    context.textAlign = "center";</code>
-            <code class='hl'>    context.fillStyle = "e0e0e0";</code>
-            <code class='hl'>    context.fillText(`${playerScore}                ${opponentScore}`, canvas.width / 2, 60);</code>
-            <code class='hl'>}</code>
-            <p>...</p>
-            <code>function draw() {</code>
-            <code>    context.clearRect(0, 0, canvas.width, canvas.height);</code>
-            <code>    drawBall();</code>
-            <code>    moveOpponentPaddle();</code>
-            <code>    drawPaddle(playerPaddle);</code>
-            <code>    drawPaddle(opponentPaddle);</code>
-            <code>    handleCollision();</code>
-            <code class='hl'>    drawScore();</code>
-            <code>    requestAnimationFrame(draw);</code>
-            <p>...</p>
+    <code class='hl'>let playerScore = 0;</code>
+    <code class='hl'>let opponentScore = 0;</code>
+    <p>...</p>
+    <code class='hl'>function drawScore() {</code>
+    <code class='hl'>    context.font = "64px Courier New";</code>
+    <code class='hl'>    context.textAlign = "center";</code>
+    <code class='hl'>    context.fillStyle = "#e0e0e0";</code>
+    <code class='hl'>    context.fillText(`${playerScore}                ${opponentScore}`, canvas.width / 2, 60);</code>
+    <code class='hl'>}</code>
+    <p>...</p>
+    <code>function draw() {</code>
+    <code>    context.clearRect(0, 0, canvas.width, canvas.height);</code>
+    <code>    drawBall();</code>
+    <code>    moveOpponentPaddle();</code>
+    <code>    drawPaddle(playerPaddle);</code>
+    <code>    drawPaddle(opponentPaddle);</code>
+    <code>    handleCollision();</code>
+    <code class='hl'>    drawScore();</code>
+    <code>    requestAnimationFrame(draw);</code>
+    <p>...</p>
             </pre>
         </section>
         <p>
-            The large space between the player score and the opponent score in the printed string is on purpose to
-            separate the two numbers across the canvas. The screen should look something like this now:
+            The large amount of whitespace between the player score and the opponent score in the string has the purpose
+            of
+            separating the two numbers across the canvas. The screen should look something like this now:
         </p>
         <img src="jsimages/game8.png" alt="">
         <p>
@@ -69,18 +70,18 @@
         </p>
         <section class="code">
             <pre>
-            <code>function handleCollision() {</code>
-            <code>    ballTop = ballY - BALL_SIZE;</code>
-            <code>    ballBottom = ballY + BALL_SIZE;</code>
-            <code></code>
-            <code>    if (ballX &lt; 0) {</code>
-            <code class='hl'>        opponentScore++;</code>
-            <code>        reposition();</code>
-            <code>    }</code>
-            <code>    else if (ballX &gt; canvas.width) {</code>
-            <code class='hl'>        playerScore++;</code>
-            <code>        reposition();</code>
-            <code>    }</code>
+    <code>function handleCollision() {</code>
+    <code>    ballTop = ballY - BALL_SIZE;</code>
+    <code>    ballBottom = ballY + BALL_SIZE;</code>
+    <code></code>
+    <code>    if (ballX &lt; 0) {</code>
+    <code class='hl'>        opponentScore++;</code>
+    <code>        reposition();</code>
+    <code>    }</code>
+    <code>    else if (ballX &gt; canvas.width) {</code>
+    <code class='hl'>        playerScore++;</code>
+    <code>        reposition();</code>
+    <code>    }</code>
             </pre>
         </section>
         <p>
@@ -89,18 +90,18 @@
         </p>
         <section class="code">
             <pre>
-            <code> function handleCollision() {</code>
-            <code>     ballTop = ballY - BALL_SIZE;</code>
-            <code>     ballBottom = ballY + BALL_SIZE;</code>
-            <code> </code>
-            <code>     if (ballX &lt; 0) {</code>
-            <code>         opponentScore++;</code>
-            <code>         reposition();</code>
-            <code class='hl'>         if (opponentScore === 10) {</code>
-            <code class='hl'>             alert(`GAME OVER, Score:${playerScore}`);</code>
-            <code class='hl'>             document.location.reload();</code>
-            <code class='hl'>         }     </code>
-            <code>     }</code>
+    <code> function handleCollision() {</code>
+    <code>     ballTop = ballY - BALL_SIZE;</code>
+    <code>     ballBottom = ballY + BALL_SIZE;</code>
+    <code> </code>
+    <code>     if (ballX &lt; 0) {</code>
+    <code>         opponentScore++;</code>
+    <code>         reposition();</code>
+    <code class='hl'>         if (opponentScore === 10) {</code>
+    <code class='hl'>             alert(`GAME OVER, Score:${playerScore}`);</code>
+    <code class='hl'>             document.location.reload();</code>
+    <code class='hl'>         }     </code>
+    <code>     }</code>
             </pre>
         </section>
         <p>
@@ -113,11 +114,11 @@
             want to make more complicated games, you can start researching using JS frameworks, like Phaser. Have fun!
         </p>
         <p><a href="https://github.com/abh-c/gameDemo6">Final Source Code</a></p>
+        <p><a href="https://abh-c.github.io/gameDemo6/">Link to Playable Game</a></p>
     </section>
 
     <section class="next-previous-wrapper">
-        <a href="js9.html">&lt; Previous</a>
-        <a href="js11.html">Next &gt;</a>
+        <a href="js10.html">&lt; Previous</a>
     </section>
 
     <nav class="course-nav">
@@ -127,12 +128,12 @@
             <li><a href="js3.html">Lesson 2</a></li>
             <li><a href="js4.html">Lesson 3</a></li>
             <li><a href="js5.html">Lesson 4</a></li>
-            <li><a href="js6.html">Lesson 5</a></li>
-            <li><a href="js7.html">Lesson 6</a></li>
-            <li><a href="js8.html">Lesson 7</a></li>
-            <li><a href="js9.html">Lesson 8</a></li>
-            <li><a href="js10.html">Lesson 9</a></li>
-            <li><a href="js11.html">Lesson 10</a></li>
+            <li><a href="js6.html">Game 1</a></li>
+            <li><a href="js7.html">Game 2</a></li>
+            <li><a href="js8.html">Game 3</a></li>
+            <li><a href="js9.html">Game 4</a></li>
+            <li><a href="js10.html">Game 5</a></li>
+            <li><a href="js11.html">Game 6</a></li>
         </ul>
     </nav>
 

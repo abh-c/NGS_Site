@@ -25,22 +25,22 @@
         <p>In this lesson we will add collision between the ball and the paddles.</p>
         <hr>
         <p>
-            Now all we have to do to start playing the game is adding collision between the ball and the paddles. Before
+            Now all we have to do to start playing the game is add collision between the ball and the paddles. Before
             we do that, let's make the ball reposition itself to the center of the screen every time it touches the left
             or right edge. First let's make a simple <code>reposition()</code> function and start the ball going toward
             the player paddle.
         </p>
         <section class="code">
             <pre>
-            <code>let ballDX = <span>-4</span>;</code>
-            <code>let ballDY = <span>0</span>;</code>
-            <p>...</p>
-            <code class='hl'> function reposition() {</code>
-            <code class='hl'>     ballX = canvas.width / 2;</code>
-            <code class='hl'>     ballY = canvas.height / 2;</code>
-            <code class='hl'>     ballDX = -4;</code>
-            <code class='hl'>     ballDY = 0;</code>
-            <code class='hl'> }</code>
+    <code>let ballDX = <span>-4</span>;</code>
+    <code>let ballDY = <span>0</span>;</code>
+    <p>...</p>
+    <code class='hl'> function reposition() {</code>
+    <code class='hl'>     ballX = canvas.width / 2;</code>
+    <code class='hl'>     ballY = canvas.height / 2;</code>
+    <code class='hl'>     ballDX = -4;</code>
+    <code class='hl'>     ballDY = 0;</code>
+    <code class='hl'> }</code>
             </pre>
         </section>
         <p>
@@ -50,21 +50,21 @@
         <p>Updated function:</p>
         <section class="code">
             <pre>
-            <code>function handleCollision() {</code>
-            <code>    ballTop = ballY - BALL_SIZE;</code>
-            <code>    ballBottom = ballY + BALL_SIZE;</code>
-            <code></code>
-            <code class='hl'>    if (ballX &lt; 0) {</code>
-            <code class='hl'>        reposition();</code>
-            <code class='hl'>    }</code>
-            <code class='hl'>    else if (ballX &gt; canvas.width) {</code>
-            <code class='hl'>        reposition();</code>
-            <code class='hl'>    }</code>
-            <code>    // Handle collision with the walls</code>
-            <code>    <span>else</span> if (ballTop + ballDY &lt; 0 || ballBottom &gt; canvas.height) {</code>
-            <code>        ballDY = -ballDY;</code>
-            <code>    }</code>
-            <code>}</code>
+    <code>function handleCollision() {</code>
+    <code>    ballTop = ballY - BALL_SIZE;</code>
+    <code>    ballBottom = ballY + BALL_SIZE;</code>
+    <code></code>
+    <code class='hl'>    if (ballX &lt; 0) {</code>
+    <code class='hl'>        reposition();</code>
+    <code class='hl'>    }</code>
+    <code class='hl'>    else if (ballX &gt; canvas.width) {</code>
+    <code class='hl'>        reposition();</code>
+    <code class='hl'>    }</code>
+    <code>    // Handle collision with the walls</code>
+    <code>    <span>else</span> if (ballTop + ballDY &lt; 0 || ballBottom &gt; canvas.height) {</code>
+    <code>        ballDY = -ballDY;</code>
+    <code>    }</code>
+    <code>}</code>
             </pre>
         </section>
         <p>Now the left side of your screen should look like this:</p>
@@ -95,20 +95,20 @@
         </p>
         <section class="code">
             <pre>
-            <code>const PLAYER_PADDLE_DY = 6;</code>
-            <code class='hl'>const MAX_ANGLE = Math.PI / 3; // 60 degrees</code>
-            <p>...</p>
-            <code>let downIsPressed = false;</code>
-            <code class='hl'>let ballYTop; // stores the ball y position relative to the top of the paddle</code>
-            <code class='hl'>let ballYCenter; // stores the ball y position relative to the center of the paddle</code>
-            <code class='hl'>let relativeBallYCenter; // stores the ball y position relative to the center of the paddle between -1 and 1</code>
-            <code class='hl'>let angle; // stores angle that the ball will bounce off of a paddle with</code>
-            <code class='hl'>let maxBallSpeed = 6;</code>
-            <code>let mouseY;</code>
-            <p>...</p>
-            <code class='hl'> function bounceBall(paddle) {</code>
-            <code class='hl'> </code>
-            <code class='hl'> }</code>
+    <code>const PLAYER_PADDLE_DY = 6;</code>
+    <code class='hl'>const MAX_ANGLE = Math.PI / 3; // 60 degrees</code>
+    <p>...</p>
+    <code>let downIsPressed = false;</code>
+    <code class='hl'>let ballYTop; // stores the ball y position relative to the top of the paddle</code>
+    <code class='hl'>let ballYCenter; // stores the ball y position relative to the center of the paddle</code>
+    <code class='hl'>let relativeBallYCenter; // stores the ball y position relative to the center of the paddle between -1 and 1</code>
+    <code class='hl'>let angle; // stores angle that the ball will bounce off of a paddle with</code>
+    <code class='hl'>let maxBallSpeed = 6;</code>
+    <code>let mouseY;</code>
+    <p>...</p>
+    <code class='hl'>function bounceBall(paddle) {</code>
+    <code class='hl'></code>
+    <code class='hl'>}</code>
             </pre>
         </section>
         <p>All these variables will only be calculated when the ball is hitting a paddle.</p>
@@ -139,10 +139,11 @@
             understand.
         </p>
         <p>Now we need to calculate the angle at which the ball will travel after it hits the paddle. This can be
-            calculated by multiplying the maximum angle that we want the ball to have – in our case 60 degrees – by the
-            <code>relativeBallYCenter</code> variable value. This determines a value between +60 and -60 degrees that
-            the ball will travel in depending on where it hits the paddle. You can also change the
-            <code>MAX_ANGLE</code> variable to change the maximum angle easily.</p>
+            calculated by multiplying the maximum angle that we want the ball to have, in our case 60 degrees, by the
+            <code>relativeBallYCenter</code> variable value. This determines an angle between +60 and -60 degrees at
+            which
+            the ball will travel depending on where it hits the paddle. You can also change the
+            <code>MAX_ANGLE</code> variable to change the maximum angle that the ball will be able to travel at.</p>
         <p>
             <code>angle = MAX_ANGLE * relativeBallYCenter;</code>
         </p>
@@ -152,7 +153,7 @@
         <p>To understand this look at this diagram:</p>
         <img src="jsimages/diagram2.png" alt="">
         <p>
-            This describes the relationship between the hypotenuse (longest side opposite the right angle) or a right
+            This describes the relationship between the hypotenuse (longest side opposite the right angle) of a right
             triangle and the two "leg" sides. If the longest side is represented with <em>x</em>, then the leg opposite
             angle <em>a</em> is equal to the length of <em>x</em> multiplied by the sine of angle <em>a</em>. It is the
             same but with cosine with the leg perpendicular to angle <em>a</em>.
@@ -167,17 +168,17 @@
         <p>Putting it all together, this is what the function should look like:</p>
         <section class="code">
             <pre>
-            <code>function bounceBall(paddle) {</code>
-            <code>    // changes the angle of the ball depending on where it hits</code>
-            <code>    ballYTop = ballY - paddle.y;</code>
-            <code>    ballYCenter = ballYTop - PADDLE_HEIGHT / 2;</code>
-            <code>    relativeBallYCenter = ballYCenter / (PADDLE_HEIGHT / 2);</code>
-            <code>    angle = MAX_ANGLE * relativeBallYCenter;</code>
-            <code></code>
-            <code>    // The trig keeps the speed of the ball the constant</code>
-            <code>    ballDY = maxBallSpeed * Math.sin(angle);</code>
-            <code>    ballDX = maxBallSpeed * Math.cos(angle);</code>
-            <code>}</code>
+    <code>function bounceBall(paddle) {</code>
+    <code>    // changes the angle of the ball depending on where it hits</code>
+    <code>    ballYTop = ballY - paddle.y;</code>
+    <code>    ballYCenter = ballYTop - PADDLE_HEIGHT / 2;</code>
+    <code>    relativeBallYCenter = ballYCenter / (PADDLE_HEIGHT / 2);</code>
+    <code>    angle = MAX_ANGLE * relativeBallYCenter;</code>
+    <code></code>
+    <code>    // The trig keeps the speed of the ball constant</code>
+    <code>    ballDY = maxBallSpeed * Math.sin(angle);</code>
+    <code>    ballDX = maxBallSpeed * Math.cos(angle);</code>
+    <code>}</code>
             </pre>
         </section>
         <p>
@@ -186,30 +187,30 @@
         </p>
         <section class="code">
             <pre>
-            <code>function handleCollision() {</code>
-            <code>    ballTop = ballY - BALL_SIZE;</code>
-            <code>    ballBottom = ballY + BALL_SIZE;</code>
-            <code></code>
-            <code>    if (ballX &lt; 0) {</code>
-            <code>        reposition();</code>
-            <code>    }</code>
-            <code>    else if (ballX &gt; canvas.width) {</code>
-            <code>        reposition();</code>
-            <code>    }</code>
-            <code>    // Handle collision with the walls</code>
-            <code>    else if (ballTop + ballDY &lt; 0 || ballBottom &gt; canvas.height) {</code>
-            <code>        ballDY = -ballDY;</code>
-            <code>    }</code>
-            <code></code>
-            <code class='hl'>    // Handle collision with the player paddle on the left</code>
-            <code class='hl'>    // true if left side of the ball is within the paddle</code>
-            <code class='hl'>    if ((ballX - BALL_SIZE + ballDX &lt; playerPaddle.x + PADDLE_WIDTH) && </code>
-            <code class='hl'>        (ballX - BALL_SIZE + ballDX &gt; playerPaddle.x) &&</code>
-            <code class='hl'>        (ballY &lt; playerPaddle.y + PADDLE_HEIGHT) && </code>
-            <code class='hl'>        (ballY &gt; playerPaddle.y)) {</code>
-            <code class='hl'>        bounceBall(playerPaddle);</code>
-            <code class='hl'>    }</code>
-            <code>}</code>
+    <code>function handleCollision() {</code>
+    <code>    ballTop = ballY - BALL_SIZE;</code>
+    <code>    ballBottom = ballY + BALL_SIZE;</code>
+    <code></code>
+    <code>    if (ballX &lt; 0) {</code>
+    <code>        reposition();</code>
+    <code>    }</code>
+    <code>    else if (ballX &gt; canvas.width) {</code>
+    <code>        reposition();</code>
+    <code>    }</code>
+    <code>    // Handle collision with the walls</code>
+    <code>    else if (ballTop + ballDY &lt; 0 || ballBottom &gt; canvas.height) {</code>
+    <code>        ballDY = -ballDY;</code>
+    <code>    }</code>
+    <code></code>
+    <code class='hl'>    // Handle collision with the player paddle on the left</code>
+    <code class='hl'>    // true if left side of the ball is within the paddle</code>
+    <code class='hl'>    if ((ballX - BALL_SIZE + ballDX &lt; playerPaddle.x + PADDLE_WIDTH) && </code>
+    <code class='hl'>        (ballX - BALL_SIZE + ballDX &gt; playerPaddle.x) &&</code>
+    <code class='hl'>        (ballY &lt; playerPaddle.y + PADDLE_HEIGHT) && </code>
+    <code class='hl'>        (ballY &gt; playerPaddle.y)) {</code>
+    <code class='hl'>        bounceBall(playerPaddle);</code>
+    <code class='hl'>    }</code>
+    <code>}</code>
             </pre>
         </section>
         <p>
@@ -220,65 +221,66 @@
         </p>
         <section class="code">
             <pre>
-            <code>function handleCollision() {</code>
-            <code>    ballTop = ballY - BALL_SIZE;</code>
-            <code>    ballBottom = ballY + BALL_SIZE;</code>
-            <code></code>
-            <code>    if (ballX &lt; 0) {</code>
-            <code>        reposition();</code>
-            <code>    }</code>
-            <code>    else if (ballX > canvas.width) {</code>
-            <code>        reposition();</code>
-            <code>    }</code>
-            <code>    // Handle collision with the walls</code>
-            <code>    else if (ballTop + ballDY &lt; 0 || ballBottom > canvas.height) {</code>
-            <code>        ballDY = -ballDY;</code>
-            <code>    }</code>
-            <code></code>
-            <code>    // Handle collision with the player paddle on the left</code>
-            <code>    // true if left side of the ball is within the paddle</code>
-            <code>    if ((ballX - BALL_SIZE + ballDX &lt; playerPaddle.x + PADDLE_WIDTH) && </code>
-            <code>        (ballX - BALL_SIZE + ballDX > playerPaddle.x) &&</code>
-            <code>        (ballY &lt; playerPaddle.y + PADDLE_HEIGHT) && </code>
-            <code>        (ballY > playerPaddle.y)) {</code>
-            <code>        ballBounce(playerPaddle);</code>
-            <code>    }</code>
-            <code></code>
-            <code class='hl'>    // Handle collision with the opponent paddle on the right</code>
-            <code class='hl'>    // true if right side of the ball is within the paddle</code>
-            <code class='hl'>    if ((ballX + BALL_SIZE + ballDX &lt; opponentPaddle.x + PADDLE_WIDTH) && </code>
-            <code class='hl'>        (ballX + BALL_SIZE + ballDX > opponentPaddle.x) &&</code>
-            <code class='hl'>        (ballY &lt; opponentPaddle.y + PADDLE_HEIGHT) && </code>
-            <code class='hl'>        (ballY > opponentPaddle.y)) {</code>
-            <code class='hl'>        ballBounce(opponentPaddle);</code>
-            <code class='hl'>    }</code>
-            <code>}</code>
+    <code>function handleCollision() {</code>
+    <code>    ballTop = ballY - BALL_SIZE;</code>
+    <code>    ballBottom = ballY + BALL_SIZE;</code>
+    <code></code>
+    <code>    if (ballX &lt; 0) {</code>
+    <code>        reposition();</code>
+    <code>    }</code>
+    <code>    else if (ballX > canvas.width) {</code>
+    <code>        reposition();</code>
+    <code>    }</code>
+    <code>    // Handle collision with the walls</code>
+    <code>    else if (ballTop + ballDY &lt; 0 || ballBottom > canvas.height) {</code>
+    <code>        ballDY = -ballDY;</code>
+    <code>    }</code>
+    <code></code>
+    <code>    // Handle collision with the player paddle on the left</code>
+    <code>    // true if left side of the ball is within the paddle</code>
+    <code>    if ((ballX - BALL_SIZE + ballDX &lt; playerPaddle.x + PADDLE_WIDTH) && </code>
+    <code>        (ballX - BALL_SIZE + ballDX > playerPaddle.x) &&</code>
+    <code>        (ballY &lt; playerPaddle.y + PADDLE_HEIGHT) && </code>
+    <code>        (ballY > playerPaddle.y)) {</code>
+    <code>        ballBounce(playerPaddle);</code>
+    <code>    }</code>
+    <code></code>
+    <code class='hl'>    // Handle collision with the opponent paddle on the right</code>
+    <code class='hl'>    // true if right side of the ball is within the paddle</code>
+    <code class='hl'>    if ((ballX + BALL_SIZE + ballDX &lt; opponentPaddle.x + PADDLE_WIDTH) && </code>
+    <code class='hl'>        (ballX + BALL_SIZE + ballDX > opponentPaddle.x) &&</code>
+    <code class='hl'>        (ballY &lt; opponentPaddle.y + PADDLE_HEIGHT) && </code>
+    <code class='hl'>        (ballY > opponentPaddle.y)) {</code>
+    <code class='hl'>        ballBounce(opponentPaddle);</code>
+    <code class='hl'>    }</code>
+    <code>}</code>
             </pre>
         </section>
         <p>
             However, since we need to make the ball go in the opposite x direction when it hits the opponent paddle, we
-            need to edit the <code>bounceBall()</code> function as well. This is where the <code>name</code> property of
+            need to edit the <code>bounceBall()</code> function to make <code>ballDX</code> negative when the ball hits
+            the opponent paddle. This is where the <code>name</code> property of
             the paddles is useful.
         </p>
         <section class="code">
             <pre>
-            <code>function bounceBall(paddle) {</code>
-            <code>    // changes the angle of the ball depending on where it hits</code>
-            <code>    ballYTop = ballY - paddle.y;</code>
-            <code>    ballYCenter = ballYTop - PADDLE_HEIGHT / 2;</code>
-            <code>    relativeBallYCenter = ballYCenter / (PADDLE_HEIGHT / 2);</code>
-            <code>    angle = MAX_ANGLE * relativeBallYCenter;</code>
-            <code></code>
-            <code>    // The trig keeps the speed of the ball the constant</code>
-            <code class='hl'>    if (paddle.name === "player") {</code>
-            <code>        ballDY = maxBallSpeed * Math.sin(angle);</code>
-            <code>        ballDX = maxBallSpeed * Math.cos(angle); </code>
-            <code class='hl'>    }</code>
-            <code class='hl'>    else if (paddle.name === "opponent") {</code>
-            <code class='hl'>        ballDY = maxBallSpeed * Math.sin(angle);</code>
-            <code class='hl'>        ballDX = -maxBallSpeed * Math.cos(angle);</code>
-            <code class='hl'>    }</code>
-            <code>}</code>
+    <code>function bounceBall(paddle) {</code>
+    <code>    // changes the angle of the ball depending on where it hits</code>
+    <code>    ballYTop = ballY - paddle.y;</code>
+    <code>    ballYCenter = ballYTop - PADDLE_HEIGHT / 2;</code>
+    <code>    relativeBallYCenter = ballYCenter / (PADDLE_HEIGHT / 2);</code>
+    <code>    angle = MAX_ANGLE * relativeBallYCenter;</code>
+    <code></code>
+    <code>    // The trig keeps the speed of the ball the constant</code>
+    <code class='hl'>    if (paddle.name === "player") {</code>
+    <code>        ballDY = maxBallSpeed * Math.sin(angle);</code>
+    <code>        ballDX = maxBallSpeed * Math.cos(angle); </code>
+    <code class='hl'>    }</code>
+    <code class='hl'>    else if (paddle.name === "opponent") {</code>
+    <code class='hl'>        ballDY = maxBallSpeed * Math.sin(angle);</code>
+    <code class='hl'>        ballDX = -maxBallSpeed * Math.cos(angle);</code>
+    <code class='hl'>    }</code>
+    <code>}</code>
             </pre>
         </section>
         <p>Now the paddles can pass the ball between each other.</p>
@@ -292,43 +294,46 @@
         <p>
             Note: the paddle is chasing the ball because of the optional ball chasing code from part 4.
         </p>
+        <p>
+            I am going to add one more line of code that speeds up the ball every time it hits a paddle:
+        </p>
         <section class="code">
             <pre>
-            <code>function bounceBall(paddle) {</code>
-            <code>    // Changes the angle of the ball depending on where it hits</code>
-            <code>    ballYTop = ballY - paddle.y;</code>
-            <code>    ballYCenter = ballYTop - PADDLE_HEIGHT / 2;</code>
-            <code>    relativeBallYCenter = ballYCenter / (PADDLE_HEIGHT / 2);</code>
-            <code>    angle = MAX_ANGLE * relativeBallYCenter;</code>
-            <code></code>
-            <code>    // The trig keeps the speed of the ball the constant</code>
-            <code>    if (paddle.name === "player") {</code>
-            <code>        ballDY = maxBallSpeed * Math.sin(angle);</code>
-            <code>        ballDX = maxBallSpeed * Math.cos(angle); </code>
-            <code>    }</code>
-            <code>    else if (paddle.name === "opponent") {</code>
-            <code>        ballDY = maxBallSpeed * Math.sin(angle);</code>
-            <code>        ballDX = -maxBallSpeed * Math.cos(angle);</code>
-            <code>    }</code>
-            <code></code>
-            <code class='hl'>    maxBallSpeed += 1; // Speeds up the ball every hit</code>
-            <code>}</code>
+    <code>function bounceBall(paddle) {</code>
+    <code>    // Changes the angle of the ball depending on where it hits</code>
+    <code>    ballYTop = ballY - paddle.y;</code>
+    <code>    ballYCenter = ballYTop - PADDLE_HEIGHT / 2;</code>
+    <code>    relativeBallYCenter = ballYCenter / (PADDLE_HEIGHT / 2);</code>
+    <code>    angle = MAX_ANGLE * relativeBallYCenter;</code>
+    <code></code>
+    <code>    // The trig keeps the speed of the ball the constant</code>
+    <code>    if (paddle.name === "player") {</code>
+    <code>        ballDY = maxBallSpeed * Math.sin(angle);</code>
+    <code>        ballDX = maxBallSpeed * Math.cos(angle); </code>
+    <code>    }</code>
+    <code>    else if (paddle.name === "opponent") {</code>
+    <code>        ballDY = maxBallSpeed * Math.sin(angle);</code>
+    <code>        ballDX = -maxBallSpeed * Math.cos(angle);</code>
+    <code>    }</code>
+    <code></code>
+    <code class='hl'>    maxBallSpeed += 1; // Speeds up the ball every hit</code>
+    <code>}</code>
             </pre>
         </section>
         <p>We should also update the reposition function to reset the max ball speed:</p>
         <section class="code">
             <pre>
-            <code>function reposition() {</code>
-            <code>    ballX = canvas.width / 2;</code>
-            <code>    ballY = canvas.height / 2;</code>
-            <code>    ballDX = -4;</code>
-            <code>    ballDY = 0;</code>
-            <code class='hl'>    maxBallSpeed = 6;</code>
-            <code>}</code>
+    <code>function reposition() {</code>
+    <code>    ballX = canvas.width / 2;</code>
+    <code>    ballY = canvas.height / 2;</code>
+    <code>    ballDX = -4;</code>
+    <code>    ballDY = 0;</code>
+    <code class='hl'>    maxBallSpeed = 6;</code>
+    <code>}</code>
             </pre>
         </section>
         <p>Now it's finally time to add the score and winning.</p>
-        <p><a href="https://github.com/abh-c/gameDemo5">Source code</a></p>
+        <p><a href="https://github.com/abh-c/gameDemo5" target="_blank" rel="noopener">Source code</a></p>
     </section>
 
     <section class="next-previous-wrapper">
@@ -343,12 +348,12 @@
             <li><a href="js3.html">Lesson 2</a></li>
             <li><a href="js4.html">Lesson 3</a></li>
             <li><a href="js5.html">Lesson 4</a></li>
-            <li><a href="js6.html">Lesson 5</a></li>
-            <li><a href="js7.html">Lesson 6</a></li>
-            <li><a href="js8.html">Lesson 7</a></li>
-            <li><a href="js9.html">Lesson 8</a></li>
-            <li><a href="js10.html">Lesson 9</a></li>
-            <li><a href="js11.html">Lesson 10</a></li>
+            <li><a href="js6.html">Game 1</a></li>
+            <li><a href="js7.html">Game 2</a></li>
+            <li><a href="js8.html">Game 3</a></li>
+            <li><a href="js9.html">Game 4</a></li>
+            <li><a href="js10.html">Game 5</a></li>
+            <li><a href="js11.html">Game 6</a></li>
         </ul>
     </nav>
 

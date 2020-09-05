@@ -31,38 +31,39 @@
         </p>
         <section class="code">
             <pre>
-            <code>function draw() {</code>
-            <code>    drawBall();</code>
-            <code>    drawPaddle(playerPaddle);</code>
-            <code>    drawPaddle(opponentPaddle);</code>
-            <code>    requestAnimationFrame(draw);</code>
-            <code class='hl'>    ballX += 4;</code>
-            <code class='hl'>    ballY += 4;</code>
-            <code>}</code>
+    <code>function draw() {</code>
+    <code>    drawBall();</code>
+    <code>    drawPaddle(playerPaddle);</code>
+    <code>    drawPaddle(opponentPaddle);</code>
+    <code>    requestAnimationFrame(draw);</code>
+    <code class='hl'>    ballX += 4;</code>
+    <code class='hl'>    ballY += 4;</code>
+    <code>}</code>
             </pre>
         </section>
         <p>
-            With this, we increase the ball's x and y coordinates by 4 each frame. This will cause the ball to move
+            With this, we increase the ball's x and y coordinates by 4 pixels each frame. This will cause the ball to
+            move
             toward the bottom right of the screen. If you launch the html file in a browser now, this is what you should
             see:
         </p>
         <img src="jsimages/game7.png" alt="">
         <p>
             It looks like this because we keep drawing new circles without erasing the old ones. In order to create the
-            effect of animation, we need to clear the whole canvas before each frame. We can do so easily like this:
+            illusion of a moving circle, we need to clear the whole canvas before each frame. We can do so
+            easily like this:
         </p>
         <section class="code">
             <pre>
-            <code>function draw() {</code>
-            <code class='hl'>    context.clearRect(0, 0, canvas.width, canvas.height);</code>
-            <code>    drawBall();</code>
-            <code>    drawPaddle(playerPaddle);</code>
-            <code>    drawPaddle(opponentPaddle);</code>
-            <code>    requestAnimationFrame(draw);</code>
-            <code>    ballX += 4;</code>
-            <code>    ballY += 4;</code>
-            <code>}</code>
-            <code></code>
+    <code>function draw() {</code>
+    <code class='hl'>    context.clearRect(0, 0, canvas.width, canvas.height);</code>
+    <code>    drawBall();</code>
+    <code>    drawPaddle(playerPaddle);</code>
+    <code>    drawPaddle(opponentPaddle);</code>
+    <code>    requestAnimationFrame(draw);</code>
+    <code>    ballX += 4;</code>
+    <code>    ballY += 4;</code>
+    <code>}</code>
             </pre>
         </section>
         <p>
@@ -73,21 +74,20 @@
         </p>
         <section class="code">
             <pre>
-            <code>let ballX = canvas.width / 2;</code>
-            <code>let ballY = canvas.height / 2;</code>
-            <code class='hl'>let ballDX = 4;</code>
-            <code class='hl'>let ballDY = 4;</code>
-            <p>...</p>
-            <code>function draw() {</code>
-            <code>    context.clearRect(0, 0, canvas.width, canvas.height);</code>
-            <code>    drawBall();</code>
-            <code>    drawPaddle(playerPaddle);</code>
-            <code>    drawPaddle(opponentPaddle);</code>
-            <code>    requestAnimationFrame(draw);</code>
-            <code>    ballX += <span>ballDX</span>;</code>
-            <code>    ballY += <span>ballDY</span>;</code>
-            <code>}</code>
-            <code></code>
+    <code>let ballX = canvas.width / 2;</code>
+    <code>let ballY = canvas.height / 2;</code>
+    <code class='hl'>let ballDX = 4;</code>
+    <code class='hl'>let ballDY = 4;</code>
+    <p>...</p>
+    <code>function draw() {</code>
+    <code>    context.clearRect(0, 0, canvas.width, canvas.height);</code>
+    <code>    drawBall();</code>
+    <code>    drawPaddle(playerPaddle);</code>
+    <code>    drawPaddle(opponentPaddle);</code>
+    <code>    requestAnimationFrame(draw);</code>
+    <code>    ballX += <span>ballDX</span>;</code>
+    <code>    ballY += <span>ballDY</span>;</code>
+    <code>}</code>
             </pre>
         </section>
         <p>
@@ -96,33 +96,34 @@
             <em>difference</em> in x and y every frame.
         </p>
         <p>
-            Now we can write a collision function. For now, we can write it so that either <code>ballDY</code> variable
-            changes sign at when the ball hits a wall:
+            Now we can write a collision function. For now, we can write it so that the <code>ballDY</code> variable
+            changes sign at when the ball hits either the top or bottom wall:
         </p>
         <section class="code">
             <pre>
-            <code>function handleCollision() {</code>
-            <code class='hl'>    // Handle collision with the walls</code>
-            <code class='hl'>    if (ballY + ballDY &lt; 0 || ballY + ballDY > canvas.height) {</code>
-            <code class='hl'>        ballDY = -ballDY;</code>
-            <code class='hl'>    }</code>
-            <code>}</code>
-            <p>...</p>
-            <code>function draw() {</code>
-            <code>    context.clearRect(0, 0, canvas.width, canvas.height);</code>
-            <code>    drawBall();</code>
-            <code>    drawPaddle(playerPaddle);</code>
-            <code>    drawPaddle(opponentPaddle);</code>
-            <code class='hl'>    handleCollision();</code>
-            <code>    requestAnimationFrame(draw);</code>
-            <code>    ballX += ballDX;</code>
-            <code>    ballY += ballDY;</code>
-            <code>}</code>
+    <code class="hl">function handleCollision() {</code>
+    <code class='hl'>    // Handle collision with the walls</code>
+    <code class='hl'>    if (ballY + ballDY &lt; 0 || ballY + ballDY > canvas.height) {</code>
+    <code class='hl'>        ballDY = -ballDY;</code>
+    <code class='hl'>    }</code>
+    <code class="hl">}</code>
+    <p>...</p>
+    <code>function draw() {</code>
+    <code>    context.clearRect(0, 0, canvas.width, canvas.height);</code>
+    <code>    drawBall();</code>
+    <code>    drawPaddle(playerPaddle);</code>
+    <code>    drawPaddle(opponentPaddle);</code>
+    <code class='hl'>    handleCollision();</code>
+    <code>    requestAnimationFrame(draw);</code>
+    <code>    ballX += ballDX;</code>
+    <code>    ballY += ballDY;</code>
+    <code>}</code>
             </pre>
         </section>
         <p>
             This will make it so that if the ball is about to go out of bounds on the top or bottom of the canvas (hence
-            the <code>+ ballDY</code>), it will bounce off the wall, and that is what you should see. However, the
+            the <code>+ ballDY</code>), it will change its y direction and bounce off the wall, and that is what you
+            should see. However, the
             <code>ballY</code> variable stores the y coordinate of the center of the ball, so the ball actually clips
             into the wall a bit before bouncing off. There are many ways to fix this, but her is one that will make it
             easier to understand the math. First, we need new <code>ballTop</code> and <code>ballBottom</code> variables
@@ -131,20 +132,20 @@
         </p>
         <section class="code">
             <pre>
-            <code>let ballDX = 4;</code>
-            <code>let ballDY = 4;</code>
-            <code class='hl'>let ballTop;</code>
-            <code class='hl'>let ballBottom;</code>
-            <p>...</p>
-            <code>function handleCollision() {</code>
-            <code>    ballTop = ballY - BALL_SIZE;</code>
-            <code>    ballBottom = ballY + BALL_SIZE;</code>
-            <code></code>
-            <code>    // Handle collision with the walls</code>
-            <code>    if (<span>ballTop</span> + ballDY &lt; 0 || <span>ballBottom</span> &gt; canvas.height) {</code>
-            <code>        ballDY = -ballDY;</code>
-            <code>    }</code>
-            <code>}</code>
+    <code>let ballDX = 4;</code>
+    <code>let ballDY = 4;</code>
+    <code class='hl'>let ballTop;</code>
+    <code class='hl'>let ballBottom;</code>
+    <p>...</p>
+    <code>function handleCollision() {</code>
+    <code class="hl">    ballTop = ballY - BALL_SIZE;</code>
+    <code class="hl">    ballBottom = ballY + BALL_SIZE;</code>
+    <code></code>
+    <code>    // Handle collision with the walls</code>
+    <code>    if (<span>ballTop</span> + ballDY &lt; 0 || <span>ballBottom</span> &gt; canvas.height) {</code>
+    <code>        ballDY = -ballDY;</code>
+    <code>    }</code>
+    <code>}</code>
             </pre>
         </section>
         <p>
@@ -167,12 +168,12 @@
             <li><a href="js3.html">Lesson 2</a></li>
             <li><a href="js4.html">Lesson 3</a></li>
             <li><a href="js5.html">Lesson 4</a></li>
-            <li><a href="js6.html">Lesson 5</a></li>
-            <li><a href="js7.html">Lesson 6</a></li>
-            <li><a href="js8.html">Lesson 7</a></li>
-            <li><a href="js9.html">Lesson 8</a></li>
-            <li><a href="js10.html">Lesson 9</a></li>
-            <li><a href="js11.html">Lesson 10</a></li>
+            <li><a href="js6.html">Game 1</a></li>
+            <li><a href="js7.html">Game 2</a></li>
+            <li><a href="js8.html">Game 3</a></li>
+            <li><a href="js9.html">Game 4</a></li>
+            <li><a href="js10.html">Game 5</a></li>
+            <li><a href="js11.html">Game 6</a></li>
         </ul>
     </nav>
 

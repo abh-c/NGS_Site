@@ -491,7 +491,9 @@ hr,
     font-size: inherit;
 }
 
-.section-1 p a {
+.section-1 p a,
+.section-1 ol li a,
+.section-1 ul li a {
     font-size: inherit;
 }
 
@@ -692,8 +694,8 @@ hr,
     font-family: inherit;
     font-size: inherit;
     /* Fallback solid color */
-    background: rgb(181, 181, 181);
-    background: rgba(108, 108, 108, 0.42);
+    background: rgb(193, 193, 193);
+    background: rgba(152, 152, 152, 0.42);
 }
 
 .code p {
@@ -737,8 +739,8 @@ hr,
 /* Styling for highlighted code */
 code.hl {
     /* Fallback solid color */
-    background: rgb(181, 181, 181);
-    background: rgba(108, 108, 108, 0.42);
+    background: rgb(193, 193, 193);
+    background: rgba(152, 152, 152, 0.42);
 }
 
 .course-nav {
