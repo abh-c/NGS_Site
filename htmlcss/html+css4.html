@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Java, Python" />
+    <meta name="description" content="Free programming tutorials" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Next Gen Stem</title>
+</head>
+
+<body>
+    <nav class="nav-top">
+        <ul class="nav-top-ul">
+            <li><b><a href="../index.html" class="nav-top-link">Home</a></b></li>
+            <li><b><a href="../learntocode.html" class="nav-top-link">Learn to Code</a></b></li>
+            <li><b><a href="../about.html" class="nav-top-link">About</a></b></li>
+        </ul>
+    </nav>
+
+    <section class="section-1">
+        <h1>HTML + CSS - Lesson 4</h1>
+        <hr class="hr-1">
+        <h2>Linking Pages and Buttons</h2>
+        <p>
+In this lesson we continue working on the “Home” webpage by using CSS and HTML and laying out the ability to link separate web pages with more buttons. We will also learn how to animate buttons. 
+
+        </p>
+        <p>
+First, we will be adding more buttons and learning to animate them. 
+
+        </p>
+        <p>
+In regards to adding buttons, we learned this in a previous lesson. Under the first < button > < /button > tag, you can simply add to more <button> < /button > tags.
+
+        </p>
+        <p>
+I called the other two buttons “Photos” and “About Me” 
+        </p>
+<section class="code">
+
+<pre>
+
+<code><button>My Blog</code>
+<code><button>Photos</code>
+<code><button>About Me</code>
+</pre>
+
+</section>
+
+<p>
+When using CSS to style the buttons, as they are all called “button” the CSS button code will edit all the buttons. 
+
+
+</p>
+<p>
+However, unique from the previous lesson, I added a border: 
+
+
+</p>
+<p>
+border: 1px solid white;
+
+
+</p>
+<p>
+Other than that, I simply used the CSS to match my website and so can you! 
+
+
+</p>
+<p>
+Here’s my code for the buttons. 
+</p>
+<section class="code">
+
+<pre>
+
+<code>button {</code>
+<code>	padding:10px;</code>
+<code>	font-size: 120px;</code>
+<code>	font-fammily: 'Montserrat','sans-serif';</code>
+<code>	background-color: transparent;</code>
+<code>	color: white;</code>
+<code>	border: 1px solid white;</code>
+<code>	text-align: center;</code>
+<code></code>
+<code>}</code>
+</pre>
+
+</section>
+
+<p>
+Now, we will use CSS to animate the buttons. Create a new CSS element:
+</p>
+<section class="code">
+
+<pre>
+
+<code>button:hover { </code>
+</pre>
+
+</section>
+<p>
+This defines what happens when the button is hovered over. Therefore, you can change the colors exactly like a regular button to whatever you see fit. 
+
+
+</p>
+
+<p>
+Here’s my code: 
+</p>
+<section class="code">
+
+<pre>
+
+<code>button:hover {</code>
+<code>	background-color: white;	</code>
+<code>	color: rgb(19,60,121);</code>
+<code>	border: 1px solid white;</code>
+<code>}</code>
+</pre>
+
+</section>
+<p>
+Here is how the button looks without and with the animation effect: 
+
+
+</p>
+
+        <img src="htmlcss/HTMLCSS Images/lesson4p1.png" alt="Buttons Without Animation">
+        <img src="htmlcss/HTMLCSS Images/lesson4p2.png" alt="Buttons With Animations">
+
+        <hr class="hr-1">
+        <p>
+            Now, add a new file to the folder from Visual Code Studio:
+        </p>
+
+        <img src="HTMLCSS Images/image7.png" alt="Add File">
+        
+        <p>
+            Name the file “index.html” which will allow Visual Code Studio to realize the language of code you are writing in which  is html.           
+        </p>
+
+        <img src="HTMLCSS Images/image4.png" alt="Name File">        
+        
+
+    <section class="next-previous-wrapper">
+        <a href="html+css3.html">&lt; Previous</a>
+        <a href="html+css5.html">Next &gt;</a>
+    </section>
+
+    <nav class="course-nav">
+        <ul>
+            <li><a href="html-course-landing-page.html">Introduction</a></li>
+            <li><a href="html+css2.html">Lesson 1</a></li>
+            <li><a href="html+css3.html">Lesson 2</a></li>
+            <li><a href="html+css4.html">Lesson 3</a></li>
+            <li><a href="html+css5.html">Lesson 4</a></li>
+            <li><a href="html+css6.html">Lesson 5</a></li>
+            <li><a href="html+css7.html">Lesson 6</a></li>
+            <li><a href="html+css8.html">Lesson 7</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>
+            NEXT GEN STEM <br> CONNECTICUT, USA
+        </p>
+        <img src="../images/Mail-Icon-White-on-Grey.jpg" style="width:65px; height:65px">
+    </footer>
+</body>
+<!-- TODO: put the stuff below in the <body> tag -->
+ 
+    <div id="app_settings" style="display:none;">
+    <label class='app_text_label'>Chat SiteID: </label>
+    <input class='app_field_input' type="text" name="siteID"><br>
+    <label class='app_text_label info'>* To start receiving chats go to <a href='http://www.tawk.to'
+            target='blank'>tawk.to</a> and get your chat site ID. <br>Tawk dashboard -> Admin (at the top of the
+        dashboard) -> Property Settings -> Site ID. </label>
+</div>
+<div id="app_settings" style="display:none;">
+    <label class='app_text_label'>Chat SiteID: </label>
+    <input class='app_field_input' type="text" name="siteID"><br>
+    <label class='app_text_label info'>* To start receiving chats go to <a href='http://www.tawk.to'
+            target='blank'>tawk.to</a> and get your chat site ID. <br>Tawk dashboard -> Admin (at the top of the
+        dashboard) -> Property Settings -> Site ID. </label>
+</div>
+ 
+    <script type="text/javascript">
+   
+       //*****
+       //Change these params 
+       //Go to tawk.to and sign up for a user, enter your site domain and replace the following URL with the one they give you.
+       var /*<{*/siteID/*}*/ = /*{*/"5f29c48fed9d9d2627082f71"/*}>*/;
+       var chatSiteURL = 'https://embed.tawk.to/'+siteID+'/default';
+         
+       //*****
+       
+       // Start of Tawk.to Script
+       
+       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+       (function(){
+       var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+       s1.async=true;
+       s1.src=chatSiteURL;
+       s1.charset='UTF-8';
+       s1.setAttribute('crossorigin','*');
+       s0.parentNode.insertBefore(s1,s0);
+       })();
+   
+       //  End of Tawk.to Script
+   
+   </script>
+    
+
+</html>
