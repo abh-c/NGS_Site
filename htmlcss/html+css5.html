@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Java, Python" />
+    <meta name="description" content="Free programming tutorials" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Next Gen Stem</title>
+</head>
+
+<body>
+    <nav class="nav-top">
+        <ul class="nav-top-ul">
+            <li><b><a href="../index.html" class="nav-top-link">Home</a></b></li>
+            <li><b><a href="../learntocode.html" class="nav-top-link">Learn to Code</a></b></li>
+            <li><b><a href="../about.html" class="nav-top-link">About</a></b></li>
+        </ul>
+    </nav>
+
+    <section class="section-1">
+        <h1>HTML + CSS - Lesson 5</h1>
+        <hr class="hr-1">
+        <h2>Images and Fonts</h2>
+        <p>
+In this lesson, we will learn how to add and modify an image, import fonts, and finally finish our front webpage. Throughout this lesson you will have the freedom to design your webpage how you see best based upon what was learned in the previous 4 lessons. After all, it is your website!
+
+
+        </p>
+        <p>
+The biggest takeaway from this lesson should be that as you are working in web development, you are constantly making modifications to the previous designing that you have done. Having an appealing and practical website is what web developers work to achieve. This is exactly what we are doing in this lesson, adding new aspects to our website and 
+modifying the previous ones to make sure it all fits together.
+
+
+        </p>
+        <p>
+Next, we will learn how to add an image. Pick any image of your choice and put it in the folder that we made at the start of the course.
+
+
+        </p>
+        <p>
+Then, we are going to go to the “p” section of the CSS. There, we will write:
+
+        </p>
+<section class="code">
+
+<pre>
+
+<code>background-image: url(name-of-your-image.____)</code>
+<code></code>
+<code></code>
+</pre>
+
+</section>
+
+
+<p>
+ Next we have to style this image to make sure that it fits our website correctly. Here is some of the code I used to make it. This code below specifically allows us to take up the full background.
+
+ 
+</p>
+
+<section class="code">
+
+<pre>
+
+<code>background-size: cover;</code>
+<code>background-position inherit;</code>
+<code>height: 600px;</code>
+</pre>
+
+</section>
+<p>
+Here’s the code and the image I chose to use:
+</p>
+<section class="code">
+
+<pre>
+
+<code>p {color: white;</code>
+<code>   background-image: url (space.jpg);</code>
+<code>   background-size: cover;</code>
+<code>   background-position: inherit;</code>
+<code>   height: 600px;</code>
+<code>   text-align: center;</code>
+<code>   display: flex;</code>
+<code>   align-items: center; </code>
+<code>   justify-content: center;</code>
+<code>   text-align: center;</code>
+</pre>
+
+</section>
+
+<img src="htmlcss/HTMLCSS Images/space.png" alt="Space Background">
+
+<p>
+With the galaxy background image that I chose, I noticed that the current font style does not achieve the feel of the website that I am trying to create. (Of course, the following steps are up to you! Again, design your website how you see fit!) 
+
+
+</p>
+
+<p>
+Although font choice may seem like a small detail in comparison to the whole website, font choice is one of the most important things in regards to the viewers’ view and feel towards the website. 
+
+
+</p>
+
+<p>
+I therefore decided to import a font that I know will work better. To do this, I am going to utilize a great, free, resource: Google Fonts. 
+
+
+</p>
+<p>
+Once I found my desired font, I pressed “Select this style.” 
+</p>
+
+
+<img src="htmlcss/HTMLCSS Images/gf2.png" alt="Select this Style">
+
+<p>
+Then, press “Embed” and select “Link."
+</p>
+
+<img src="htmlcss/HTMLCSS Images/gf3.png" alt="Link Font">
+
+
+<p>
+Place this under your body tag:
+</p>
+<section class="code">
+
+<pre>
+
+<code><body></code>
+<code>  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"></code>
+<code></code>
+</pre>
+
+</section>
+
+<p>
+Now, we can go back to the line of CSS code that we worked on in a previous lesson, 
+</p>
+
+<section class="code">
+
+<pre>
+
+<code>body { </code>
+<code>font-family: </code>
+</pre>
+
+</section>
+
+<p>
+and paste the labeled CSS code on the Google Fonts website: 
+</p>
+
+<img src="htmlcss/HTMLCSS Images/gf1.png" alt="Link Font">
+
+<p>
+</p>
+
+<p>
+Similarly, I changed the background color of the website to better match the galaxy image. 
+
+
+</p>
+
+<p>
+You can change the background color just as we did in previous lessons! 
+
+
+</p>
+
+<p>
+Here is what I did: 
+
+</p>
+<section class="code">
+
+<pre>
+
+<code><style></code>
+<code>  body {</code>
+<code>  	font-family: 'Montserrat', 'sans-serif';</code>
+<code>    color: white;</code>
+<code>    text-align: center;</code>
+<code>    background: rgb(19, 60, 121);</code>
+<code>  }</code>
+</pre>
+
+</section>
+
+<p>
+You might be noticing that the text on your image does not really match well and is disproportional with the rest of the website. Therefore, I am going to change the size and positioning of the text to better fit this. 
+
+
+</p>
+
+
+<p>
+To do this go into the “p” section of the CSS. 
+
+
+</p>
+
+
+<p>
+We need to code: 
+
+
+</p>
+<section class="code">
+
+<pre>
+
+<code>p { </code>
+<code></code>
+<code>text-align: center; </code>
+<code></code>
+<code>display: flex; </code>
+<code></code>
+<code>justify-content: center; </code>
+</pre>
+
+</section>
+
+
+<p>
+These lines of code work together to ensure that our code is in the center of the background image which can be seen by defining the text alignment and the content justification to be “center.” The display being set to “flex” allows the text to fit within the entire “p” (paragraph) without overflowing it. 
+
+
+</p>
+
+<p>
+Next, I adjusted the font size and text in the same “p” to be bigger and to contain the name of my website but you can adjust this however you want. We already learned how to adjust the text in earlier lessons in HTML but to adjust the text size, use “font-size: ___ px” and adjust as you see fit. 100px worked well for my website. 
+
+</p>
+
+<p>
+Here is the code: 
+
+
+</p>
+
+<section class="code">
+
+<pre>
+
+<code> p {color: white;</code>
+<code>    background-image: url (space.jpg);</code>
+<code>    background-position: inherit;</code>
+<code>    height: 600px;</code>
+<code>    text-align:center;</code>
+<code>    display: flex;</code>
+<code>    align-items:center;</code>
+<code>    justify-content: center;</code>
+<code>    font-size: 100px;</code>
+<code>  }</code>
+</pre>
+
+</section>
+
+
+<p>
+Now let’s see how this part of our website looks! 
+
+
+</p>
+
+<img src="htmlcss/HTMLCSS Images/space 3.png" alt="Text on Image">
+
+
+<p>
+Now it is up to you to finish styling your front web page! 
+
+
+</p>
+
+<p>
+I decided to edit the header by moving it to the left:
+
+
+</p>
+<section class="code">
+
+<pre>
+
+<code>h1 {text-align: left;</code>
+<code>}</code>
+</pre>
+
+</section>
+
+<p>
+Then I wrote “Welcome to my website I will be sharing…” to the first section: 
+
+</p>
+<section class="code">
+
+<pre>
+
+<code><section>Welcome to my website, I will be sharing...</code>
+</pre>
+
+</section>
+
+<p>
+Then I deleted the other section and the footer that were added previously as I thought they were not needed. 
+
+
+</p>
+<p>
+Of course style your website as you see fit and feel free to add or delete elements based on what we learned in previous lessons! 
+
+
+</p>
+<p>
+Here is how my webpage looks like:
+</p>
+
+<img src="htmlcss/HTMLCSS Images/space2.png" alt="Home Page">
+
+    <section class="next-previous-wrapper">
+        <a href="html+css4.html">&lt; Previous</a>
+        <a href="html+css6.html">Next &gt;</a>
+    </section>
+
+    <nav class="course-nav">
+        <ul>
+            <li><a href="html-course-landing-page.html">Introduction</a></li>
+            <li><a href="html+css2.html">Lesson 1</a></li>
+            <li><a href="html+css3.html">Lesson 2</a></li>
+            <li><a href="html+css4.html">Lesson 3</a></li>
+            <li><a href="html+css5.html">Lesson 4</a></li>
+            <li><a href="html+css6.html">Lesson 5</a></li>
+            <li><a href="html+css7.html">Lesson 6</a></li>
+            <li><a href="html+css8.html">Lesson 7</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>
+            NEXT GEN STEM <br> CONNECTICUT, USA
+        </p>
+        <img src="../images/Mail-Icon-White-on-Grey.jpg" style="width:65px; height:65px">
+    </footer>
+</body>
+<!-- TODO: put the stuff below in the <body> tag -->
+ 
+    <div id="app_settings" style="display:none;">
+    <label class='app_text_label'>Chat SiteID: </label>
+    <input class='app_field_input' type="text" name="siteID"><br>
+    <label class='app_text_label info'>* To start receiving chats go to <a href='http://www.tawk.to'
+            target='blank'>tawk.to</a> and get your chat site ID. <br>Tawk dashboard -> Admin (at the top of the
+        dashboard) -> Property Settings -> Site ID. </label>
+</div>
+<div id="app_settings" style="display:none;">
+    <label class='app_text_label'>Chat SiteID: </label>
+    <input class='app_field_input' type="text" name="siteID"><br>
+    <label class='app_text_label info'>* To start receiving chats go to <a href='http://www.tawk.to'
+            target='blank'>tawk.to</a> and get your chat site ID. <br>Tawk dashboard -> Admin (at the top of the
+        dashboard) -> Property Settings -> Site ID. </label>
+</div>
+ 
+    <script type="text/javascript">
+   
+       //*****
+       //Change these params 
+       //Go to tawk.to and sign up for a user, enter your site domain and replace the following URL with the one they give you.
+       var /*<{*/siteID/*}*/ = /*{*/"5f29c48fed9d9d2627082f71"/*}>*/;
+       var chatSiteURL = 'https://embed.tawk.to/'+siteID+'/default';
+         
+       //*****
+       
+       // Start of Tawk.to Script
+       
+       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+       (function(){
+       var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+       s1.async=true;
+       s1.src=chatSiteURL;
+       s1.charset='UTF-8';
+       s1.setAttribute('crossorigin','*');
+       s0.parentNode.insertBefore(s1,s0);
+       })();
+   
+       //  End of Tawk.to Script
+   
+   </script>
+    
+
+</html>
