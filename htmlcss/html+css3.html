@@ -25,82 +25,80 @@
         <h2>Layout and Styling</h2>
         <h3></h3>
         <p>
-           In this lesson, we will begin to create a layout for our website using CSS and HTML and style it as well.
+            In this lesson, we will begin to create a layout for our website using CSS and HTML and style it as well.
         </p>
         <p>
-Creating a layout for your website is extremely important to the overall organization and feel of the website. Without it, the website can feel cluttered and the user experience won’t be positive.
+            Creating a layout for your website is extremely important to the overall organization and feel of the
+            website. Without it, the website can feel cluttered and the user experience won’t be positive.
         </p>
         <p>
-To do this, within the HTML <body> </body> tags we are going to add section tags, <section> </section> and a footer tags for the bottom of the website.
+            To do this, within the HTML &lt;body> &lt;/body> tags we are going to add section tags, &lt;section>
+            &lt;/section> and a footer tags for the bottom of the website.
+        </p>
+        <p>
+            This will allow us to put more information into this webpage in an organized way. Similarly, the footer
+            section can contain general information and on many websites this where a copyright goes.
+        </p>
+        <p>
+            The code should look like this:
+        </p>
 
-        </p>
-        <p>
-        This will allow us to put more information into this webpage in an organized way. Similarly, the footer section can contain general information and on many websites this where a copyright goes.
-        </p>
-        <p>
-        The code should look like this:
-        </p>
-        
         <section class="code">
+            <pre>
+    <code> &lt;body></code>
+    <code>   &lt;Website Name</code>
+    <code>   &lt;p></code>
+    <code>     &lt;b>Welcome to my website! On this website I will be sharing</code>
+    <code>   &lt;/p></code>
+    <code>   &lt;button>My Blog</code>
+    <code>   &lt;section>Section 1</code>
+    <code>   &lt;section>Section 2</code>
+    <code>   &lt;footer>Footer</code>
+    <code> &lt;/body> </code>
+            </pre>
+        </section>
 
-<pre>
-
-<code> &lt;body></code>
-<code>   &lt;Website Name</code>
-<code>   &lt;p></code>
-<code>     &lt;b>Welcome to my website! On this website I will be sharing</code>
-<code>   &lt;/p></code>
-<code>   &lt;button>My Blog</code>
-<code>   &lt;section>Section 1</code>
-<code>   &lt;section>Section 2</code>
-<code>   &lt;footer>Footer</code>
-<code> &lt;/body> </code>
-</pre>
-
-</section>
-          
         <hr class="hr-1">
         <p>
-Now, with what we learned last lesson, we will style these sections and the footer as you would like.
+            Now, with what we learned last lesson, we will style these sections and the footer as you would like.
 
-        </p>        
-        <p>
-This is how my website now looks:
         </p>
-   <img src="HTMLCSSImages/lesson3_2.png" alt="Color">
         <p>
-And this is the code for it:
+            This is how my website now looks:
         </p>
-<section class="code">
+        <img src="HTMLCSSImages/lesson3_2.png" alt="Color">
+        <p>
+            And this is the code for it:
+        </p>
+        <section class="code">
 
-<pre>
+            <pre>
+    <code>button {</code>
+    <code>	background: rgb(0, 140, 255);</code>
+    <code>  color: white;</code>
+    <code>  border: gray;</code>
+    <code></code>
+    <code>}</code>
+    <code></code>
+    <code>section {</code>
+    <code>	background: gray;</code>
+    <code></code>
+    <code>}</code>
+    <code></code>
+    <code>footer {</code>
+    <code>background: rgb(0, 140, 255);</code>
+    <code></code>
+    <code>}</code>
+            </pre>
+        </section>
+        <p>
+            Now we will space out the layout correctly using the CSS tags margin and padding which allows the website to
+            be spaced out and organized.
+        </p>
 
-<code>button {</code>
-<code>	background: rgb(0, 140, 255);</code>
-<code>  color: white;</code>
-<code>  border: gray;</code>
-<code></code>
-<code>}</code>
-<code></code>
-<code>section {</code>
-<code>	background: gray;</code>
-<code></code>
-<code>}</code>
-<code></code>
-<code>footer {</code>
-<code>background: rgb(0, 140, 255);</code>
-<code></code>
-<code>}</code>
-</pre>
+        <section class="code">
 
-</section>
-<p>
-Now we will space out the layout correctly using the CSS tags margin and padding which allows the website to be spaced out and organized.
-</p>
-
-<section class="code">
-
-<pre>
+            <pre>
 
 <code>button {</code>
 <code>	background: rgb(0, 140, 255);</code>
@@ -125,34 +123,35 @@ Now we will space out the layout correctly using the CSS tags margin and padding
 <code>}</code>
 </pre>
 
-</section>
+        </section>
 
 
-<p>
-The final part of this lesson’s layout and styling is to center the different parts to this webpage.
-</p>
-<p>
-First, we are going to go to go into the CSS code under the body section. There, make sure there is ; following the color that we made the paragraph. Then write: text-align: center;
-</p>
-<p>
-Similarly, we will add another section of CSS code based on the previous HTML by writing:
-</p>
-<p>
-h1 { 
-</p>
-<p>
-Then we will again write: 
-</p>
-<p>
-text-align: center; 
-</p>
-<p>
-The code should look like this: 
+        <p>
+            The final part of this lesson’s layout and styling is to center the different parts to this webpage.
+        </p>
+        <p>
+            First, we are going to go to go into the CSS code under the body section. There, make sure there is ;
+            following the color that we made the paragraph. Then write: text-align: center;
+        </p>
+        <p>
+            Similarly, we will add another section of CSS code based on the previous HTML by writing:
+        </p>
+        <p>
+            h1 {
+        </p>
+        <p>
+            Then we will again write:
+        </p>
+        <p>
+            text-align: center;
+        </p>
+        <p>
+            The code should look like this:
 
-</p>
-<section class="code">
+        </p>
+        <section class="code">
 
-<pre>
+            <pre>
 
 <code>body {</code>
 <code>	font-family: 'Lucida'; 'Lucida Sans', 'Lucida Sans Regular';</code>
@@ -162,52 +161,54 @@ The code should look like this:
 <code>}</code>
 </pre>
 
-</section>
+        </section>
 
-<p>
-  My website looks ike this:
-</p>
-
-<img src="HTMLCSSImages/lesson3_2.png" alt="Color">
-
-<p>
-Common Mistakes: 
-</p>
-<p>
-Make sure you are using a semicolon ( ; ) after each line of CSS code. Also, make sure all of your CSS code lies within opening and closing brackets, ( { } ). 
-</p>
-<p>
-Finally, make sure you save your code before, File, Save or ctrl s before going into your files and testing the file in your browser. 
-</p>
-
-    <section class="next-previous-wrapper">
-        <a href="html-course-landing-page.html">&lt; Previous</a>
-        <a href="html+css2.html">Next &gt;</a>
-    </section>
-
-    <nav class="course-nav">
-        <ul>
-            <li><a href="html-course-landing-page.html">Introduction</a></li>
-            <li><a href="html+css2.html">Lesson 1</a></li>
-            <li><a href="html+css3.html">Lesson 2</a></li>
-            <li><a href="html+css4.html">Lesson 3</a></li>
-            <li><a href="html+css5.html">Lesson 4</a></li>
-            <li><a href="html+css6.html">Lesson 5</a></li>
-            <li><a href="html+css7.html">Lesson 6</a></li>
-            <li><a href="html+css8.html">Lesson 7</a></li>
-        </ul>
-    </nav>
-
-    <footer>
         <p>
-            NEXT GEN STEM <br> CONNECTICUT, USA
+            My website looks ike this:
         </p>
-        <img src="../images/Mail-Icon-White-on-Grey.jpg" style="width:65px; height:65px">
-    </footer>
+
+        <img src="HTMLCSSImages/lesson3_2.png" alt="Color">
+
+        <p>
+            Common Mistakes:
+        </p>
+        <p>
+            Make sure you are using a semicolon ( ; ) after each line of CSS code. Also, make sure all of your CSS code
+            lies within opening and closing brackets, ( { } ).
+        </p>
+        <p>
+            Finally, make sure you save your code before, File, Save or ctrl s before going into your files and testing
+            the file in your browser.
+        </p>
+
+        <section class="next-previous-wrapper">
+            <a href="html-course-landing-page.html">&lt; Previous</a>
+            <a href="html+css2.html">Next &gt;</a>
+        </section>
+
+        <nav class="course-nav">
+            <ul>
+                <li><a href="html-course-landing-page.html">Introduction</a></li>
+                <li><a href="html+css2.html">Lesson 1</a></li>
+                <li><a href="html+css3.html">Lesson 2</a></li>
+                <li><a href="html+css4.html">Lesson 3</a></li>
+                <li><a href="html+css5.html">Lesson 4</a></li>
+                <li><a href="html+css6.html">Lesson 5</a></li>
+                <li><a href="html+css7.html">Lesson 6</a></li>
+                <li><a href="html+css8.html">Lesson 7</a></li>
+            </ul>
+        </nav>
+
+        <footer>
+            <p>
+                NEXT GEN STEM <br> CONNECTICUT, USA
+            </p>
+            <img src="../images/Mail-Icon-White-on-Grey.jpg" style="width:65px; height:65px">
+        </footer>
 </body>
 <!-- TODO: put the stuff below in the <body> tag -->
- 
-    <div id="app_settings" style="display:none;">
+
+<div id="app_settings" style="display:none;">
     <label class='app_text_label'>Chat SiteID: </label>
     <input class='app_field_input' type="text" name="siteID"><br>
     <label class='app_text_label info'>* To start receiving chats go to <a href='http://www.tawk.to'
@@ -221,32 +222,32 @@ Finally, make sure you save your code before, File, Save or ctrl s before going 
             target='blank'>tawk.to</a> and get your chat site ID. <br>Tawk dashboard -> Admin (at the top of the
         dashboard) -> Property Settings -> Site ID. </label>
 </div>
- 
-    <script type="text/javascript">
-   
-       //*****
-       //Change these params 
-       //Go to tawk.to and sign up for a user, enter your site domain and replace the following URL with the one they give you.
-       var /*<{*/siteID/*}*/ = /*{*/"5f29c48fed9d9d2627082f71"/*}>*/;
-       var chatSiteURL = 'https://embed.tawk.to/'+siteID+'/default';
-         
-       //*****
-       
-       // Start of Tawk.to Script
-       
-       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-       (function(){
-       var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-       s1.async=true;
-       s1.src=chatSiteURL;
-       s1.charset='UTF-8';
-       s1.setAttribute('crossorigin','*');
-       s0.parentNode.insertBefore(s1,s0);
-       })();
-   
-       //  End of Tawk.to Script
-   
-   </script>
-    
+
+<script type="text/javascript">
+    //*****
+    //Change these params 
+    //Go to tawk.to and sign up for a user, enter your site domain and replace the following URL with the one they give you.
+    var /*<{*/ siteID /*}*/ = /*{*/ "5f29c48fed9d9d2627082f71" /*}>*/ ;
+    var chatSiteURL = 'https://embed.tawk.to/' + siteID + '/default';
+
+    //*****
+
+    // Start of Tawk.to Script
+
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = chatSiteURL;
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+
+    //  End of Tawk.to Script
+</script>
+
 
 </html>
