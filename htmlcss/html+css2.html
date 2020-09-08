@@ -2,39 +2,42 @@
 <html lang="en-US">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="keywords" content="HTML, CSS, JavaScript, Java, Python" />
-    <meta name="description" content="Free programming tutorials" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style.css" />
-    <title>Next Gen Stem</title>
+  <meta charset="utf-8" />
+  <meta name="keywords" content="HTML, CSS, JavaScript, Java, Python" />
+  <meta name="description" content="Free programming tutorials" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style.css" />
+  <title>Next Gen Stem</title>
 </head>
 
 <body>
-    <nav class="nav-top">
-        <ul class="nav-top-ul">
-            <li><b><a href="../index.html" class="nav-top-link">Home</a></b></li>
-            <li><b><a href="../learntocode.html" class="nav-top-link">Learn to Code</a></b></li>
-            <li><b><a href="../about.html" class="nav-top-link">About</a></b></li>
-        </ul>
-    </nav>
+  <nav class="nav-top">
+    <ul class="nav-top-ul">
+      <li><b><a href="../index.html" class="nav-top-link">Home</a></b></li>
+      <li><b><a href="../learntocode.html" class="nav-top-link">Learn to Code</a></b></li>
+      <li><b><a href="../about.html" class="nav-top-link">About</a></b></li>
+    </ul>
+  </nav>
 
-    <section class="section-1">
-        <h1>HTML + CSS - Lesson 2</h1>
-        <hr class="hr-1">
-        <h2>Learning CSS</h2>
-        <h3></h3>
-        <p>
-           In this lesson, we will continue to use HTML to add more elements to our website as well as beginning to style the website using CSS for the first time. 
-        </p>
-        <p>
-           First, we are going to create a button that links to a separate webpage where we can share photos, write a blog, etc. beyond the home page. Do this by creating < button > < /button > tags after the < /p > tag. In the middle of the tags we will write the title of this next page: < button > My Blog! < /button > 
-        </p>
-        <p>
-           Your code should look like this: 
-        </p>
-        <section class="code">
-          <pre>
+  <section class="section-1">
+    <h1>HTML + CSS - Lesson 2</h1>
+    <hr class="hr-1">
+    <h2>Learning CSS</h2>
+    <h3></h3>
+    <p>
+      In this lesson, we will continue to use HTML to add more elements to our website as well as beginning to style the
+      website using CSS for the first time.
+    </p>
+    <p>
+      First, we are going to create a button that links to a separate webpage where we can share photos, write a blog,
+      etc. beyond the home page. Do this by creating &lt;button>
+      &lt;/button> tags after the &lt;/p> tag. In the middle of the tags we will write the title of this next page:
+      &lt;button> My Blog! &lt;/button> </p>
+    <p>
+      Your code should look like this:
+    </p>
+    <section class="code">
+      <pre>
             <code>&lt;!DOCTYPE html></code>
             <code>  &lt;html></code>
             <code>    &lt;head></code>
@@ -47,33 +50,33 @@
             <code>         Website Name</code>
             <code>      &lt;/h1></code>
             <code>      &lt;p></code>
-            <code>         &lt;b>
+            <code>         &lt;b></code>
             <code>           Welcome to my website! On this website I will be sharing____</code>
-            <code>         &lt;/b>
+            <code>         &lt;/b></code>
             <code>      &lt;/p></code>
             <code>    &lt;/body></code>
             <code>  &lt;/html></code>
-            
           </pre>
     </section>
-          
-        <hr class="hr-1">
-        <p>
-           Now that we have a good amount of items on our website, we should begin styling it as it looks very bland. 
-        </p>        
-        <p>
-            To do this, we can simply add a <style> </style> tag. This is a simpler way to write CSS rather than creating a brand new style.css file. As long as we write in between those tags, then we write in the CSS language! 
-        </p>
-        <section class="code">
-          <pre>
+
+    <hr class="hr-1">
+    <p>
+      Now that we have a good amount of items on our website, we should begin styling it as it looks very bland.
+    </p>
+    <p>
+      To do this, we can simply add a <style> </style> tag. This is a simpler way to write CSS rather than creating a
+      brand new style.css file. As long as we write in between those tags, then we write in the CSS language!
+    </p>
+    <section class="code">
+      <pre>
             <code>&lt;!DOCTYPE html></code>
             <code>  &lt;html></code>
             <code>    &lt;head></code>
             <code>      &lt;title></code>
             <code>         Your Website Name!</code>
             <code>      &lt;/title></code>
-            <code>   `  &lt;style></code>
-            <code>
+            <code>      &lt;style></code>
+            <code></code>
             <code>      &lt;/style></code>
             <code>    &lt;/head></code>
             <code>    &lt;body></code>
@@ -81,34 +84,36 @@
             <code>         Website Name</code>
             <code>      &lt;/h1></code>
             <code>      &lt;p></code>
-            <code>         &lt;b>
+            <code>         &lt;b></code>
             <code>           Welcome to my website! On this website I will be sharing____</code>
-            <code>         &lt;/b>
+            <code>         &lt;/b></code>
             <code>      &lt;/p></code>
             <code>      &lt;button></code>
             <code>        My Blog!</code>
             <code>      &lt;/button></code>
             <code>    &lt;/body></code>
             <code>  &lt;/html></code>
-            
           </pre>
     </section>
 
-        <p>
-          In between the < style > tag we are going to let the CSS know what we are talking about. Since CSS is a styling language, we are going to begin adding color to this initial webpage. Therefore we use selectors to link information from the html. 
-        </p>
-        <p>
-          To do this, write the tag from the html without the arrows (<>) and add { after it. This is because each coding language is unique in its own way so there is always a variation to how they are written.
-        </p>
-                <section class="code">
-          <pre>
+    <p>
+      In between the &lt;style> tag we are going to let the CSS know what we are talking about. Since CSS is a styling
+      language, we are going to begin adding color to this initial webpage. Therefore we use selectors to link
+      information from the html.
+    </p>
+    <p>
+      To do this, write the tag from the html without the arrows (&lt;>) and add { after it. This is because each coding
+      language is unique in its own way so there is always a variation to how they are written.
+    </p>
+    <section class="code">
+      <pre>
             <code>&lt;!DOCTYPE html></code>
             <code>  &lt;html></code>
             <code>    &lt;head></code>
             <code>      &lt;title></code>
             <code>         Your Website Name!</code>
             <code>      &lt;/title></code>
-            <code>   `  &lt;style></code>
+            <code>      &lt;style></code>
             <code>        p {
             <code>        }
             <code>      &lt;/style></code>
@@ -127,21 +132,21 @@
             <code>      &lt;/button></code> 
             <code>    &lt;/body></code>
             <code>  &lt;/html></code>
-            
           </pre>
     </section>
-        <p>
-          As the p tag is selected, the paragraph will be styled. In between the { } write color: . You can pick any of the colors that come up, or hover over the color after you selected one to choose any color. 
-        </p>
-        <section class="code">
-          <pre>
+    <p>
+      As the p tag is selected, the paragraph will be styled. In between the { } write color: . You can pick any of the
+      colors that come up, or hover over the color after you selected one to choose any color.
+    </p>
+    <section class="code">
+      <pre>
             <code>&lt;!DOCTYPE html></code>
             <code>  &lt;html></code>
             <code>    &lt;head></code>
             <code>      &lt;title></code>
             <code>         Your Website Name!</code>
             <code>      &lt;/title></code>
-            <code>   `  &lt;style></code>
+            <code>      &lt;style></code>
             <code>        p {color: blue
             <code>        }
             <code>      &lt;/style></code>
@@ -160,49 +165,53 @@
             <code>      &lt;/button></code>
             <code>    &lt;/body></code>
             <code>  &lt;/html></code>
-            
           </pre>
     </section>
-        <img src="HTMLCSSImages/image6lesson2.png" alt="Color">
-        <p>
-          After writing a line of CSS, it is important to use a semicolon ( ; ) which allows the browser to know that you are writing different lines of code. 
-        </p>
-        <p>
-          Using the same techniques, we can change the font of the website. Under the style tag 
-          write body { font-family: r, your code should look like this:
-        </p>
-        <p>
-          Following this, many a list of many different fonts should come up:
-        </p>
-        <img src="HTMLCSSImages/image3lesson2.png" alt="Font">
-        <p>
-          Click on the one that you like best! 
-        </p>
-        <p>
-          The reason why there are so many fonts in the line of code is because different computer operating systems cannot process different fonts. Therefore, if the first font is not available, then the computer will go to the next font and so on. 
-        </p>
-        <p>
-          Just as HTML uses arrows, <> , to separate lines of code, CSS uses semicolons, ; , so use this to separate your lines of CSS Code. 
-        </p>      
-        <p>
-          Now it is your turn! Using the information taught in this lesson, style the colors and fonts of the different elements of your website! 
-        </p>
-        <p>
-          This is how mine came out so far! 
-        </p>
-        <img src="HTMLCSSImages/image4lesson2.png" alt="Webpage">
-        <p>
-          Here is my code:
-        </p>
-<section class="code">
-          <pre>
+    <img src="HTMLCSSImages/image6lesson2.png" alt="Color">
+    <p>
+      After writing a line of CSS, it is important to use a semicolon ( ; ) which allows the browser to know that you
+      are writing different lines of code.
+    </p>
+    <p>
+      Using the same techniques, we can change the font of the website. Under the style tag
+      write body { font-family: r, your code should look like this:
+    </p>
+    <p>
+      Following this, many a list of many different fonts should come up:
+    </p>
+    <img src="HTMLCSSImages/image3lesson2.png" alt="Font">
+    <p>
+      Click on the one that you like best!
+    </p>
+    <p>
+      The reason why there are so many fonts in the line of code is because different computer operating systems cannot
+      process different fonts. Therefore, if the first font is not available, then the computer will go to the next font
+      and so on.
+    </p>
+    <p>
+      Just as HTML uses arrows, &lt;> , to separate lines of code, CSS uses semicolons, ; , so use this to separate your
+      lines of CSS Code.
+    </p>
+    <p>
+      Now it is your turn! Using the information taught in this lesson, style the colors and fonts of the different
+      elements of your website!
+    </p>
+    <p>
+      This is how mine came out so far!
+    </p>
+    <img src="HTMLCSSImages/image4lesson2.png" alt="Webpage">
+    <p>
+      Here is my code:
+    </p>
+    <section class="code">
+      <pre>
             <code> &lt;!DOCTYPE html></code>
             <code>  &lt;html></code>
             <code>    &lt;head></code>
             <code>      &lt;title></code>
             <code>         Your Website Name!</code>
             <code>      &lt;/title></code>
-            <code>   `  &lt;style></code>
+            <code>      &lt;style></code>
             <code>       body {
             <code>          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
             <code>          color: aliceblue;
@@ -228,78 +237,77 @@
             <code>      &lt;/p></code>
             <code>    &lt;/body></code>
             <code>  &lt;/html></code>
-            
           </pre>
     </section>
 
 
     <section class="next-previous-wrapper">
-        <a href="html+css1.html">&lt; Previous</a>
-        <a href="html+css3.html">Next &gt;</a>
+      <a href="html+css1.html">&lt; Previous</a>
+      <a href="html+css3.html">Next &gt;</a>
     </section>
 
     <nav class="course-nav">
-        <ul>
-            <li><a href="html-course-landing-page.html">Introduction</a></li>
-            <li><a href="html+css2.html">Lesson 1</a></li>
-            <li><a href="html+css3.html">Lesson 2</a></li>
-            <li><a href="html+css4.html">Lesson 3</a></li>
-            <li><a href="html+css5.html">Lesson 4</a></li>
-            <li><a href="html+css6.html">Lesson 5</a></li>
-            <li><a href="html+css7.html">Lesson 6</a></li>
-            <li><a href="html+css8.html">Lesson 7</a></li>
-        </ul>
+      <ul>
+        <li><a href="html-course-landing-page.html">Introduction</a></li>
+        <li><a href="html+css2.html">Lesson 1</a></li>
+        <li><a href="html+css3.html">Lesson 2</a></li>
+        <li><a href="html+css4.html">Lesson 3</a></li>
+        <li><a href="html+css5.html">Lesson 4</a></li>
+        <li><a href="html+css6.html">Lesson 5</a></li>
+        <li><a href="html+css7.html">Lesson 6</a></li>
+        <li><a href="html+css8.html">Lesson 7</a></li>
+      </ul>
     </nav>
 
     <footer>
-        <p>
-            NEXT GEN STEM <br> CONNECTICUT, USA
-        </p>
-        <img src="../images/Mail-Icon-White-on-Grey.jpg" style="width:65px; height:65px">
+      <p>
+        NEXT GEN STEM <br> CONNECTICUT, USA
+      </p>
+      <img src="../images/Mail-Icon-White-on-Grey.jpg" style="width:65px; height:65px">
     </footer>
 </body>
 <!-- TODO: put the stuff below in the <body> tag -->
- 
-    <div id="app_settings" style="display:none;">
-    <label class='app_text_label'>Chat SiteID: </label>
-    <input class='app_field_input' type="text" name="siteID"><br>
-    <label class='app_text_label info'>* To start receiving chats go to <a href='http://www.tawk.to'
-            target='blank'>tawk.to</a> and get your chat site ID. <br>Tawk dashboard -> Admin (at the top of the
-        dashboard) -> Property Settings -> Site ID. </label>
+
+<div id="app_settings" style="display:none;">
+  <label class='app_text_label'>Chat SiteID: </label>
+  <input class='app_field_input' type="text" name="siteID"><br>
+  <label class='app_text_label info'>* To start receiving chats go to <a href='http://www.tawk.to'
+      target='blank'>tawk.to</a> and get your chat site ID. <br>Tawk dashboard -> Admin (at the top of the
+    dashboard) -> Property Settings -> Site ID. </label>
 </div>
 <div id="app_settings" style="display:none;">
-    <label class='app_text_label'>Chat SiteID: </label>
-    <input class='app_field_input' type="text" name="siteID"><br>
-    <label class='app_text_label info'>* To start receiving chats go to <a href='http://www.tawk.to'
-            target='blank'>tawk.to</a> and get your chat site ID. <br>Tawk dashboard -> Admin (at the top of the
-        dashboard) -> Property Settings -> Site ID. </label>
+  <label class='app_text_label'>Chat SiteID: </label>
+  <input class='app_field_input' type="text" name="siteID"><br>
+  <label class='app_text_label info'>* To start receiving chats go to <a href='http://www.tawk.to'
+      target='blank'>tawk.to</a> and get your chat site ID. <br>Tawk dashboard -> Admin (at the top of the
+    dashboard) -> Property Settings -> Site ID. </label>
 </div>
- 
-    <script type="text/javascript">
-   
-       //*****
-       //Change these params 
-       //Go to tawk.to and sign up for a user, enter your site domain and replace the following URL with the one they give you.
-       var /*<{*/siteID/*}*/ = /*{*/"5f29c48fed9d9d2627082f71"/*}>*/;
-       var chatSiteURL = 'https://embed.tawk.to/'+siteID+'/default';
-         
-       //*****
-       
-       // Start of Tawk.to Script
-       
-       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-       (function(){
-       var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-       s1.async=true;
-       s1.src=chatSiteURL;
-       s1.charset='UTF-8';
-       s1.setAttribute('crossorigin','*');
-       s0.parentNode.insertBefore(s1,s0);
-       })();
-   
-       //  End of Tawk.to Script
-   
-   </script>
-    
+
+<script type="text/javascript">
+  //*****
+  //Change these params 
+  //Go to tawk.to and sign up for a user, enter your site domain and replace the following URL with the one they give you.
+  var /*<{*/ siteID /*}*/ = /*{*/ "5f29c48fed9d9d2627082f71" /*}>*/ ;
+  var chatSiteURL = 'https://embed.tawk.to/' + siteID + '/default';
+
+  //*****
+
+  // Start of Tawk.to Script
+
+  var Tawk_API = Tawk_API || {},
+    Tawk_LoadStart = new Date();
+  (function () {
+    var s1 = document.createElement("script"),
+      s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = chatSiteURL;
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    s0.parentNode.insertBefore(s1, s0);
+  })();
+
+  //  End of Tawk.to Script
+</script>
+
 
 </html>
