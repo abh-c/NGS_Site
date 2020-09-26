@@ -42,34 +42,34 @@
 
     <section class="code">
         <pre>
-            <code>import random</code>
-            <code>name = input("What is your name? ")</code>
-            <code>print("Hi,", name, "! Good luck!")</code>
-            <code>words = ['python', 'computers', 'programming', 'dog', 'cat', 'math']</code>
-            <code>word = random.choice(words)</code>
-            <code>guesses = ''</code>
-            <code>turns = 12</code>
-            <code>while turns > 0:</code>
-            <code>  failed = 0</code>
-            <code>  for char in word:</code>
-            <code>      if char in guesses:</code>
-            <code>          print(char)</code>
-            <code>      else:</code>
-            <code>          print("-")</code>
-            <code>          failed += 1</code>
-            <code>  if failed == 0:</code>
-            <code>      print("You win!")</code>
-            <code>      print("The word is: ", word)</code>
-            <code>      break</code>
-            <code>  guess = input("Guess another letter: ")</code>
-            <code>  guesses += guess</code>
-            <code>  if guess not in word:</code>
-            <code>      turns -= 1</code>
-            <code>      print("Wrong")</code>
-            <code>      print("You have", turns, " guesses left")</code>
-            <code>      if turns == 0:</code>
-            <code>          print("You lose:(")</code>
-            <code>          print("The word was ", word)</code>
+    <code>import random</code>
+    <code>name = input("What is your name? ")</code>
+    <code>print("Hi,", name, "! Good luck!")</code>
+    <code>words = ['python', 'computers', 'programming', 'dog', 'cat', 'math']</code>
+    <code>word = random.choice(words)</code>
+    <code>guesses = ''</code>
+    <code>turns = 12</code>
+    <code>while turns > 0:</code>
+    <code>  failed = 0</code>
+    <code>  for char in word:</code>
+    <code>      if char in guesses:</code>
+    <code>          print(char)</code>
+    <code>      else:</code>
+    <code>          print("-")</code>
+    <code>          failed += 1</code>
+    <code>  if failed == 0:</code>
+    <code>      print("You win!")</code>
+    <code>      print("The word is: ", word)</code>
+    <code>      break</code>
+    <code>  guess = input("Guess another letter: ")</code>
+    <code>  guesses += guess</code>
+    <code>  if guess not in word:</code>
+    <code>      turns -= 1</code>
+    <code>      print("Wrong")</code>
+    <code>      print("You have", turns, " guesses left")</code>
+    <code>      if turns == 0:</code>
+    <code>          print("You lose:(")</code>
+    <code>          print("The word was ", word)</code>
         </pre>
     </section>
 
