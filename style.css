@@ -135,13 +135,11 @@ section.the-team {
     overflow: hidden;
     font-size: 35px;
     padding: 40px;
+    padding-bottom: 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     overflow: hidden;
-    padding-bottom: 60px;
-
-
 }
 
 /* Style for the table in about section AS A WHOLE*/
@@ -214,6 +212,39 @@ section table td.table {
     vertical-align: baseline;
     padding-bottom: 10px;
 
+}
+
+.about-us {
+    background: #033254;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.about-us li {
+    float: left;
+    display: block;
+    background:rgb(249, 249, 249);
+    color: #021e32;
+    text-decoration: none;
+    font-size: 24px;
+    width: 300px;
+    padding: 20px;
+    margin: 5px;
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.21), 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.35s cubic-bezier(.24, .8, .24, 1);
+}
+
+.about-us li b{
+    font-size: 26px;
+}
+
+.about-us li p{
+    padding-top: 10px;
+    line-height: 22px;
 }
 
 /*Email button*/
