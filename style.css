@@ -187,6 +187,9 @@ section button.email-button-about:hover {
     justify-content: center;
     display: flex;
     border-color: black;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
 
 }
 
@@ -266,6 +269,10 @@ section button.email-button {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     padding: 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
 }
 
 /*Email button hover*/
@@ -276,6 +283,10 @@ section button.email-button:hover {
     transition-duration: .1s;
     border-radius: 2px;
     justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
 
 }
 
