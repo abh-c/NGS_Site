@@ -596,8 +596,8 @@ hr,
     border-collapse: collapse;
     border: 1px solid rgb(200, 200, 200);
     letter-spacing: normal;
-    display: flex;
     flex-flow: column;
+    max-width: 540px;
 }
 
 .section-1 table caption {
