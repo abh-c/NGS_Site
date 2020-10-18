@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Java, Python" />
+    <meta name="description" content="Free programming tutorials" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Next Gen Stem</title>
+    <link rel="icon" href="../images/NGT_HEADER.png">
+
+</head>
+<!-- NOTE to self: alt + w to wrap text in a tag -->
+
+<body>
+    <nav class="nav-top">
+        <ul class="nav-top-ul">
+            <li><b><a href="../index.html" class="nav-top-link">Home</a></b></li>
+            <li><b><a href="../learntocode.html" class="nav-top-link">Learn to Code</a></b></li>
+            <li><b><a href="../about.html" class="nav-top-link">About</a></b></li>
+        </ul>
+    </nav>
+
+    <section class="section-1">
+        <h1>JavaScript - Lesson 2</h1>
+        <p>
+            This lesson will go over comments, variables, strings, template literals, and math operators.
+        </p>
+        <hr class="hr-1">
+        <h3>Comments</h3>
+        <p>
+            When you are developing code with a team of other people or even if you are working alone writing a sizable
+            program, it is sometimes unclear what a specific part of code actually does, or why it does it in
+            that way. Other people may have coding styles different from your own, and you may even forget how your own
+            code works over time. This is where comments come in.
+        </p>
+    </section>
+
+    <section class="code">
+        <pre>
+            <code>// This is a single-line comment!</code>
+        </pre>
+    </section>
+
+    <section class="section-1">
+        <p>
+            Comments are parts of code that are completely ignored when the code is run. As such, they can be used in
+            the source code of projects to explain the reasoning behind the choices made in the code. You should get in
+            the habit of writing comments in your code now, as they will be much more useful in the future with bigger
+            projects.
+        </p>
+        <p>
+            Comments can be used to explain <em>what</em> code does and the reasoning behind <em>why</em> the developer
+            decided to make certain choices.
+        </p>
+        <p>
+            Single-line comments start with two slashes. Functional code can be written prior to the slashes on the same
+            line, but everything after them on that single line is seen as part of a comment.
+        </p>
+        <p>
+            Multi-line comments are useful for larger comments. They start with <code>/*</code> and end with
+            <code>*/</code>. Make sure to close each multi-line comment you open!
+        </p>
+    </section>
+    <section class="code">
+        <pre>
+            <code>/*</code>
+            <code>This is a</code>
+            <code>multi-line</code>
+            <code>comment!</code>
+            <code>*/</code>
+        </pre>
+    </section>
+
+    <hr class="hr-1">
+
+    <section class="section-1">
+        <h3>Intro to Variables</h3>
+        <p>
+            Any program needs to store and manipulate values. A convenient way to do this in JS is through the use of
+            variables. For example, let’s say we want to store the user’s name and then output it. The code could
+            look like this:
+        </p>
+    </section>
+
+    <section class="code">
+        <pre>
+            <code>var name = "Bob";</code>
+            <code>console.log(name);</code>
+        </pre>
+    </section>
+
+    <section class="section-1">
+        <p>
+            <b>A quick syntax lesson:</b> every statement in JS should end in a semicolon (;). This isn't actually
+            necessary in
+            JavaScript now, but I recommend doing it for clarity.
+        </p>
+        <p>
+            In this case, the variable is <code>name</code>. Every variable in JavaScript has to be <em>declared</em>
+            with a certain <em>keyword</em>. The keyword used in this example was <code>var</code>, but others may be
+            used in different situations. The single equals sign is the <em>assignment operator</em>. This operator
+            assigns the value of what is to the right of the operator to the variable on the left of the operator.
+        </p>
+        <p>
+            This is a lot of terminology, and we'll get into it more down the road, but, basically, we have just created
+            a variable that stores the value <code>"Bob"</code>. We can <code>console.log</code> the variable name, and
+            the output in the console should be the stored value, <code>"Bob"</code>.
+        </p>
+        <p>
+            Note: variables are case sensitive. Be careful to use the proper casing every time you want to call a
+            variable.
+        </p>
+        <hr class="hr-1">
+        <h3>Writing Strings</h3>
+        <p>
+            Before we get more into the details of variables, we can try manipulating strings as an example. Strings are
+            a type of variable which are basically a collection, or <em>string</em>, of characters. A simple string like
+            the
+            previous example works just fine, but what happens if you want a string with
+            quotation marks in it?
+        </p>
+        <p>
+            For example, the string <code>"This is a "string with quotes"!"</code> would give you an error in an IDE
+            because it thinks that the string is closed at the second quotation mark.
+        </p>
+        <p>
+            One option is to replace the inner quotes with single quotes or the outer quotes with single quotes because
+            as long as the inner and outer quotes are different types, no error will occur. Both these examples work:
+        </p>
+    </section>
+
+    <section class="code">
+        <pre>
+            <code>var str1 = "This is a 'string with quotes'!";</code>
+            <code>var str2 = 'This is a "string with quotes"!';</code>
+        </pre>
+    </section>
+
+    <section class="section-1">
+        <p>
+            Another option is using something called an escape character. The escape character is just a backslash
+            <code>\</code> but
+            if you put it directly before a quotation mark, the IDE will allow you to put a quote in the string. For
+            example this is a valid string:
+        </p>
+    </section>
+
+    <section class="code">
+        <pre>
+            <code>var str1 = "This is a \"string with quotes\"!";</code>
+        </pre>
+    </section>
+
+    <section class="section-1">
+        <p>
+            This would print out <code>This is a "string with quotes"!</code> in the console.
+            You can also escape single quotes in the same way like this: <code>\'</code>. And you can insert actual
+            backslashes
+            by escaping a backslash like this: <code>\\</code>.
+        </p>
+        <p>
+            Escape characters are very useful in formatting your strings as well. You can use <code>\n</code> for a new
+            line in your string and <code>\t</code> for a tab.
+        </p>
+        <p>
+            For example, the result in the console of the string <code>"This is a\n\t\"string with quotes\"!"</code>
+            looks like the image below. Notice the line break and the added spacing of the tab.
+        </p>
+        <img src="jsimages/string1.png" alt="">
+        <p>
+            Try playing around with different combinations to get a hang of it! Remember: the best way to learn a
+            programming language is by using it!
+        </p>
+    </section>
+
+    <hr class="hr-1">
+
+    <section class="section-1">
+        <h3>Template Literals</h3>
+        <p>
+            The name may seem daunting, but these things are basically just strings with backticks as the enclosing
+            characters. These are a special kind of string which can be written over multiple lines and allow you to
+            insert code directly into them using something called <em>interpolation</em>.
+        </p>
+        <p>This is an example:</p>
+    </section>
+
+    <section class="code">
+        <pre>
+            <code>let num = 42;</code>
+            <code>let str = `6 times 7</code>
+            <code>is ${num}`;</code>
+            <code></code>
+            <code>console.log(str);</code>
+        </pre>
+    </section>
+
+    <section class="section-1">
+        <p>This is what results in the console:</p>
+        <img src="jsimages/string2.png" alt="">
+        <p>The line break shows up and the variable <code>num</code> is shown as <code>42</code>, the value it stores.
+        </p>
+        <p>
+            Using the <code>${}</code> interpolation syntax, any JS code can be run between the curly braces. For
+            example, replacing <code>${num}</code> with <code>${6 * 7}</code> would print the same result to the
+            console because the code <code>6 * 7</code> would return <code>42</code>.
+        </p>
+    </section>
+
+    <hr class="hr-1">
+
+    <section class="section-1">
+        <h3>Doing Math in JavaScript</h3>
+        <p>
+            In the last example, you might have noticed that <code>6 * 7</code> resulted in the multiplication of 6 and
+            7. The asterisk character is used to denote multiplication in JS. Here is a list of the main math operators
+            in JavaScript:
+        </p>
+        <table>
+            <caption>Common JS Math operators</caption>
+            <tr>
+                <td>+</td>
+                <td>Addition</td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>Subtraction</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>Multiplication</td>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>Division</td>
+            </tr>
+            <tr>
+                <td>%</td>
+                <td>Modulo</td>
+            </tr>
+            <tr>
+                <td>**</td>
+                <td>Exponent</td>
+            </tr>
+        </table>
+
+        <p>
+            You may not be familiar with the modulo operator. All it does is return the remainder of a division. For
+            example, <code>3 % 2 = 1</code> because the remainder of 3/2 is 1. One use for this operator is determining
+            if a number is divisible by another number because the result should be zero. For instance, you can tell if
+            a number is even if that number modulo 2 is equal to 0.
+        </p>
+        <p>
+            Try doing math with JavaScript to get used to the operators! Here is an example:
+        </p>
+    </section>
+
+    <section class="code">
+        <pre>
+            <code>let total = 582;</code>
+            <code>let n = 6;</code>
+            <code></code>
+            <code>let average = total / n;</code>
+            <code>console.log(average);</code>
+        </pre>
+    </section>
+
+    <section class="section-1">
+        <p>
+            The output to the console is 97, which is equal to 582/6.
+        </p>
+    </section>
+
+    <hr class="hr-1">
+
+    <section class="section-1">
+        <h3>Some Math Shortcuts with Variables</h3>
+        <p>
+            Some expressions in JavaScript are so commonly used that in-built shortcuts for those
+            expressions have been implemented. An example is an expression similar to this one:
+        </p>
+    </section>
+
+    <section class="code">
+        <pre>
+            <code>let num = 2;</code>
+            <code>num = num + 3;</code>
+        </pre>
+    </section>
+
+    <section class="section-1">
+        <p>
+            To increase the value stored in <code>num</code> by 3, you can reassign <code>num</code> to the current
+            value
+            of <code>num</code> increased by 3. Reassigning a variable to a value equal to itself plus another number
+            is extremely common. This has a shortcut that looks like this:
+        </p>
+    </section>
+
+    <section class="code">
+        <pre>
+            <code>let num = 2;</code>
+            <code>num += 3;</code>
+        </pre>
+    </section>
+
+    <section class="section-1">
+        <p>
+            These two blocks of code do the exact same thing, and the resulting new value of <code>num</code> is still
+            5. This kind of shortcut is extremely common, so keep them in mind. Here is a list of common shortcuts used
+            in a similar way:
+        </p>
+
+        <table>
+            <caption>Common shortcuts</caption>
+            <tr>
+                <td>+=</td>
+                <td>Sets a variable to the initial value of the variable plus the right-hand expression</td>
+            </tr>
+            <tr>
+                <td>-=</td>
+                <td>Sets a variable to the initial value of the variable minus the right-hand expression</td>
+            </tr>
+            <tr>
+                <td>*=</td>
+                <td>Sets a variable to the initial value of the variable multiplied by the right-hand expression</td>
+            </tr>
+            <tr>
+                <td>/=</td>
+                <td>Sets a variable to the initial value of the variable divided by the right-hand expression</td>
+            </tr>
+        </table>
+        <p>In addition, the need to increment or decrement the value of a number by one is so common that the phrases
+            <code>+= 1</code> and <code>-= 1</code> can be shortened even further: </p>
+
+        <section class="code">
+            <pre>
+            <code>num++; // This is equivalent to num += 1</code>
+            <code>num--; // This is equivalent to num -= 1</code>
+            </pre>
+        </section>
+
+        <hr class="hr-1">
+        <h3>String Concatenation</h3>
+        <p>
+            You can the "plus" symbol to <em>concatenate</em>, or conjoin, strings. For example, the code:
+        </p>
+
+        <section class="code">
+            <pre>
+            <code>console.log("Hello " + "there!");</code>
+            </pre>
+        </section>
+
+        <p>
+            Results in the output <code>"Hello there!"</code>. Notice: the space character in the <code>"Hello "</code>
+            string is necessary because if it was not there, the resulting string would be <code>"Hellothere"</code>.
+            The concatenation operator + joins strings directly without adding any spaces.
+        </p>
+
+        <hr class="hr-1">
+        <h3>Types of Variables</h3>
+        <p>
+            This section may seem like a lot of terminology, but don't worry about memorizing it right away. Working
+            more with JS will allow you to quickly learn this information and build muscle memory.
+        </p>
+        <p>
+            There are multiple different types of information that variables can store. Here are some of the most
+            common:
+        </p>
+        <p>
+            <em>Number</em>: one of the numerical data types in JavaScript, stores numbers, as you would expect. <br>
+            Examples: <code>1, 2.0, 1412321, 3.1415</code>.
+        </p>
+        <p>
+            <em>Boolean</em>: can only store the values <code>true</code> and <code>false</code>. These values are not
+            the same as
+            the strings <code>"true"</code> and <code>"false"</code>. They are unique Boolean-type values that are
+            written without enclosing quotes.<br>
+        </p>
+        <p>
+            <em>String</em>: stores a "string" of characters. <br>
+            Example: <code>"The quick brown fox jumps over the lazy dog"</code>.
+        </p>
+        <p>
+            Strings in JS are <em>immutable</em>, meaning they cannot be directly changed once created. A
+            variable can be assigned to another string, but no methods/functions (which we will talk about later) can
+            change
+            the string once assigned.
+        </p>
+        <p>
+            Strings are indicated by surrounding quotes, either double quotes "" or single quotes
+            '' or even backticks ``. All three options have different effects on how you can
+            organize your strings.
+        </p>
+        <p>
+            Variables can also be of type <code>null</code>, which only returns the value <code>null</code>.
+        </p>
+        <p>
+            Variables
+            can also be of type <code>undefined</code>, which means that a variable has not been assigned a value yet.
+        </p>
+        <p>
+            For example, the statement <code>let num;</code> does not assign the variable <code>num</code> a value, so
+            its type is <code>undefined</code> until it is assigned a value with the assignment operator.
+        </p>
+        <p>
+            The variable types listed so far are <em>primitive values</em>. Values of these types cannot be changed with
+            methods/functions (which we will talk about later). You can reassign a variable to a different primitive
+            value, but you cannot use a function to change the value.
+        </p>
+        <p>
+            Variables that are not primitive types are known as Objects. These can be thought of as custom types of data
+            created by the programmer! We'll talk about these later as well.
+        </p>
+    </section>
+
+    <section class="next-previous-wrapper">
+        <a href="js2.html">&lt; Previous</a>
+        <a href="js4.html">Next &gt;</a>
+    </section>
+
+    <nav class="course-nav">
+        <ul>
+            <li><a href="js1.html">Introduction</a></li>
+            <li><a href="js2.html">Lesson 1</a></li>
+            <li><a href="js3.html">Lesson 2</a></li>
+            <li><a href="js4.html">Lesson 3</a></li>
+            <li><a href="js5.html">Lesson 4</a></li>
+            <li><a href="js6.html">Game 1</a></li>
+            <li><a href="js7.html">Game 2</a></li>
+            <li><a href="js8.html">Game 3</a></li>
+            <li><a href="js9.html">Game 4</a></li>
+            <li><a href="js10.html">Game 5</a></li>
+            <li><a href="js11.html">Game 6</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>
+            NEXT GEN STEM <br> CONNECTICUT, USA
+        </p>
+               <a href="mailto:thenextgenstem@gmail.com"><img src="../images/Mail-Icon-White-on-Grey.jpg" alt="E-mail" style="width:65px; height:65px"></a>
+
+    </footer>
+</body>
+<script type="text/javascript">
+    //*****
+    //Change these params 
+    //Go to tawk.to and sign up for a user, enter your site domain and replace the following URL with the one they give you.
+    var /*<{*/ siteID /*}*/ = /*{*/ "5f29c48fed9d9d2627082f71" /*}>*/ ;
+    var chatSiteURL = 'https://embed.tawk.to/' + siteID + '/default';
+
+    //*****
+
+    // Start of Tawk.to Script
+
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = chatSiteURL;
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+
+    //  End of Tawk.to Script
+</script>
+</html>

@@ -12,22 +12,30 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <title>Next Gen Stem</title>
+    <link rel="icon" href="../images/NGT_HEADER.png">
 </head>
 
 <body>
     <nav class="nav-top">
         <ul class="nav-top-ul">
             <!-- TODO: Fill in links -->
-            <li><b><a href="#" class="nav-top-link">Home</a></b></li>
+            <li><b><a href="index.html" class="nav-top-link">Home</a></b></li>
             <li><b><a href="learntocode.html" class="nav-top-link">Learn to Code</a></b></li>
-            <li><b><a href="#" class="nav-top-link">About</a></b></li>
+            <li><b><a href="about.html" class="nav-top-link">About</a></b></li>
         </ul>
     </nav>
     <header class="homepage-header">
+        <div class="video-container">
+            <div class="color"></div>
+            <video playsinline autoplay loop muted poster="images/code_poster.png">
+                <source src="images/code-2.mp4" type="video/mp4">
+            </video>
+        </div>
         <h1>NEXT GEN STEM</h1>
         <p>Leading the next generation of STEM students</p>
         <a href="learntocode.html"><button class="homepage-header-button">Learn to Code</button></a>
     </header>
+
     <section>
         <p class="homepage-p">
             Next Gen STEM is a completely free resource made to
@@ -46,22 +54,21 @@
     </section>
     <nav class="nav-bottom">
         <ul class="nav-bottom-ul">
-            <!-- TODO: Fill in links once we get the courses up -->
             <li><a href="javascript/js1.html" class="nav-bottom-link" id="javascript">JAVASCRIPT</a></li>
 
-            <li><a href="#" class="nav-bottom-link" id="htmlcss">HTML+CSS</a></li>
+            <li><a href="htmlcss/htmlcourseinfo.html" class="nav-bottom-link" id="htmlcss">HTML+CSS</a></li>
 
             <li><a href="python/CourseLandingPage.html" class="nav-bottom-link" id="python">PYTHON</a></li>
 
-            <li><a href="#" class="nav-bottom-link" id="java">JAVA</a></li>
+            <li><a href="java/Courseinfo.html" class="nav-bottom-link" id="java">JAVA</a></li>
         </ul>
     </nav>
     <footer>
         <p>
             NEXT GEN STEM <br> CONNECTICUT, USA
         </p>
-         <a href="mailto:thenextgenstem@gmail.com">
-            <img src="images/Mail-Icon-White-on-Grey.jpg" style="width:65px; height:65px">
+        <a href="mailto:thenextgenstem@gmail.com">
+        <img src="images/Mail-Icon-White-on-Grey.jpg" style="width:65px; height:65px">
         </a>
     </footer>
 </body>
@@ -86,33 +93,29 @@
         dashboard) -> Property Settings -> Site ID. </label>
 
 </div>
- -->
-<!-- 
-    <script type="text/javascript">
-   
-       //*****
-       //Change these params 
-       //Go to tawk.to and sign up for a user, enter your site domain and replace the following URL with the one they give you.
-       var /*<{*/siteID/*}*/ = /*{*/"5f29c48fed9d9d2627082f71"/*}>*/;
-       var chatSiteURL = 'https://embed.tawk.to/'+siteID+'/default';
-         
-       //*****
-       
-       // Start of Tawk.to Script
-       
-       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-       (function(){
-       var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-       s1.async=true;
-       s1.src=chatSiteURL;
-       s1.charset='UTF-8';
-       s1.setAttribute('crossorigin','*');
-       s0.parentNode.insertBefore(s1,s0);
-       })();
-   
-       //  End of Tawk.to Script
-   
-   </script>
-    -->
+<script type="text/javascript">
+    //*****
+    //Change these params 
+    //Go to tawk.to and sign up for a user, enter your site domain and replace the following URL with the one they give you.
+    var /*<{*/ siteID /*}*/ = /*{*/ "5f29c48fed9d9d2627082f71" /*}>*/ ;
+    var chatSiteURL = 'https://embed.tawk.to/' + siteID + '/default';
 
+    //*****
+
+    // Start of Tawk.to Script
+
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = chatSiteURL;
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+
+    //  End of Tawk.to Script
+</script>
 </html>

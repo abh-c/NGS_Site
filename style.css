@@ -43,13 +43,10 @@ section p.coding-info {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    overflow: hidden;
-    font-size: 25px;
-    margin: 40px;
-    justify-content: left;
+    font-size: 22px;
+    margin: 40px auto;
     height: 90%;
-
+    max-width: 30rem;
 }
 
 /* Style for the general course descriptions on learn to code page*/
@@ -88,7 +85,8 @@ section p.link {
     justify-content: left;
     overflow: hidden;
     font-size: 18px;
-    margin: 20px;
+    margin: 20px auto;
+    max-width: 30rem;
     height: 90%;
     padding-bottom: 50px;
 }
@@ -102,7 +100,8 @@ section p.feedback2 {
     justify-content: left;
     overflow: hidden;
     font-size: 25px;
-    margin: 40px;
+    margin: 40px auto;
+    max-width: 30rem;
     height: 90%;
 }
 
@@ -136,13 +135,11 @@ section.the-team {
     overflow: hidden;
     font-size: 35px;
     padding: 40px;
+    padding-bottom: 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     overflow: hidden;
-    padding-bottom: 60px;
-
-
 }
 
 /* Style for the table in about section AS A WHOLE*/
@@ -190,6 +187,9 @@ section button.email-button-about:hover {
     justify-content: center;
     display: flex;
     border-color: black;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
 
 }
 
@@ -217,6 +217,39 @@ section table td.table {
 
 }
 
+.about-us {
+    background: #033254;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.about-us li {
+    float: left;
+    display: block;
+    background:rgb(249, 249, 249);
+    color: #021e32;
+    text-decoration: none;
+    font-size: 24px;
+    width: 300px;
+    padding: 20px;
+    margin: 5px;
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.21), 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.35s cubic-bezier(.24, .8, .24, 1);
+}
+
+.about-us li b{
+    font-size: 26px;
+}
+
+.about-us li p{
+    padding-top: 10px;
+    line-height: 22px;
+}
+
 /*Email button*/
 
 section button.email-button {
@@ -236,6 +269,10 @@ section button.email-button {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     padding: 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
 }
 
 /*Email button hover*/
@@ -246,6 +283,10 @@ section button.email-button:hover {
     transition-duration: .1s;
     border-radius: 2px;
     justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
 
 }
 
@@ -291,17 +332,46 @@ section button.email-button:hover {
     list-style-type: none;
 }
 
+.video-container video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.video-container .color {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #033254;
+    opacity: 30%;
+    z-index: -1;
+}
+
 /* Style the header (only for the homepage) */
 .homepage-header {
-    background-image: url("images/ezgif.com-video-to-gif.gif");
-    background-size: cover;
-    background-position: inherit;
-    height: 600px;
-    justify-content: center;
     color: rgb(255, 255, 255);
-    padding-top: 200px;
-    padding-bottom: 100px;
+    position: relative;
+    height: 100vh;
     text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* Make header h1 bigger */
+.homepage-header h1 {
+    text-align: center;
+    font-size: 70px;
+    text-shadow: 0 2px 7px #000000;
 }
 
 /* Style the button in the header */
@@ -323,22 +393,18 @@ section button.email-button:hover {
     color: #033254;
 }
 
-/* Make header h1 bigger */
-.homepage-header h1 {
-    font-size: 70px;
-}
-
 /* For the subtitle below NEXT GEN STEM in the header */
 .homepage-header p {
     font-size: 24px;
     color: hsl(0, 0%, 98%);
     margin-top: 10px;
     margin-bottom: 20px;
+    text-shadow: 0 2px 7px #000000;
 }
 
 .homepage-p {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin: 30px auto;
+    max-width: 30rem;
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: 24px;
@@ -426,41 +492,25 @@ footer {
 .section-1 h2,
 .section-1 h3,
 .section-1 ol,
+.section-1 ul,
+.section-1 table,
 .section-2 p,
 .section-2 h1,
 .section-2 h2,
 .section-2 ol {
-    max-width: 40rem;
+    max-width: 30rem;
     text-align: left;
     margin: 20px auto;
 }
 
 /* Style a horizontal divider line */
+hr,
 .hr-1 {
-    max-width: 40rem;
+    max-width: 30rem;
     margin: 10px auto;
     height: 1px;
     border: 0;
     border-top: 1px solid rgb(96, 96, 96);
-}
-
-/* For when it gets below 720px/40em */
-@media only screen and (max-width: 720px) {
-    .section-1 p,
-    .section-1 h1,
-    .section-1 h2,
-    .section-1 h3,
-    .section-1 ol,
-    .section-2 p,
-    .section-2 h1,
-    .section-2 h2,
-    .section-2 ol {
-        margin: 20px 5%;
-    }
-
-    .hr-1 {
-        margin: 10px 5%;
-    }
 }
 
 .section-1 iframe {
@@ -500,6 +550,20 @@ footer {
     letter-spacing: normal;
 }
 
+.section-1 p em {
+    font-size: inherit;
+}
+
+.section-1 p b {
+    font-size: inherit;
+}
+
+.section-1 p a,
+.section-1 ol li a,
+.section-1 ul li a {
+    font-size: inherit;
+}
+
 .section-1 p code {
     color: rgb(96, 96, 96);
     font-size: 18px;
@@ -520,16 +584,53 @@ footer {
     list-style-type: decimal;
 }
 
-.section-1 ol {
+.section-1 ol li {
+    color: rgb(96, 96, 96);
+    font-size: inherit;
+    line-height: 1.5;
+}
+
+.section-1 table {
+    color: rgb(96, 96, 96);
+    font-size: 18px;
+    border-collapse: collapse;
+    border: 1px solid rgb(200, 200, 200);
+    letter-spacing: normal;
+    flex-flow: column;
+    max-width: 540px;
+}
+
+.section-1 table caption {
+    padding: 5px;
+}
+
+.section-1 td,
+.section-1 th {
+    border: 1px solid rgb(200, 200, 200);
+    padding: 7px 10px;
+    font-size: inherit;
+}
+
+.section-1 th {
+    background-color: rgb(235, 235, 235);
+}
+
+.section-1 ul {
     padding-bottom: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
     padding-left: 50px;
-    color: rgb(74, 74, 74);
+    color: rgb(96, 96, 96);
     font-size: 18px;
     line-height: 1.5;
     letter-spacing: normal;
-    list-style-type: decimal;
+    list-style-type: none;
+}
+
+.section-1 ul li {
+    color: rgb(96, 96, 96);
+    font-size: inherit;
+    line-height: 1.5;
 }
 
 .section-1 img {
@@ -538,6 +639,12 @@ footer {
     margin-right: auto;
     max-width: 100%;
     height: auto;
+}
+
+.section-1 video.vid-1 {
+    max-width: 540px;
+    display: block;
+    margin: 10px auto;
 }
 
 .img-gallery {
@@ -633,20 +740,18 @@ footer {
 /* NOTE: USE THE <code> tag in text */
 .code {
     background: rgb(230, 230, 230);
-    overflow: scroll;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: calc(50% - 20rem);
+    margin-left: calc(50% - 15rem);
     margin-right: 0px;
-    padding: 10px;
     padding-right: 0px;
     border: solid #033254;
     border-width: 0 0 0 5px;
     border-radius: 6px 0 0 6px;
 }
 
-.code p,
-.code code {
+.code pre p,
+.code pre code {
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     color: rgb(58, 58, 58);
@@ -654,15 +759,26 @@ footer {
     /* white-space: pre-wrap; */
 }
 
+.code pre code span {
+    font-family: inherit;
+    font-size: inherit;
+    /* Fallback solid color */
+    background: rgb(193, 193, 193);
+    background: rgba(152, 152, 152, 0.42);
+}
+
 .code p {
     display: inline-block;
-    margin-left: 3em;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 2em;
 }
 
 /* Use CSS counters to put line numbers before the code */
 .code pre {
-    overflow-x: scroll;
     white-space: pre;
+    overflow-x: scroll;
     counter-reset: line;
 }
 
@@ -673,11 +789,16 @@ footer {
     counter-increment: line;
 }
 
+/* Add some padding to the top of the first text line */
+.code pre:first-child {
+    padding-top: 10px;
+}
+
 /* Add the line numbers */
 .code code:before {
     content: counter(line) ": ";
     display: inline-block;
-    width: 3em;
+    width: 2em;
     padding-left: auto;
     margin-left: auto;
     text-align: right;
@@ -686,9 +807,9 @@ footer {
 
 /* Styling for highlighted code */
 code.hl {
-    background: rgb(181, 181, 181);
     /* Fallback solid color */
-    background: rgba(108, 108, 108, 0.42);
+    background: rgb(193, 193, 193);
+    background: rgba(152, 152, 152, 0.42);
 }
 
 .course-nav {
@@ -734,14 +855,21 @@ code.hl {
 @media only screen and (max-width:540px) {
 
     /* Change format for smaller screens */
+    .section-1 p,
     .section-1 h1,
     .section-1 h2,
     .section-1 h3,
-    .section-1 p,
+    .section-1 ol,
+    .section-2 p,
     .section-2 h1,
-    .section-1 h2,
-    .section-2 p {
+    .section-2 h2,
+    .section-2 ol {
         margin: 20px 5%;
+    }
+
+    hr,
+    .hr-1 {
+        margin: 10px 5%;
     }
 
     .code {
@@ -766,13 +894,17 @@ code.hl {
     .section-1 p,
     .section-2 p,
     .section-1 p code,
+    .section-1 table,
+    .section-1 table caption,
+    .section-1 table tr,
     .section-1 ol,
+    .section-1 ul,
     .section-2 ol {
         font-size: 14px;
     }
 
-    .hr-1 {
-        margin: 10px 5%;
+    .section-1 video.vid-1 {
+        width: 100%;
     }
 
     /* Make the top nav bar a column */

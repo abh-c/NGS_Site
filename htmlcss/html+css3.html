@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Java, Python" />
+    <meta name="description" content="Free programming tutorials" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Next Gen Stem</title>
+    <link rel="icon" href="../images/NGT_HEADER.png">
+</head>
+
+<body>
+    <nav class="nav-top">
+        <ul class="nav-top-ul">
+            <li><b><a href="../index.html" class="nav-top-link">Home</a></b></li>
+            <li><b><a href="../learntocode.html" class="nav-top-link">Learn to Code</a></b></li>
+            <li><b><a href="../about.html" class="nav-top-link">About</a></b></li>
+        </ul>
+    </nav>
+
+    <section class="section-1">
+        <h1>HTML + CSS - Lesson 3</h1>
+        <hr class="hr-1">
+        <h2>Layout and Styling</h2>
+        <h3></h3>
+        <p>
+            In this lesson, we will begin to create a layout for our website using CSS and HTML.
+        </p>
+        <p>
+            Creating a layout for your website is extremely important to the overall organization and feel of the
+            website. Without it, the website can feel cluttered and the user experience will not be positive.
+        </p>
+        <p>
+            To do this, within the HTML &lt;body> &lt;/body> tags we are going to add section tags, &lt;section>
+            &lt;/section> and a footer tags for the bottom of the website.
+        </p>
+        <p>
+            This will allow us to put more information into this webpage in an organized way. Similarly, the footer
+            section can contain general information and on many websites this where a copyright, location, or basic contact information goes.
+        </p>
+        <p>
+            The code should look like this:
+        </p>
+
+        <section class="code">
+            <pre>
+    <code> &lt;body></code>
+    <code>   &lt;Website Name</code>
+    <code>   &lt;p></code>
+    <code>     &lt;b>Welcome to my website! On this website I will be sharing</code>
+    <code>   &lt;/p></code>
+    <code>   &lt;button>My Blog</code>
+    <code>   &lt;section>Section 1</code>
+    <code>   &lt;section>Section 2</code>
+    <code>   &lt;footer>Footer</code>
+    <code> &lt;/body> </code>
+            </pre>
+        </section>
+
+        <hr class="hr-1">
+        <p>
+            Now, with what we learned last lesson, you can style these sections and the footer as you would like.
+
+        </p>
+        <p>
+            This is how my website now looks:
+        </p>
+        <img src="HTMLCSSImages/lesson3_2.png" alt="Color">
+        <p>
+            And this is the code for it:
+        </p>
+        <section class="code">
+
+            <pre>
+    <code>button {</code>
+    <code>	background: rgb(0, 140, 255);</code>
+    <code>  color: white;</code>
+    <code>  border: gray;</code>
+    <code></code>
+    <code>}</code>
+    <code></code>
+    <code>section {</code>
+    <code>	background: gray;</code>
+    <code></code>
+    <code>}</code>
+    <code></code>
+    <code>footer {</code>
+    <code>background: rgb(0, 140, 255);</code>
+    <code></code>
+    <code>}</code>
+            </pre>
+        </section>
+        <p>
+            Now we will space out the layout correctly using the CSS tags margin and padding which allows the website to
+            be spaced out and organized.
+        </p>
+
+        <section class="code">
+
+            <pre>
+    <code>button {</code>
+    <code>	background: rgb(0, 140, 255);</code>
+    <code>  color: white;</code>
+    <code>  border: gray;</code>
+    <code>  padding: 10px;</code>
+    <code></code>
+    <code>}</code>
+    <code></code>
+    <code>section {</code>
+    <code>	background: gray;</code>
+    <code>	padding: 30px;</code>
+    <code>	margin: 40px;</code>
+    <code>	align-items: center;</code>
+    <code></code>
+    <code>}</code>
+    <code></code>
+    <code>footer {</code>
+    <code>background: rgb(0, 140, 255);</code>
+    <code>padding: 30px;</code>
+    <code></code>
+    <code>}</code>
+        </pre>
+
+        </section>
+
+
+        <p>
+            The final part of this lesson’s layout and styling is to center the different parts of this webpage.
+        </p>
+        <p>
+            First, we are going to go to go into the CSS code under the body section. There, make sure there is ;
+            following the color that we made the paragraph. Then write: text-align: center;
+        </p>
+        <p>
+            Similarly, we will add another section of CSS code based on the previous HTML by writing:
+        </p>
+        <p>
+            h1 {
+        </p>
+        <p>
+            Then we will again write:
+        </p>
+        <p>
+            text-align: center;
+        </p>
+        <p>
+            The code should look like this:
+
+        </p>
+        <section class="code">
+
+        <pre>
+    <code>body {</code>
+    <code>	font-family: 'Lucida'; 'Lucida Sans', 'Lucida Sans Regular';</code>
+    <code>	color: aliceblue;</code>
+    <code>	background: rgb(211, 211, 211);</code>
+    <code>	text-align: center;</code>
+    <code>}</code>
+        </pre>
+
+        </section>
+
+        <p>
+            My website looks ike this:
+        </p>
+
+        <img src="HTMLCSSImages/lesson3_2.png" alt="Color">
+
+        <p>
+            Common Mistakes:
+        </p>
+        <p>
+            Make sure you are using a semicolon ( ; ) after each line of CSS code. Also, make sure all of your CSS code
+            lies within opening and closing brackets, ( { } ).
+        </p>
+        <p>
+            Finally, make sure you save your code before, File, Save or ctrl + s before going into your files and testing
+            the file in your browser.
+        </p>
+
+        <section class="next-previous-wrapper">
+            <a href="html+css2.html">&lt; Previous</a>
+            <a href="html+css4.html">Next &gt;</a>
+        </section>
+
+        <nav class="course-nav">
+            <ul>
+                <li><a href="htmlcourseinfo.html">Introduction</a></li>
+                <li><a href="html+css1.html">Lesson 1</a></li>
+                <li><a href="html+css2.html">Lesson 2</a></li>
+                <li><a href="html+css3.html">Lesson 3</a></li>
+                <li><a href="html+css4.html">Lesson 4</a></li>
+                <li><a href="html+css5.html">Lesson 5</a></li>
+                <li><a href="html+css6.html">Lesson 6</a></li>
+                <li><a href="html+css7.html">Lesson 7</a></li>
+            </ul>
+        </nav>
+
+    </section>
+
+
+    <footer>
+        <p>
+            NEXT GEN STEM <br> CONNECTICUT, USA
+        </p>
+        <a href="mailto:thenextgenstem@gmail.com"><img src="../images/Mail-Icon-White-on-Grey.jpg" alt="E-mail"
+                style="width:65px; height:65px"></a>
+    </footer>
+</body>
+<!-- TODO put the stuff below in the <body> tag -->
+
+<div id="app_settings" style="display:none;">
+    <label class='app_text_label'>Chat SiteID: </label>
+    <input class='app_field_input' type="text" name="siteID"><br>
+    <label class='app_text_label info'>* To start receiving chats go to <a href='http://www.tawk.to'
+            target='blank'>tawk.to</a> and get your chat site ID. <br>Tawk dashboard -> Admin (at the top of the
+        dashboard) -> Property Settings -> Site ID. </label>
+</div>
+<div id="app_settings" style="display:none;">
+    <label class='app_text_label'>Chat SiteID: </label>
+    <input class='app_field_input' type="text" name="siteID"><br>
+    <label class='app_text_label info'>* To start receiving chats go to <a href='http://www.tawk.to'
+            target='blank'>tawk.to</a> and get your chat site ID. <br>Tawk dashboard -> Admin (at the top of the
+        dashboard) -> Property Settings -> Site ID. </label>
+</div>
+
+<script type="text/javascript">
+    //*****
+    //Change these params 
+    //Go to tawk.to and sign up for a user, enter your site domain and replace the following URL with the one they give you.
+    var /*<{*/ siteID /*}*/ = /*{*/ "5f29c48fed9d9d2627082f71" /*}>*/ ;
+    var chatSiteURL = 'https://embed.tawk.to/' + siteID + '/default';
+
+    //*****
+
+    // Start of Tawk.to Script
+
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = chatSiteURL;
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+
+    //  End of Tawk.to Script
+</script>
+
+
+</html>

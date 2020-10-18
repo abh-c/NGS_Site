@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Java, Python" />
+    <meta name="description" content="Free programming tutorials" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Next Gen Stem</title>
+    <link rel="icon" href="../images/NGT_HEADER.png">
+
+</head>
+<!-- NOTE to self: alt + w to wrap text in a tag -->
+
+<body>
+    <nav class="nav-top">
+        <ul class="nav-top-ul">
+            <li><b><a href="../index.html" class="nav-top-link">Home</a></b></li>
+            <li><b><a href="../learntocode.html" class="nav-top-link">Learn to Code</a></b></li>
+            <li><b><a href="../about.html" class="nav-top-link">About</a></b></li>
+        </ul>
+    </nav>
+
+    <section class="section-1">
+        <h1>JavaScript - Game Part 4</h1>
+        <p>In this lesson we will move the paddles with the keyboard and mouse.</p>
+        <hr>
+        <p>
+            Now that we have the ball moving, let's try moving the paddles as well. The opponent paddle on the right
+            will move automatically without any input from the player. Let's create a function to move the opponent
+            paddle. To do so, we need an <code>opponentPaddleDY</code> variable to store the amount by which the paddle
+            will move each frame. Let's set it initially to 3.
+        </p>
+        <section class="code">
+            <pre>
+    <code>let ballTop;</code>
+    <code>let ballBottom;</code>
+    <code class='hl'>let opponentPaddleDY = 3;</code>
+    <p>...</p>
+    <code class='hl'>function moveOpponentPaddle() {</code>
+    <code class='hl'></code>
+    <code class='hl'>}</code>
+    <p>...</p>
+    <code>function draw() {</code>
+    <code>    context.clearRect(0, 0, canvas.width, canvas.height);</code>
+    <code>    drawBall();</code>
+    <code class='hl'>    moveOpponentPaddle();</code>
+    <code>    drawPaddle(playerPaddle);</code>
+    <code>    drawPaddle(opponentPaddle);</code>
+    <code>    handleCollision();</code>
+    <code>    requestAnimationFrame(draw);</code>
+    <code>    ballX += ballDX;</code>
+    <code>    ballY += ballDY;</code>
+    <code>}</code>
+            </pre>
+        </section>
+        <p>
+            First, we want the opponent paddle to change directions when it hits the edges. The top of the paddle is
+            represented only by its y coordinate, and the bottom is represented by the y coordinate plus the height of
+            the paddle. Thus, we want the function to look like this:
+        </p>
+        <section class="code">
+            <pre>
+    <code>function moveOpponentPaddle() {</code>
+    <code>    if (opponentPaddle.y &lt; 0 || </code>
+    <code>        opponentPaddle.y + PADDLE_HEIGHT &gt; canvas.height) {</code>
+    <code>        opponentPaddleDY = -opponentPaddleDY;</code>
+    <code>    }</code>
+    <code></code>
+    <code>    opponentPaddle.y += opponentPaddleDY;</code>
+    <code>}</code>
+            </pre>
+        </section>
+        <p>
+            This function means that if the paddle touches either the top or bottom edge, it will change direction. The
+            function will then add <code>opponentPaddleDY</code> to the opponent paddle's y position.
+        </p>
+        <video controls class="vid-1">
+            <source src="jsimages/paddleMove1.mp4" type="video/mp4">
+            <p>
+                Your browser doesn't support mp4 videos. Here is
+                a <a href="jsimages/paddleMove1.mp4" target="_blank" rel="noopener">link</a> to the video instead.
+            </p>
+        </video>
+        <p>
+            Now let's try to move the player paddle as well. Let's start with the keyboard. In order to detect key
+            presses, we need to add <em>event listeners</em> to the document. These statements take the form:
+        </p>
+        <section class="code">
+            <pre>
+    <code>document.addEventListener("eventType", function);</code>
+            </pre>
+        </section>
+        <p>
+            The first parameter determines the type of event to listen for, like a key press or a mouse movement, and
+            the second parameter defines a function that runs automatically when the event is detected. For the second
+            parameter, we could write a function name and define that function elsewhere in the program, or we could
+            insert
+            a function directly into the parameter space. We could even write an arrow function in that space. The last
+            option is the least verbose, so we will do that one. For moving with the arrow keys, we need to listen for
+            two events. Add these lines to your program near the top.
+        </p>
+        <section class="code">
+            <pre>
+    <code>document.addEventListener("keydown", e => {</code>
+    <code>    </code>
+    <code>});</code>
+    <code></code>
+    <code>document.addEventListener("keyup", e => {</code>
+    <code>    </code>
+    <code>});</code>
+    <code></code>
+            </pre>
+        </section>
+        <p>
+            Each function takes in an event parameter which holds information about the event. In this case, we call the
+            parameter <code>e</code>. The <code>"keydown"</code> event triggers when a key is pressed down, and the
+            <code>"keyup"</code> event is triggered when a key is released, or when you stop pressing a key. In order to
+            properly use the events, we need to declare some variables:
+        </p>
+        <section class="code">
+            <pre>
+            <code>const PADDLE_COLOR = "#e0e0e0";</code>
+            <code>const PADDLE_WIDTH = 15;</code>
+            <code>const PADDLE_HEIGHT = 120;</code>
+            <code class='hl'>const PLAYER_PADDLE_DY = 6;</code>
+            <p>...</p>
+            <code>let ballBottom;</code>
+            <code>let opponentPaddleDY = 3;</code>
+            <code class='hl'>let upIsPressed = false;</code>
+            <code class='hl'>let downIsPressed = false;</code>
+            </pre>
+        </section>
+        <p>
+            The constant <code>PLAYER_PADDLE_DY</code> determines the rate at which the paddle will move, and the
+            <code>upIsPressed</code> and <code>downIsPressed</code> variables store information on whether or not the up
+            or down arrow keys are being pressed.
+        </p>
+        <p>
+            Now, to find out which key is being pressed, we can use the event's keycode. You can use a search engine to
+            find out which keycode corresponds to which key. You will find that the up-arrow key has keycode 38, and the
+            down-arrow key has keycode 40. We can get the keycode
+            that the event parameter variable stores with dot notation like this: <code>e.keycode</code>. With this
+            information, we can fill in the functions:
+        </p>
+        <section class="code">
+            <pre>
+    <code>document.addEventListener("keydown", e => {</code>
+    <code>    if (e.keyCode === 38) {</code>
+    <code>        upIsPressed = true;</code>
+    <code>    }</code>
+    <code>    else if (e.keyCode === 40) {</code>
+    <code>        downIsPressed = true;</code>
+    <code>    }</code>
+    <code>});</code>
+    <code></code>
+    <code>document.addEventListener("keyup", e => {</code>
+    <code>    if (e.keyCode === 38) {</code>
+    <code>        upIsPressed = false;</code>
+    <code>    }</code>
+    <code>    else if (e.keyCode === 40) {</code>
+    <code>        downIsPressed = false;</code>
+    <code>    }</code>
+    <code>});</code>
+            </pre>
+        </section>
+        <p>
+            What these functions do is set the appropriate variable to true if that key is being pressed and set the
+            appropriate variable to false when the key stops being pressed. Now we can animate the paddle movement in
+            the <code>draw()</code> function:
+        </p>
+        <section class="code">
+            <pre>
+    <code> function draw() {</code>
+    <code>     context.clearRect(0, 0, canvas.width, canvas.height);</code>
+    <code>     drawBall();</code>
+    <code>     moveOpponentPaddle();</code>
+    <code>     drawPaddle(playerPaddle);</code>
+    <code>     drawPaddle(opponentPaddle);</code>
+    <code>     handleCollision();</code>
+    <code>     requestAnimationFrame(draw);</code>
+    <code>     ballX += ballDX;</code>
+    <code>     ballY += ballDY;</code>
+    <code class='hl'>     if (upIsPressed) {</code>
+    <code class='hl'>         playerPaddle.y -= PLAYER_PADDLE_DY;</code>
+    <code class='hl'>     }</code>
+    <code class='hl'>     else if (downIsPressed) {</code>
+    <code class='hl'>         playerPaddle.y += PLAYER_PADDLE_DY;</code>
+    <code class='hl'>     }</code>
+    <code> }</code>
+            </pre>
+        </section>
+        <p>
+            This moves the paddle up (by lowering the y value) when the up key is being pressed and moves the paddle
+            down (by increasing the y value) when the down key is being pressed. There is one problem with this,
+            however,
+            because the paddle can go offscreen. We can fix this by adding additional code that pushes the paddle back
+            into bounds if it gets too far high or low:
+        </p>
+        <section class="code">
+            <pre>
+    <code> function draw() {</code>
+    <code>     context.clearRect(0, 0, canvas.width, canvas.height);</code>
+    <code>     drawBall();</code>
+    <code>     moveOpponentPaddle();</code>
+    <code>     drawPaddle(playerPaddle);</code>
+    <code>     drawPaddle(opponentPaddle);</code>
+    <code>     handleCollision();</code>
+    <code>     requestAnimationFrame(draw);</code>
+    <code>     ballX += ballDX;</code>
+    <code>     ballY += ballDY;</code>
+    <code>     if (upIsPressed) {</code>
+    <code>         playerPaddle.y -= PLAYER_PADDLE_DY;</code>
+    <code class='hl'>         if (playerPaddle.y &lt; 0) {</code>
+    <code class='hl'>             playerPaddle.y += PLAYER_PADDLE_DY;</code>
+    <code class='hl'>         }</code>
+    <code>     }</code>
+    <code>     else if (downIsPressed) {</code>
+    <code>         playerPaddle.y += PLAYER_PADDLE_DY;</code>
+    <code class='hl'>         if (playerPaddle.y &gt; canvas.height - PADDLE_HEIGHT) {</code>
+    <code class='hl'>             playerPaddle.y -= PLAYER_PADDLE_DY;</code>
+    <code class='hl'>         }</code>
+    <code>     }</code>
+    <code> }</code>
+            </pre>
+        </section>
+        <p>Now, you should be able to move the paddle with the arrow keys.</p>
+        <p>You can also implement mouse movement in a similar way:</p>
+        <section class="code">
+            <pre>
+    <code>let downIsPressed = false;</code>
+    <code class='hl'>let mouseY;</code>
+    <p>...</p>
+    <code class='hl'>document.addEventListener("mousemove", e => {</code>
+    <code class='hl'>    mouseY = e.clientY - canvas.offsetTop;</code>
+    <code class='hl'>    if (mouseY > 0 && mouseY &lt; canvas.height) {</code>
+    <code class='hl'>        playerPaddle.y = mouseY - PADDLE_HEIGHT / 2;</code>
+    <code class='hl'>    }</code>
+    <code class='hl'>});</code>
+            </pre>
+        </section>
+        <p>
+            We need to calculate the mouse y position as the difference between the mouse y position in the browser
+            <code>e.clientY</code> and
+            the offset off the top of the canvas <code>canvas.offsetTop</code>. The function then sets the paddle
+            position with the mouse position
+            when the mouse moves, as long as the mouse is inside the canvas bounds. We can keep the paddle from going
+            off the screen at all with some additional code:
+        </p>
+        <section class="code">
+            <pre>
+    <code>document.addEventListener("mousemove", e => {</code>
+    <code>    mouseY = e.clientY - canvas.offsetTop;</code>
+    <code>    if (mouseY > 0 && mouseY &lt; canvas.height) {</code>
+    <code>        playerPaddle.y = mouseY - PADDLE_HEIGHT / 2;</code>
+    <code class="hl">        if (playerPaddle.y &lt; 0) {</code>
+    <code class="hl">            playerPaddle.y = 0;</code>
+    <code class="hl">        }</code>
+    <code class="hl">        else if (playerPaddle.y > canvas.height - PADDLE_HEIGHT) {</code>
+    <code class="hl">            playerPaddle.y = canvas.height - PADDLE_HEIGHT;</code>
+    <code class="hl">        }</code>
+    <code>    }</code>
+    <code>});</code>
+            </pre>
+        </section>
+        <hr>
+        <h3>An optional extra step to make the opponent paddle chase the ball.</h3>
+        <p>
+            We can add some simple code to the <code>moveOpponentPaddle()</code> function to make the paddle try to
+            chase the ball instead of just going back and forth. See if you can do it yourself before seeing my code.
+            What we want the opponent paddle to do is change direction when the ball is above it and the paddle is
+            moving downward or when the ball is below it and the paddle is moving upward. Try it yourself!
+        </p>
+        <p>
+            <br><br><br><br>
+            Here is my code:
+        </p>
+        <section class="code">
+            <pre>
+    <code>function moveOpponentPaddle() {</code>
+    <code>    if (opponentPaddle.y &lt; 0 || </code>
+    <code>        opponentPaddle.y + PADDLE_HEIGHT > canvas.height) {</code>
+    <code>        opponentPaddleDY = -opponentPaddleDY;</code>
+    <code>    }</code>
+    <code class='hl'>    else if ((ballY &lt; opponentPaddle.y && opponentPaddleDY > 0) ||</code>
+    <code class='hl'>            (ballY > opponentPaddle.y + PADDLE_HEIGHT && opponentPaddleDY &lt; 0)) {</code>
+    <code class='hl'>        opponentPaddleDY = -opponentPaddleDY;</code>
+    <code class='hl'>    }</code>
+    <code></code>
+    <code>    opponentPaddle.y += opponentPaddleDY;</code>
+    <code>}</code>
+            </pre>
+        </section>
+        <p><a href="https://github.com/abh-c/gameDemo4" target="_blank" rel="noopener">Source code</a></p>
+    </section>
+
+    <section class="next-previous-wrapper">
+        <a href="js8.html">&lt; Previous</a>
+        <a href="js10.html">Next &gt;</a>
+    </section>
+
+    <nav class="course-nav">
+        <ul>
+            <li><a href="js1.html">Introduction</a></li>
+            <li><a href="js2.html">Lesson 1</a></li>
+            <li><a href="js3.html">Lesson 2</a></li>
+            <li><a href="js4.html">Lesson 3</a></li>
+            <li><a href="js5.html">Lesson 4</a></li>
+            <li><a href="js6.html">Game 1</a></li>
+            <li><a href="js7.html">Game 2</a></li>
+            <li><a href="js8.html">Game 3</a></li>
+            <li><a href="js9.html">Game 4</a></li>
+            <li><a href="js10.html">Game 5</a></li>
+            <li><a href="js11.html">Game 6</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>
+            NEXT GEN STEM <br> CONNECTICUT, USA
+        </p>
+               <a href="mailto:thenextgenstem@gmail.com"><img src="../images/Mail-Icon-White-on-Grey.jpg" alt="E-mail" style="width:65px; height:65px"></a>
+
+    </footer>
+</body>
+<script type="text/javascript">
+    //*****
+    //Change these params 
+    //Go to tawk.to and sign up for a user, enter your site domain and replace the following URL with the one they give you.
+    var /*<{*/ siteID /*}*/ = /*{*/ "5f29c48fed9d9d2627082f71" /*}>*/ ;
+    var chatSiteURL = 'https://embed.tawk.to/' + siteID + '/default';
+
+    //*****
+
+    // Start of Tawk.to Script
+
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = chatSiteURL;
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+
+    //  End of Tawk.to Script
+</script>
+</html>

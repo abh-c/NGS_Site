@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Java, Python" />
+    <meta name="description" content="Free programming tutorials" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Next Gen Stem</title>
+    <link rel="icon" href="../images/NGT_HEADER.png">
+
+</head>
+<!-- NOTE to self: alt + w to wrap text in a tag -->
+
+<body>
+    <nav class="nav-top">
+        <ul class="nav-top-ul">
+            <li><b><a href="../index.html" class="nav-top-link">Home</a></b></li>
+            <li><b><a href="../learntocode.html" class="nav-top-link">Learn to Code</a></b></li>
+            <li><b><a href="../about.html" class="nav-top-link">About</a></b></li>
+        </ul>
+    </nav>
+
+    <section class="section-1">
+        <h1>JavaScript - Lesson 3</h1>
+        <p>
+            This lesson will go over loops, arrays, variable declaration keywords, if statements, and functions/methods.
+        </p>
+        <hr class="hr-1">
+        <p>
+            <b>
+                A note: capitalization is very important in JavaScript. Keywords like <em>var</em> and <em>while</em>
+                must have
+                the proper capitalization, which is all lower-case in this case. If your code is giving you errors or
+                is not working, make sure
+                you have the right capitalization.
+            </b>
+        </p>
+        <p>
+            <b>
+                Common practice for variable names is to use camel casing, or capitalizing the
+                beginning of every word except the first, like this: <code>exampleVariableName</code>. Another thing to
+                note is that the first character
+                of a variable name cannot be a number, and variable names cannot include spaces.
+            </b>
+        </p>
+        <hr>
+        <h3>While Loops</h3>
+        <p>
+            Loops are used when you want to repeat a specific section of code multiple times. Loops run while the
+            <em>condition</em> is true and end when the condition is detected as false at the start of a loop.
+        </p>
+        <p>
+            <em>While loops</em> are one kind of loop with this syntax:
+        </p>
+        <section class="code">
+            <pre>
+        <code>while ([condition is true]) {</code>
+        <code>  [run this section of code]</code>
+        <code>}</code>
+            </pre>
+        </section>
+        <p>This is an example:</p>
+        <section class="code">
+            <pre>
+        <code>let i = 0;</code>
+        <code>while (i &lt; 10) {</code>
+        <code>  console.log(i);</code>
+        <code>  i++;</code>
+        <code>}</code>
+            </pre>
+        </section>
+        <p>
+            In English, this loop means "While the variable <code>i</code> is less than 10, log <code>i</code> to the
+            console and increment <code>i</code> by
+            1". This means that the loop will run 10 times and print the numbers 0 through 9 to the console. The loop
+            will not print the 10 to the console, because 10 is not less than 10, so the condition is <code>false</code>
+            and the loop
+            ends. If we wanted to include 10 in the loop we could have made the condition <code>i &lt;= 10</code>, or
+            <code>i</code> is less than
+            or equal to 10. Here is a list of important comparison operators in JS:
+        </p>
+        <table>
+            <caption>
+                Important comparison operators
+            </caption>
+            <tr>
+                <td>&gt;</td>
+                <td>Greater than</td>
+            </tr>
+            <tr>
+                <td>&lt;</td>
+                <td>Less than</td>
+            </tr>
+            <tr>
+                <td>&gt;=</td>
+                <td>Greater than or equal to</td>
+            </tr>
+            <tr>
+                <td>&lt;=</td>
+                <td>Less than or equal to</td>
+            </tr>
+            <tr>
+                <td>==</td>
+                <td>Is equal</td>
+            </tr>
+            <tr>
+                <td>===</td>
+                <td>Is equal (strict type)</td>
+            </tr>
+            <tr>
+                <td>!=</td>
+                <td>Is not equal</td>
+            </tr>
+            <tr>
+                <td>!==</td>
+                <td>Is not equal (strict type)</td>
+            </tr>
+        </table>
+        <p>Notice that the equality operators are not single equals signs because that is already the operator used to
+            assign values to variables, the <em>assignment operator</em>.</p>
+        <p>You may have noticed that there are two equality operators, <code>==</code> and <code>===</code>. The
+            difference is that the double equals sign operator tries to ignore the variable type of the values being
+            compared. For example, the expression
+            <code>2 == "2"</code> would return <code>true</code>. The triple equals sign operator takes type into
+            account, so <code>2 === "2"</code> would return <code>false</code>. The same principle applies to the
+            inequality operators. So <code>2 != "2"</code> would
+            return <code>false</code>, because this operator thinks that the values are equal, and inequality
+            operators only return <code>true</code> if the
+            two values are NOT equal. Likewise, <code>2 !== "2"</code> would return <code>true</code>, because the
+            operator thinks that
+            <code>2</code> and <code>"2"</code> are NOT equal.</p>
+        <p>
+            <b>
+                To avoid bugs in your code, you should probably stick to using the strict equality and inequality
+                operators
+                <code>===</code> and <code>!==</code>. The <code>==</code> and <code>!=</code> operators may be useful
+                in specific cases.
+            </b>
+        </p>
+        <p>
+            These comparison operators only work on primitive values, not Objects, which we will discuss later. Any
+            comparison between Objects will return <code>false</code>.
+        </p>
+        <p>
+            Expressions using the comparison operators return as Booleans, either <code>true</code> or
+            <code>false</code>. Loops only run if the
+            condition is <code>true</code> at the start. If the condition is <code>false</code>, then the program moves
+            on to the next lines of
+            code after the loop.
+        </p>
+        <hr>
+        <h3>Do While Loops</h3>
+        <p>A variant of the while loop is the do-while loop, which guarantees one loop through the code, then loops
+            again for every time the condition is true. Here is the format:</p>
+        <section class="code">
+            <pre>
+        <code>do {</code>
+        <code>  [run this section of code]</code>
+        <code>} while ([condition])</code>
+            </pre>
+        </section>
+        <p>For example:</p>
+        <section class="code">
+            <pre>
+        <code>let i = 0;</code>
+        <code>do {</code>
+        <code>  console.log(i);</code>
+        <code>  i++;</code>
+        <code>} while(i &lt; -1)</code>
+            </pre>
+        </section>
+        <p>
+            This will console log <code>0</code> once before the loop ends, even though the condition is never
+            <code>true</code>.
+            This may be useful occasionally.
+        </p>
+        <hr>
+        <h3>For Loops</h3>
+        <p>
+            A common structure for the while loop is defining an iterator variable, like <code>i</code>, before the
+            loop, then iterating that variable every loop, like in the first while loop example. This common structure
+            can be conveniently constructed in something called a <em>for loop</em>:
+        </p>
+        <section class="code">
+            <pre>
+        <code>for ([initialize variable]; [condition]; [iteration]) {</code>
+        <code>	[run this section of code]</code>
+        <code>}</code>
+            </pre>
+        </section>
+        <p>
+            You usually declare an iterator variable as the first statement, write the condition as the second
+            statement, and iterate the variable in the third statement.
+        </p>
+        <p>This is an example:</p>
+        <section class="code">
+            <pre>
+        <code>for (let i = 0; i &lt; 10; i++) {</code>
+        <code>  console.log(i);</code>
+        <code>}</code>
+            </pre>
+        </section>
+        <p>This results in the same output as the first example while loop, but much more efficiently.</p>
+        <p>Note: you can put in any statement for the iteration, not just <code>i++</code>. Something like <code>i +=
+                2</code> would also be valid, for example.</p>
+        <p>There are some other kinds of loops, but these are the most common.</p>
+        <hr>
+        <h3>Arrays</h3>
+        <p>
+            <em>Arrays</em> let you stores multiple values in one place. Arrays are made up of elements surrounded by
+            square brackets, and the elements can be of any type. <br>Example:
+        </p>
+        <section class="code">
+            <pre>
+        <code>let arr = [1, "string", true, 2];</code>
+            </pre>
+        </section>
+        <p>
+            Arrays can even store other arrays. And those arrays can store arrays, and so on. These are called
+            <code>nested arrays</code>.
+        </p>
+        <section class="code">
+            <pre>
+        <code>let arr = [[1, 0, 1],</code>
+        <code>           [0, 1, 0],</code>
+        <code>           [1, 0, 1]];</code>
+            </pre>
+        </section>
+        <p>
+            Access array elements using <em>bracket notation</em>. Each element in an array is given a number, starting
+            with 0.
+            Access elements like this: <code>arrayName[index]</code>. For example:
+        </p>
+        <section class="code">
+            <pre>
+        <code>let arr = [1, "string", true, 2];</code>
+        <code>console.log(arr[0]);</code>
+            </pre>
+        </section>
+        <p>
+            The output to the console would be the number 1, the first element in the array indicated by index 0. Index
+            1 would return <code>"string"</code>, index 2 would return <code>true</code>, and index 3 would return
+            <code>2</code>.
+        </p>
+        <p>
+            In order to obtain the length of an array (or of a string), you can use the <code>.length</code> property.
+            For example, <code>arr.length</code> in the previous example would return <code>4</code>, the length of the
+            array. Notice that the index of the last element in the array is the length of the array minus 1. So, you
+            can do <code>arr[arr.length – 1]</code> to get the last element of an array. You can use
+            <code>arr[arr.length – 2]</code> for the second to last element, etc.
+        </p>
+        <p>To access nested arrays, simply add as many brackets as you need. For example:</p>
+        <section class="code">
+            <pre>
+        <code>let arr = [[1, 0, 1],</code>
+        <code>           [0, 1, 0],</code>
+        <code>           [1, 0, 1]];</code>
+        <code>console.log(arr[1][0]);</code>
+            </pre>
+        </section>
+        <p>
+            The first bracket <code>[1]</code> accesses the second element, <code>[0, 1, 0]</code>, and the
+            <code>[0]</code> accesses the first element of that array, which is <code>0</code>.
+        </p>
+        <p>A triple-layer array would require three bracket indexes, etc.</p>
+        <p>Note: you can access strings the same way. Example:</p>
+        <section class="code">
+            <pre>
+        <code>let str = "Hello world!";</code>
+        <code>console.log(str[0]);</code>
+            </pre>
+        </section>
+        <p>The result would be <code>"H"</code>.</p>
+        <hr>
+        <h3>Accessing Arrays with For Loops</h3>
+        <p>
+            For loops can easily be used to visit every item in an array. For example:
+        </p>
+        <section class="code">
+            <pre>
+        <code>let arr = [0, 1, 2, 3, 4, 5];</code>
+        <code>for (let i = 0; i &lt; arr.length; i++) {</code>
+        <code>	console.log(arr[i]);</code>
+        <code>}</code>
+            </pre>
+        </section>
+        <p>This would print every element in the array.</p>
+        <p>Arrays with nested arrays can also be accessed with nested loops:</p>
+        <section class="code">
+            <pre>
+        <code>let arr = [[1, 0, 1],</code>
+        <code>           [0, 1, 0],</code>
+        <code>           [1, 0, 1]];</code>
+        <code>for (let i = 0; i &lt; arr.length; i++) {</code>
+        <code>  for (let j = 0; j &lt; arr[i].length; j++) {</code>
+        <code>      console.log(arr[i][j]);</code>
+        <code>  }</code>
+        <code>}</code>
+            </pre>
+        </section>
+        <p>
+            This prints out every element in order. Notice for the inner loop, the length of the array elements have to
+            be accessed, which is why we access <code>arr[i].length</code>.
+        </p>
+        <p>
+            You could use these loops to manipulate the elements of arrays in some way.
+        </p>
+        <hr>
+        <h3>Manipulating Arrays</h3>
+        <p>
+            You can add and remove array elements with <em>methods</em>, or sometimes referred to as
+            <em>functions</em>. You use methods on variables using this syntax:
+        </p>
+        <section class="code">
+            <pre>
+        <code>varName.functionName([parameters]);</code>
+            </pre>
+        </section>
+        <p>
+            Methods are called with a dot and take in parameters between the braces. Parameters are separated by commas.
+            There could be any number of parameters and a varying amount depending on how the method is used. There
+            could also be
+            zero parameters with nothing between the braces.
+        </p>
+        <p>
+            For example, if we wanted to add an element to the end of an array, we would use the <code>.push()</code>
+            method. This method takes in any number of new elements separated by commas and appends them onto the end
+            of an array. For example:
+        </p>
+        <section class="code">
+            <pre>
+        <code>let arr = [1, 2, 3];</code>
+        <code>arr.push(4, 5);</code>
+            </pre>
+        </section>
+        <p>
+            The resulting array stores <code>[1, 2, 3, 4, 5]</code>. The new elements have been appended to the end.
+        </p>
+        <p>
+            Methods also return potentially useful values. For example, the <code>.push()</code> method
+            returns the length of the new array. So, doing <code>console.log(arr.push(4, 5))</code> in this instance
+            would output <code>5</code>, because that is the new length of the array.
+        </p>
+        <p>
+            You can learn what any method returns by looking it up. Don't be afraid to look things up when coding! In
+            addition, some IDEs, like VS Code, may tell you the nature of a method when you do something like hover over
+            it with your mouse:
+        </p>
+        <img src="jsimages/ide1.png" alt="">
+        <p>
+            Similarly, you can remove an item from the end of an array with the <code>.pop()</code> method. This method
+            removes the last element of an array and returns that item.
+        </p>
+        <section class="code">
+            <pre>
+        <code>let arr = [1, 2, 3, 4, 5];</code>
+        <code>let lastElement = arr.pop(); // lastElement is now 5</code>
+            </pre>
+        </section>
+        <p>
+            <b>
+                Know that you don't have to use methods on variables. Although using them with variables is usually most
+                common, they work on anything of the right data type. This would also work:
+            </b>
+        </p>
+        <section class="code">
+            <pre>
+        <code>let lastElement = [1, 2, 3, 4, 5].pop();</code>
+            </pre>
+        </section>
+        <p>
+            Here is a list of useful array methods. If you ever want to find a specific method, don’t be afraid to look
+            up a description of what you want the method to do. You may find a new useful method!
+        </p>
+        <table>
+            <caption>Common Array Methods</caption>
+            <tr>
+                <td><code>.push()</code></td>
+                <td>Adds an element to the end of the array</td>
+            </tr>
+            <tr>
+                <td><code>.pop()</code></td>
+                <td>Removes an element from the end of an array</td>
+            </tr>
+            <tr>
+                <td><code>.unshift()</code></td>
+                <td>Adds an element to the beginning of an array</td>
+            </tr>
+            <tr>
+                <td><code>.shift()</code></td>
+                <td>Removes an element from the beginning of an array</td>
+            </tr>
+            <tr>
+                <td><code>.splice()</code></td>
+                <td>Can be used to add and remove elements anywhere in the array</td>
+            </tr>
+            <tr>
+                <td><code>.toString()</code></td>
+                <td>Returns the array as a string</td>
+            </tr>
+        </table>
+        <p>Play with all these methods to really get a hang of them.</p>
+        <hr>
+        <h3>var, let, and const</h3>
+        <p>
+            There are three variable declaration keywords in JavaScript: <code>var</code>, <code>let</code>, and
+            <code>const</code>.
+        </p>
+        <p>
+            To understand the difference between <code>var</code> and <code>let</code>, you need to understand the
+            concept of <em>scope</em>. Scope is basically the area of code that the variable can be accessed in, usually
+            surrounded in curly braces. For example:
+        </p>
+        <section class="code">
+            <pre>
+        <code>// global scope outside any surrounding structure</code>
+        <code>var i = 0;</code>
+        <code>while (i &lt; 10) {</code>
+        <code>  // the scope of the while loop between the curly braces</code>
+        <code>  i++;</code>
+        <code>}</code>
+            </pre>
+        </section>
+        <p>
+            <code>var</code> variables are always global variables (accessible anywhere) or scoped within a function
+            (which we will introduce later).
+        </p>
+        <p>
+            <code>let</code> variables are only accessible in the scope they were declared in and any scopes within that
+            scope.
+        </p>
+        <p>
+            I recommend only using <code>let</code> variables because they tend to cause fewer errors.
+        </p>
+        <p>
+            Variables declared with <code>const</code> cannot be reassigned to another value. Attempting to do so will
+            give you an error. They are constants, read-only variables. Other than that, they have the same properties
+            as <code>let</code> variables. You will commonly see constant variable names in all capital letters.
+        </p>
+        <hr>
+        <h3>If statements</h3>
+        <p>
+            When you want code to do different things depending on the input, you use an <em>if statement</em>. Here is
+            the syntax of a basic if statement:
+        </p>
+        <section class="code">
+            <pre>
+        <code>if ([condition]) {</code>
+        <code>  [run this code]</code>
+        <code>}</code>
+            </pre>
+        </section>
+        <p>
+            You can also have an <em>else statement</em>, which will only run if the condition is <code>false</code>.
+        </p>
+        <section class="code">
+            <pre>
+        <code>if ([condition]) {</code>
+        <code>  [run this code if the condition is true]</code>
+        <code>}</code>
+        <code>else {</code>
+        <code>  [run this code if the condition is false]</code>
+        <code>}</code>
+            </pre>
+        </section>
+        <p>
+            You can also add <em>else-if</em> statements which check the condition if the previous condition was false:
+        </p>
+        <section class="code">
+            <pre>
+        <code>if ([condition 1]) {</code>
+        <code>  [run this code if condition 1 is true]</code>
+        <code>}</code>
+        <code>else if ([condition 2]) {</code>
+        <code>  [run this code if condition 1 is false and condition 2 is true]</code>
+        <code>}</code>
+            </pre>
+        </section>
+        <p>
+            You link as many else-if statements as you want, and a simple else statement should be the last statement in
+            the if chain. For example, here is an if statement that prints the letter grade corresponding to a number
+            grade:
+        </p>
+        <section class="code">
+            <pre>
+        <code>let letterGrade = 86;</code>
+        <code></code>
+        <code>if (letterGrade >= 90) {</code>
+        <code>  console.log("A");</code>
+        <code>}</code>
+        <code>else if (letterGrade >= 80) {</code>
+        <code>  console.log("B");</code>
+        <code>}</code>
+        <code>else if (letterGrade >= 70) {</code>
+        <code>  console.log("C");</code>
+        <code>}</code>
+        <code>else if (letterGrade >= 60) {</code>
+        <code>  console.log("D");</code>
+        <code>}</code>
+        <code>else {</code>
+        <code>  console.log("F");</code>
+        <code>}</code>
+            </pre>
+        </section>
+        <p>This should return <code>"B"</code>.</p>
+        <p>
+            The difference between a series of independent if statements and a chain of else-if statements is that after
+            one of the else-if statements' condition is true and its code runs, no other else-if or else statement will
+            run. Each in a series of if statements is checked and could run.
+        </p>
+        <p>
+            You can also use multiple conditions in a single if statement using the <em>and operator</em>
+            <code>&&</code> and <em>or operator</em> <code>||</code>. Statements with the and operator return true if
+            both statements compared are true, and statements with the or operator return true if at least one of the
+            statements are true. Parentheses help decide which conditions to resolve first. For example:<em></em>
+        </p>
+        <section class="code">
+            <pre>
+        <code>let a = true;</code>
+        <code>let b = true;</code>
+        <code>let c = false;</code>
+        <code></code>
+        <code>consle.log(a || (b && c)); // this returns true</code>
+            </pre>
+        </section>
+        <p>
+            The <code>b && c</code> expression returns <code>false</code> because <code>c</code> is <code>false</code>.
+            However, since <code>a</code> is <code>true</code>, the whole expression is <code>true</code> because of the
+            or operator.
+        </p>
+        <p>
+            Something else to consider is that you can end a loop early with a <code>break</code> statement, most
+            effectively by
+            using an if statement. For example:
+        </p>
+        <section class="code">
+            <pre>
+        <code>for (let i = 0, i &lt; 10; i++) {</code>
+        <code>  if (i === 5) {</code>
+        <code>      break; // this ends the loop prematurely when i is 5</code>
+        <code>  }</code>
+        <code>}</code>
+            </pre>
+        </section>
+        <p>This may be useful in various circumstances.</p>
+        <hr>
+        <h3>Functions/Methods</h3>
+        <p>
+            When you want to reuse a certain block of code, you surround it in a function. Remember the array methods,
+            like <code>.pop()</code> and <code>.push()</code>? With functions, you can make your own reusable code!
+        </p>
+        <p>Here is the syntax for writing a function:</p>
+        <section class="code">
+            <pre>
+        <code>function functionName([parameters]) {</code>
+        <code>  [code]</code>
+        <code>}</code>
+            </pre>
+        </section>
+        <p>
+            The parameter parentheses can be left blank. Any parameters are separated with commas.
+        </p>
+        <p>
+            Let's write an example function – a function that returns the factorial of an integer. The factorial of an
+            integer is the product of the number and every positive integer fewer than it. For example, 4 factorial is
+            equal to 4
+            * 3 * 2 * 1 = 24. We can replicate this using a while loop. Try to figure this out for yourself first, then
+            look at one possible answer:
+            <br><br><br>
+        </p>
+        <section class="code">
+            <pre>
+        <code>function factorial(num) {</code>
+        <code>  let result = 1;</code>
+        <code>  while (num &gt; 0) {</code>
+        <code>      result *= num;</code>
+        <code>      num--;</code>
+        <code>  }</code>
+        <code></code>
+        <code>  return result;</code>
+        <code>}</code>
+            </pre>
+        </section>
+        <p>
+            This function only has one parameter: <code>num</code>. This function multiplies <code>result</code> by
+            <code>num</code> and all positive integers less than <code>num</code>. Note: the declared variables
+            <code>result</code> and <code>num</code> are only accessible within the function. You could declare other
+            variables called <code>result</code> and <code>num</code> in other functions with no issue. The function
+            returns the result with the <code>return</code> statement. If we do <code>console.log(factorial(4))</code>,
+            we should get the output <code>24</code>.
+        </p>
+        <p>
+            Note: you can also do a return statement like <code>return;</code> and return nothing while ending the
+            function call.
+        </p>
+        <p>
+            You can also use <em>default parameter</em> syntax to set a default value for the parameters for when no
+            parameter is passed in. Using the factorial example, if we wanted a default parameter of 1, we would write
+            the syntax like this:
+        </p>
+        <section class="code">
+            <pre>
+        <code>function factorial(num = 1) { // 1 is the default parameter</code>
+        <code>  [code]</code>
+        <code>}</code>
+            </pre>
+        </section>
+        <p>
+            Now, if factorial was called with no parameters like this: <code>factorial()</code>, then the default value
+            for <code>num</code> would be 1.
+        </p>
+    </section>
+
+    <section class="next-previous-wrapper">
+        <a href="js3.html">&lt; Previous</a>
+        <a href="js5.html">Next &gt;</a>
+    </section>
+
+    <nav class="course-nav">
+        <ul>
+            <li><a href="js1.html">Introduction</a></li>
+            <li><a href="js2.html">Lesson 1</a></li>
+            <li><a href="js3.html">Lesson 2</a></li>
+            <li><a href="js4.html">Lesson 3</a></li>
+            <li><a href="js5.html">Lesson 4</a></li>
+            <li><a href="js6.html">Game 1</a></li>
+            <li><a href="js7.html">Game 2</a></li>
+            <li><a href="js8.html">Game 3</a></li>
+            <li><a href="js9.html">Game 4</a></li>
+            <li><a href="js10.html">Game 5</a></li>
+            <li><a href="js11.html">Game 6</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>
+            NEXT GEN STEM <br> CONNECTICUT, USA
+        </p>
+               <a href="mailto:thenextgenstem@gmail.com"><img src="../images/Mail-Icon-White-on-Grey.jpg" alt="E-mail" style="width:65px; height:65px"></a>
+
+    </footer>
+</body>
+<script type="text/javascript">
+    //*****
+    //Change these params 
+    //Go to tawk.to and sign up for a user, enter your site domain and replace the following URL with the one they give you.
+    var /*<{*/ siteID /*}*/ = /*{*/ "5f29c48fed9d9d2627082f71" /*}>*/ ;
+    var chatSiteURL = 'https://embed.tawk.to/' + siteID + '/default';
+
+    //*****
+
+    // Start of Tawk.to Script
+
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = chatSiteURL;
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+
+    //  End of Tawk.to Script
+</script>
+</html>

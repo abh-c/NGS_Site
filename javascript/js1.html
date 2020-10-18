@@ -8,8 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
     <title>Next Gen Stem</title>
-</head>
+    <link rel="icon" href="../images/NGT_HEADER.png">
 
+</head>
 <body>
     <nav class="nav-top">
         <ul class="nav-top-ul">
@@ -23,11 +24,12 @@
         <h1>JavaScript</h1>
         <p>
             JavaScript (JS) is an incredibly widespread and popular
-            programming language that is present in most of the
+            programming language that is used in most of the
             websites you have ever visited. JS allows for greater
             interactivity with the user of a website, including things
-            we take for granted in websites today, like playing audio,
-            playing video, animating certain elements, and even drop-down
+            we take for granted in websites today, like
+            playing video, animating certain elements, changing elements of the html page according to the actions of
+            the user, like clicking on a button, and even drop-down
             menus! The language is easy to get started with and is
             used in both front and back-end development professionally.
         </p>
@@ -56,11 +58,11 @@
             has many useful features, like a debugger and syntax highlighting.
             An IDE is not necessary for learning the basics of JS, but it is
             very convenient. This course will make use of the
-            <a href="https://code.visualstudio.com" target="_blank">Visual Studio
+            <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Studio
                 Code</a>, text editor because it is free and versatile. If you like,
             you could use any other editor or IDE suitable for developing JavaScript,
             like Atom or Sublime Text. For the purposes of learning, you could
-            even use an online tool, like <a href="https://jsfiddle.net" target="_blank">
+            even use an online tool, like <a href="https://jsfiddle.net" target="_blank" rel="noopener">
                 https://jsfiddle.net</a>, to run simple
             JS code. Search something like “run js online” for more options.
             You could even write code in a simple text document, if you wanted to.
@@ -72,10 +74,10 @@
     <section class="section-1">
         <p>
             Throughout this course, you will see code snippets like the example below.
-            Highlighted code will be used to represent code that will be written in that
-            step. Ellipses will be used to show that there is code not shown between the
+            Highlighted code will be used to represent code that will be added in that
+            step. Ellipses will be used to show that there is code not shown between the shown
             code snippets. You can scroll horizontally if you can't see all the code.
-            You can safely copy and paste the code, but I recommend writing
+            You can copy and paste the code, but I recommend writing
             all of it out. Remember: <b>The best way to learn to code is by coding and trying
                 things out yourself</b>.
         </p>
@@ -83,15 +85,15 @@
 
     <section class="code">
         <pre>
-            <code>let playerScore = 0; </code>
-            <code>let opponentScore = 0; </code>
-            <p>...</p>
-            <code class="hl">function drawScore() { </code>
-            <code class="hl">   context.font = "64px Courier New"; </code>
-            <code class="hl">   context.textAlign = "center"; </code>
-            <code class="hl">   context.fillStyle = "e0e0e0"; </code>
-            <code class="hl">   context.fillText(`${playerScore} ${opponentScore}`, canvas.width / 2, 60);</code>
-            <code class="hl">}</code>
+        <code>let playerScore = 0; </code>
+        <code>let opponentScore = 0; </code>
+        <p>...</p>
+        <code class="hl">function drawScore() { </code>
+        <code class="hl">   context.font = "64px Courier New"; </code>
+        <code class="hl">   context.textAlign = "center"; </code>
+        <code class="hl">   context.fillStyle = "#e0e0e0"; </code>
+        <code class="hl">   context.fillText(`${playerScore} ${opponentScore}`, canvas.width / 2, 60);</code>
+        <code class="hl">}</code>
         </pre>
     </section>
 
@@ -106,12 +108,12 @@
             <li><a href="js3.html">Lesson 2</a></li>
             <li><a href="js4.html">Lesson 3</a></li>
             <li><a href="js5.html">Lesson 4</a></li>
-            <li><a href="js6.html">Lesson 5</a></li>
-            <li><a href="js7.html">Lesson 6</a></li>
-            <li><a href="js8.html">Lesson 7</a></li>
-            <li><a href="js9.html">Lesson 8</a></li>
-            <li><a href="js10.html">Lesson 9</a></li>
-            <li><a href="js11.html">Lesson 10</a></li>
+            <li><a href="js6.html">Game 1</a></li>
+            <li><a href="js7.html">Game 2</a></li>
+            <li><a href="js8.html">Game 3</a></li>
+            <li><a href="js9.html">Game 4</a></li>
+            <li><a href="js10.html">Game 5</a></li>
+            <li><a href="js11.html">Game 6</a></li>
         </ul>
     </nav>
 
@@ -119,8 +121,32 @@
         <p>
             NEXT GEN STEM <br> CONNECTICUT, USA
         </p>
-        <img src="../images/Mail-Icon-White-on-Grey.jpg" style="width:65px; height:65px">
+        <a href="mailto:thenextgenstem@gmail.com"><img src="../images/Mail-Icon-White-on-Grey.jpg" alt="E-mail" style="width:65px; height:65px"></a>
     </footer>
 </body>
+<script type="text/javascript">
+    //*****
+    //Change these params 
+    //Go to tawk.to and sign up for a user, enter your site domain and replace the following URL with the one they give you.
+    var /*<{*/ siteID /*}*/ = /*{*/ "5f29c48fed9d9d2627082f71" /*}>*/ ;
+    var chatSiteURL = 'https://embed.tawk.to/' + siteID + '/default';
 
+    //*****
+
+    // Start of Tawk.to Script
+
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = chatSiteURL;
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+
+    //  End of Tawk.to Script
+</script>
 </html>

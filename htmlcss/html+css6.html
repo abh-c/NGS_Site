@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Java, Python" />
+    <meta name="description" content="Free programming tutorials" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Next Gen Stem</title>
+    <link rel="icon" href="../images/NGT_HEADER.png">
+</head>
+
+<body>
+    <nav class="nav-top">
+        <ul class="nav-top-ul">
+            <li><b><a href="../index.html" class="nav-top-link">Home</a></b></li>
+            <li><b><a href="../learntocode.html" class="nav-top-link">Learn to Code</a></b></li>
+            <li><b><a href="../about.html" class="nav-top-link">About</a></b></li>
+        </ul>
+    </nav>
+
+    <section class="section-1">
+        <h1>HTML + CSS - Lesson 6</h1>
+        <hr class="hr-1">
+        <h2>Adding Webpages</h2>
+        <p>
+            In this lesson we will be linking our home page to other pages and learning how to code multiple webpages at
+            once.
+
+
+
+        </p>
+        <p>
+            To begin, as in the previous lessons, we made buttons that we would eventually link as other web pages.
+
+
+
+        </p>
+        <p>
+            To begin this process we need to create other html files.
+
+
+
+        </p>
+        <p>
+            To do this in the brackets software click File → NewFile
+
+
+        </p>
+
+        <img src="HTMLCSSImages/image6_6.png" alt="New File">
+
+
+        <p>
+            Once you do that there should be a file called “Untitled,” right click on it and press “Save As”
+
+
+        </p>
+
+        <img src="HTMLCSSImages/image3_6.png" alt="Save As">
+
+        <p>
+            Save this file as the name of the page .html. For example: myblog.html
+
+
+        </p>
+        <p>
+            Complete the previous steps for the remaining buttons.
+
+
+        </p>
+        <p>
+            This is how your files should look in Visual Code Studio:
+
+
+        </p>
+        <img src="HTMLCSSImages/image5_6.png" alt="Files">
+
+
+
+
+        <p>
+            Now that we have these new files, we need to link them across the website.
+
+
+        </p>
+        <p>
+            To do this we need to go into the HTML under h2 where our buttons are.
+
+
+        </p>
+        <p>
+            First we will add &lt;nav>
+            &lt;/nav> tags or navigation tags which, as in the name, allow us to navigate our website.
+
+
+        </p>
+        <p>
+            Then we will add &lt;ul>
+            &lt;/ul> tags which state that the following information is unordered and the order does not matter.
+
+
+        </p>
+        <p>
+            To link the buttons to the other pages:
+        </p>
+        <section class="code">
+
+            <pre>
+    <code> &lt;a href =“webpage.html”>My Blog</code>
+    </pre>
+
+        </section>
+
+
+        <p>
+            The reason why we have the button tags now in the middle instead of as separate parts is because we want the
+            buttons themselves to be individually linked.
+
+
+        </p>
+        <p>
+            So, the code looks like this:
+
+        </p>
+        <section class="code">
+
+            <pre>
+    <code>&lt;!DOCTYPE html></code>
+    <code>&lt;html></code>
+    <code>    &lt;link rel="stylesheet" href="style.css"></code>
+    <code>    &lt;head></code>
+    <code>        &lt;title></code>
+    <code>            Your Website Name!</code>
+    <code>        &lt;/title> </code>
+    <code>    &lt;/head>      </code>
+    <code>    &lt;body></code>
+    <code>        &lt;link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"></code>
+    <code>        &lt;h1>Website Name</code>
+    <code>        &lt;h2> </code>
+    <code>            &lt;nav></code>
+    <code>                &lt;ul></code>
+    <code>                    &lt;a href="myblog.html">My Blog</code>
+    <code>                    &lt;a href="photos.html">Photos</code>
+    <code>                    &lt;a href="aboutme.html">About Me</code>
+    <code>                &lt;/ul></code>
+    <code>            &lt;/nav>               </code>
+    <code>        &lt;/h2></code>
+    <code>        &lt;p class="home">Website Name</code>
+    <code>        &lt;section>Welcome to my website, I will be sharing...</code>
+    <code>    &lt;/body></code>
+    <code>&lt;/html></code>
+    </pre>
+
+        </section>
+
+        <p>
+            If you were to save the code and test the buttons you would end up with something like this:
+
+
+        </p>
+        <section class="code">
+
+            <pre>
+    <code>p{   </code>
+    <code>     color: white;</code>
+    <code>     text-align: center;</code>
+    <code>     display: flex;</code>
+    <code>     align-items: center; </code>
+    <code>     text-align: center;</code>
+    <code>     justify-content: center;</code>
+    <code>     font-size: 100px;</code>
+    <code>     background-image: url(space.jpg);</code>
+    <code>     background-size: cover;</code>
+    <code>     background-position: inherit;</code>
+    <code>     height: 600px;    </code>
+    <code>}</code>
+    </pre>
+
+        </section>
+
+
+
+
+
+        <p>
+            Now let’s see how this part of our website looks!
+
+
+        </p>
+        <img src="HTMLCSSImages/image4_6.png" alt="File">
+        <p>
+            The reason for this is because there is no code in the other files we made earlier in this lesson.
+
+
+        </p>
+
+        <p>
+            Now, since we have a previously made and designed webpage, we can use that code to make it easier to make
+            the other webpages. We can do this by creating a separate CSS file and then simply linking it to the html
+            files.
+
+
+        </p>
+
+        <p>
+            Following the same process as before, create a new file but name it style.css. The .css is important just as
+            using .html was for the other files.
+
+
+        </p>
+
+        <p>
+            Cut and paste all of the css work in the “index.html” file into the “style.css” file.
+
+
+        </p>
+        <section class="code">
+
+            <pre>
+    <code>body {</code>
+    <code>     font-family: 'Montserrat', sans-serif;</code>
+    <code>     color: white;</code>
+    <code>     text-align: center;</code>
+    <code>     background:rgb(19, 60, 121); </code>
+    <code></code>
+    <code>p{	 color: white;</code>
+    <code>     text-align: center;</code>
+    <code>     display: flex;</code>
+    <code>     align-items: center; </code>
+    <code>     text-align: center;</code>
+    <code>     justify-content: center;</code>
+    <code>     font-size: 100px;</code>
+    <code>     background-image: url(space.jpg);</code>
+    <code>     background-size: cover;</code>
+    <code>     background-position: inherit;</code>
+    <code>     height: 600px;    </code>
+    <code>}</code>
+    <code>button {</code>
+    <code>     padding: 10px;</code>
+    <code>     font-size: 20px;</code>
+    <code>     font-family: 'Montserrat', sans-serif;</code>
+    <code>     background-color: transparent;</code>
+    <code>     color: white;</code>
+    <code>     border: 1px solid white;</code>
+    <code>     text-align: center;</code>
+    <code>     align-items: center;</code>
+    <code> }</code>
+    <code> button:hover {</code>
+    <code>     background-color:  white;</code>
+    <code>     color:rgb(19, 60, 121); </code>
+    <code>     border: 2px solid white;</code>
+    <code> }</code>
+    <code> section { </code>
+    <code>     color: white;</code>
+    <code>     padding: 30px;</code>
+    <code>     margin: 40px;</code>
+    <code>     align-items: center;</code>
+    <code>     font-size: 30px;</code>
+    <code> }</code>
+    </pre>
+
+        </section>
+
+        <p>
+            Note how the index.html file does not contain a tag anymore.
+
+
+        </p>
+
+        <p>
+            Now, it is time to link the css to the html.
+
+
+        </p>
+        <p>
+            Below the tag in the index.html file, add a tag.
+
+
+        </p>
+        <p>
+            The code should specifically read:
+
+
+        </p>
+        <p>
+            &lt;link rel=“stylesheet” href=“style.css”>
+
+
+        </p>
+        <p>
+            The “rel” states the relationship between the two different types of code. The “href” just as previously,
+            creates the link to the other file.
+
+
+        </p>
+        <p>
+            The code should look like this: ​
+
+
+        </p>
+        <section class="code">
+
+            <pre>
+    <code>&lt;link rel="stylesheet" href="style.css"></code>
+    </pre>
+
+        </section>
+
+        <p>
+            Now, if we were to test the code, we should see that our website home page looks just as it had at the end
+            of Lesson 5. (Note: makes sure all of the files are saved using Ctrl+S or File → Save.)
+
+
+        </p>
+        <p>
+            Next, we are going to copy and paste the code from the index.html file into the other html files. Although
+            we are copying our home page, in the next lesson we can edit this to create a blog, a digital photo album,
+            and an about me section.
+
+
+        </p>
+        <p>
+            After you do this, all of the files should have the same code.
+
+
+        </p>
+        <p>
+            After saving, when we go to our website and click the different buttons, it may appear that we are not
+            moving to the different pages. However, we can make sure of this by checking the search bar.
+
+
+        </p>
+        <p>
+            For example, after clicking the “My Blog” button my search bar displayed:
+
+
+        </p>
+
+        <img src="HTMLCSSImages/lesson6.png" alt="File">
+
+
+        <p>
+            Now let’s see how this part of our website looks!
+
+
+        </p>
+    </section>
+
+
+    <section class="next-previous-wrapper">
+        <a href="html+css5.html">&lt; Previous</a>
+        <a href="html+css7.html">Next &gt;</a>
+    </section>
+
+    <nav class="course-nav">
+            <ul>
+                <li><a href="htmlcourseinfo.html">Introduction</a></li>
+                <li><a href="html+css1.html">Lesson 1</a></li>
+                <li><a href="html+css2.html">Lesson 2</a></li>
+                <li><a href="html+css3.html">Lesson 3</a></li>
+                <li><a href="html+css4.html">Lesson 4</a></li>
+                <li><a href="html+css5.html">Lesson 5</a></li>
+                <li><a href="html+css6.html">Lesson 6</a></li>
+                <li><a href="html+css7.html">Lesson 7</a></li>
+            </ul>
+        </nav>
+
+    </section>
+
+
+
+    <footer>
+        <p>
+            NEXT GEN STEM <br> CONNECTICUT, USA
+        </p>
+        <a href="mailto:thenextgenstem@gmail.com"><img src="../images/Mail-Icon-White-on-Grey.jpg" alt="E-mail"
+                style="width:65px; height:65px"></a>
+    </footer>
+</body>
+<!-- TODO: put the stuff below in the <body> tag -->
+
+<div id="app_settings" style="display:none;">
+    <label class='app_text_label'>Chat SiteID: </label>
+    <input class='app_field_input' type="text" name="siteID"><br>
+    <label class='app_text_label info'>* To start receiving chats go to <a href='http://www.tawk.to'
+            target='blank'>tawk.to</a> and get your chat site ID. <br>Tawk dashboard -> Admin (at the top of the
+        dashboard) -> Property Settings -> Site ID. </label>
+</div>
+<div id="app_settings" style="display:none;">
+    <label class='app_text_label'>Chat SiteID: </label>
+    <input class='app_field_input' type="text" name="siteID"><br>
+    <label class='app_text_label info'>* To start receiving chats go to <a href='http://www.tawk.to'
+            target='blank'>tawk.to</a> and get your chat site ID. <br>Tawk dashboard -> Admin (at the top of the
+        dashboard) -> Property Settings -> Site ID. </label>
+</div>
+
+<script type="text/javascript">
+    //*****
+    //Change these params 
+    //Go to tawk.to and sign up for a user, enter your site domain and replace the following URL with the one they give you.
+    var /*<{*/ siteID /*}*/ = /*{*/ "5f29c48fed9d9d2627082f71" /*}>*/ ;
+    var chatSiteURL = 'https://embed.tawk.to/' + siteID + '/default';
+
+    //*****
+
+    // Start of Tawk.to Script
+
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = chatSiteURL;
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+
+    //  End of Tawk.to Script
+</script>
+
+
+</html>

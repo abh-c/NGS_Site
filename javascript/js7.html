@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Java, Python" />
+    <meta name="description" content="Free programming tutorials" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Next Gen Stem</title>
+    <link rel="icon" href="../images/NGT_HEADER.png">
+
+</head>
+<!-- NOTE to self: alt + w to wrap text in a tag -->
+
+<body>
+    <nav class="nav-top">
+        <ul class="nav-top-ul">
+            <li><b><a href="../index.html" class="nav-top-link">Home</a></b></li>
+            <li><b><a href="../learntocode.html" class="nav-top-link">Learn to Code</a></b></li>
+            <li><b><a href="../about.html" class="nav-top-link">About</a></b></li>
+        </ul>
+    </nav>
+
+    <section class="section-1">
+        <h1>JavaScript - Game Part 2</h1>
+        <p>
+            In this lesson we will draw the ball and the paddles.
+        </p>
+        <hr>
+        <p>
+            Let's now draw all the elements related to actually playing the game. There are only three: the ball, the
+            player paddle, and the opponent paddle.
+        </p>
+        <p>First, we need to define a <code>draw()</code> function that will draw the game. All the drawing and
+            animation steps will exist within that function. You can use the <code>requestAnimationFrame()</code>
+            function inside the draw function in order to create animation by continually calling the
+            <code>draw()</code> function. Here is how the basic set-up looks:</p>
+        <section class="code">
+            <pre>
+        <code>let canvas = document.getElementById("gameCanvas");</code>
+        <code>let context = canvas.getContext("2d");</code>
+        <code></code>
+        <code>function draw() {</code>
+        <code>    // Drawing code goes here</code>
+        <code>    requestAnimationFrame(draw);</code>
+        <code>}</code>
+        <code> </code>
+        <code>draw();</code>
+                </pre>
+        </section>
+        <p>
+            Now we can draw everything inside the <code>draw()</code> function. By the way, the <code>draw()</code>
+            function and any of the functions and variables we will be creating can be called anything you want, but I
+            would recommend using the names we provide to reduce confusion.
+        </p>
+        <p>Now, let's draw the ball. We'll draw it inside a <code>drawBall()</code> function and call the function
+            inside the <code>draw()</code> function. The function could look something like this:</p>
+        <section class="code">
+            <pre>
+        <code>function drawBall() {</code>
+        <code>    context.beginPath();</code>
+        <code>    context.arc(400, 300, 10, 0, Math.PI * 2);</code>
+        <code>    context.fillStyle = "#e0e0e0";</code>
+        <code>    context.fill();</code>
+        <code>    context.closePath();</code>
+        <code>}</code>
+        <code></code>
+        <code>function draw() {</code>
+        <code>    drawBall();</code>
+        <code>    requestAnimationFrame(draw);</code>
+        <code>}</code>
+        <code></code>
+        <code>draw();</code>
+                </pre>
+        </section>
+        <p>
+            This draws a circle of radius 10 at the coordinates (400, 300) with the hex color <code>#e0e0e0</code>. We
+            have also put
+            the <code>drawBall()</code> function inside the <code>draw()</code> function to call it.
+            The canvas should now look like this:
+        </p>
+        <img src="jsimages/game5.png" alt="">
+        <p>
+            We want to be able to move the ball later, though, so we want to replace the ball's x and y values with
+            variables. We can also change the ball's radius/size and color to constants for ease of use. Here is what
+            the code looks like after doing that:
+        </p>
+        <section class="code">
+            <pre>
+        <code>let canvas = document.getElementById("gameCanvas");</code>
+        <code>let context = canvas.getContext("2d");</code>
+        <code></code>
+        <code class="hl">const BALL_COLOR = "#e0e0e0";</code>
+        <code class="hl">const BALL_SIZE = 10;</code>
+        <code></code>
+        <code class="hl">let ballX = canvas.width / 2;</code>
+        <code class="hl">let ballY = canvas.height / 2;</code>
+        <code></code>
+        <code>function drawBall() {</code>
+        <code>    context.beginPath();</code>
+        <code class="hl">    context.arc(ballX, ballY, BALL_SIZE, 0, Math.PI * 2);</code>
+        <code class="hl">    context.fillStyle = BALL_COLOR;</code>
+        <code>    context.fill();</code>
+        <code>    context.closePath();</code>
+        <code>}</code>
+        <code></code>
+        <code>function draw() {</code>
+        <code>    drawBall();</code>
+        <code>    requestAnimationFrame(draw);</code>
+        <code>}</code>
+        <code></code>
+        <code>draw();</code>
+        </pre>
+        </section>
+        <p>
+            You can access the width and height of the canvas with dot notation as in lines 7 and 8, and taking
+            half of those values allows us to initially place the ball in the middle of the canvas.
+        </p>
+        <p>
+            Now, we will draw the paddles. Since we have two paddles in the game, we could use one function to draw
+            both of them for code efficiency. Since paddles should store multiple pieces of important information,
+            we can store the paddle variables as objects which store values like the paddles' x and y positions. We
+            can also store constants like the paddles' heights, widths, and color in <code>const</code> variables:
+        </p>
+        <section class="code">
+            <pre>
+        <code>let canvas = document.getElementById("gameCanvas");</code>
+        <code>let context = canvas.getContext("2d");</code>
+        <code></code>
+        <code>const BALL_COLOR = "#e0e0e0";</code>
+        <code>const BALL_SIZE = 10;</code>
+        <code class="hl">const PADDLE_COLOR = "#e0e0e0";</code>
+        <code class="hl">const PADDLE_WIDTH = 15;</code>
+        <code class="hl">const PADDLE_HEIGHT = 120;</code>
+        <code></code>
+        <code>let ballX = canvas.width / 2;</code>
+        <code>let ballY = canvas.height / 2;</code>
+        <code></code>
+        <code class="hl">// paddles initialized opposite each other</code>
+        <code class="hl">let opponentPaddle = {name: "opponent", x: 765, y: (canvas.height - PADDLE_HEIGHT)/2};</code>
+        <code class="hl">let playerPaddle = {name: "player", x: 20, y: (canvas.height - PADDLE_HEIGHT)/2};</code>
+        <code></code>
+        <code>/**</code>
+        <code> * Draws the ball</code>
+        <code> */</code>
+        <code>function drawBall() {</code>
+        <code>    context.beginPath();</code>
+        <code>    context.arc(ballX, ballY, BALL_SIZE, 0, Math.PI * 2);</code>
+        <code>    context.fillStyle = BALL_COLOR;</code>
+        <code>    context.fill();</code>
+        <code>    context.closePath();</code>
+        <code>}</code>
+        <code></code>
+        <code class="hl">/**</code>
+        <code class="hl"> * Draws a paddle</code>
+        <code class="hl"> * </code>
+        <code class="hl"> * @param {Paddle} paddle </code>
+        <code class="hl"> */</code>
+        <code class="hl">function drawPaddle(paddle) {</code>
+        <code class="hl"></code>
+        <code class="hl">}</code>
+        <code></code>
+        <code>/**</code>
+        <code> * Draws the game</code>
+        <code> */</code>
+        <code>function draw() {</code>
+        <code>    drawBall();</code>
+        <code>    requestAnimationFrame(draw);</code>
+        <code>}</code>
+        <code></code>
+        <code>draw();</code>
+        <code></code>
+                </pre>
+        </section>
+        <p>
+            I also added some comments above each function. The appropriate way to comment a function involves a summary
+            of the function and definition of the inputs and their type. The <code>drawPaddle()</code> function has a
+            parameter <code>paddle</code>, which we have decided in the comment is of object type <code>Paddle</code>.
+            Each
+            paddle has the properties <code>name</code>, <code>x</code>, and <code>y</code>, which will all be helpful
+            later.
+        </p>
+        <p>
+            Side-note: You don't really have to worry about the technical details of the comments, but we really should
+            have declared a class called <code>Paddle</code> and created the paddle objects from that, but with so few
+            properties, just declaring the <code>playerPaddle</code> and <code>opponentPaddle</code> variables as
+            objects
+            is much easier.
+        </p>
+        <p>
+            Now all we have to do is define the <code>drawPaddle</code> function, which should be simple:
+        </p>
+        <section class="code">
+            <pre>
+        <code>function drawPaddle(paddle) {</code>
+        <code class='hl'>    context.beginPath();</code>
+        <code class='hl'>    context.rect(paddle.x, paddle.y, PADDLE_WIDTH, PADDLE_HEIGHT);</code>
+        <code class='hl'>    context.fillStyle = PADDLE_COLOR;</code>
+        <code class='hl'>    context.fill();</code>
+        <code class='hl'>    context.closePath();</code>
+        <code>}</code>
+        <p>...</p>
+        <code>function draw() {</code>
+        <code>    drawBall();</code>
+        <code class='hl'>    drawPaddle(playerPaddle);</code>
+        <code class='hl'>    drawPaddle(opponentPaddle);</code>
+        <code>    requestAnimationFrame(draw);</code>
+        <code>}</code>
+        <code></code>
+            </pre>
+        </section>
+        <p>
+            As you can see, we can use dot notation to get the x and y values of the input paddle object. In addition,
+            we need to actually draw the paddles in the <code>draw()</code> function by inputting each paddle into the
+            <code>drawPaddle()</code> function, as shown in lines 46 and 47. The canvas should now look like this when
+            you re-open the html file:
+        </p>
+        <img src="jsimages/game6.png" alt="">
+        <p>Perfect! Next let's try to animate the ball.</p>
+        <p><a href="https://github.com/abh-c/gameDemo2" target="_blank" rel="noopener">Source code</a></p>
+    </section>
+
+    <section class="next-previous-wrapper">
+        <a href="js6.html">&lt; Previous</a>
+        <a href="js8.html">Next &gt;</a>
+    </section>
+
+    <nav class="course-nav">
+        <ul>
+            <li><a href="js1.html">Introduction</a></li>
+            <li><a href="js2.html">Lesson 1</a></li>
+            <li><a href="js3.html">Lesson 2</a></li>
+            <li><a href="js4.html">Lesson 3</a></li>
+            <li><a href="js5.html">Lesson 4</a></li>
+            <li><a href="js6.html">Game 1</a></li>
+            <li><a href="js7.html">Game 2</a></li>
+            <li><a href="js8.html">Game 3</a></li>
+            <li><a href="js9.html">Game 4</a></li>
+            <li><a href="js10.html">Game 5</a></li>
+            <li><a href="js11.html">Game 6</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>
+            NEXT GEN STEM <br> CONNECTICUT, USA
+        </p>
+               <a href="mailto:thenextgenstem@gmail.com"><img src="../images/Mail-Icon-White-on-Grey.jpg" alt="E-mail" style="width:65px; height:65px"></a>
+
+    </footer>
+</body>
+<script type="text/javascript">
+    //*****
+    //Change these params 
+    //Go to tawk.to and sign up for a user, enter your site domain and replace the following URL with the one they give you.
+    var /*<{*/ siteID /*}*/ = /*{*/ "5f29c48fed9d9d2627082f71" /*}>*/ ;
+    var chatSiteURL = 'https://embed.tawk.to/' + siteID + '/default';
+
+    //*****
+
+    // Start of Tawk.to Script
+
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = chatSiteURL;
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+
+    //  End of Tawk.to Script
+</script>
+</html>

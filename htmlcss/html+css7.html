@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Java, Python" />
+    <meta name="description" content="Free programming tutorials" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Next Gen Stem</title>
+    <link rel="icon" href="../images/NGT_HEADER.png">
+</head>
+
+<body>
+    <nav class="nav-top">
+        <ul class="nav-top-ul">
+            <li><b><a href="../index.html" class="nav-top-link">Home</a></b></li>
+            <li><b><a href="../learntocode.html" class="nav-top-link">Learn to Code</a></b></li>
+            <li><b><a href="../about.html" class="nav-top-link">About</a></b></li>
+        </ul>
+    </nav>
+
+    <section class="section-1">
+        <h1>HTML + CSS - Lesson 7</h1>
+        <hr class="hr-1">
+        <h2>Classifying and Styling</h2>
+        <p>
+        In this lesson we will be laying out and styling our other web pages so that you can write / add information in them.
+        </p>
+        <p>
+            To begin this process we need to create other html files.
+        </p>
+        <p>
+            With the myblog.html file, we should begin by removing the header that currently says “Website Name”
+        </p>
+
+        <img src="HTMLCSSImages/image6_6.png" alt="New File">
+
+
+        <p>
+            Then, we should change one of the buttons that says “My Blog” into “Home.” To do this, go under the &lt;ul> tag
+                and where it says “myblog.html” change it to “index.html”. Similarly, when it says “My Blog” change it
+                to “Home”.
+
+
+
+        </p>
+        <p>
+            The code should now look like this:
+
+
+
+        </p>
+
+        <section class="code">
+
+            <pre>
+    <code>&lt;a href="index.html">Home</code>
+    </pre>
+
+        </section>
+
+
+
+
+        <p>
+            Now we have a home button!
+        </p>
+
+        <img src="HTMLCSSImages/7image9.png" alt="Space Background">
+
+
+        <p>
+            Since this is a blog, we need to set it up so we know how to add more sections so we can update our blog. To
+            do this we are going to classify section tags.
+
+
+
+        </p>
+        <p>
+            Therefore, we need to create a section tag and follow the same steps as we did earlier with classifying the
+            &lt;p> tag:
+
+
+        </p>
+
+
+
+        <section class="code">
+
+            <pre>
+    <code>&lt;section class="blog">Blog Post 1</code>
+    </pre>
+
+        </section>
+
+        <p>
+            Where it says “Blog post 1” you can paste your first blog post!
+
+
+        </p>
+        <p>
+            Then, we are going to go into the style.css and write “section.blog”
+
+        </p>
+        <p>
+            This is how I decided to style it, but you should style it as you wish!
+
+        </p>
+
+        <section class="code">
+
+            <pre>
+    <code>section.blog {</code>
+    <code>    color:white; </code>
+    <code>    margin-left: 200px; </code>
+    <code>    margin-right: 200px;</code>
+    <code>    background:rgb(19, 60, 121); </code>
+    <code>    border-style: solid;</code>
+    <code>}</code>
+    </pre>
+        </section>
+
+
+        <p>
+            To add more blog posts, simply go to the myblog.html file and copy and paste the as many sections as you
+            need above the previous blog post:
+        </p>
+        <section class="code">
+
+            <pre>
+    <code>&lt;section class="blog">Blog Post 3</code>
+    <code>&lt;section class="blog">Blog Post 2</code>
+    <code>&lt;section class="blog">Blog Post 1</code>
+    </pre>
+
+        </section>
+
+
+
+        <p>
+            This is how the blog looks!
+
+
+        </p>
+        <img src="HTMLCSSImages/7image11.png" alt="New File">
+
+
+
+        <p>
+            Now we are going to set up the Photo webpage!
+
+
+        </p>
+        <p>
+            Just as before, there are simple things that we should take care of, such as removing the part of the
+            web page that says “Website Name” and rearranging the buttons so there is a home button.
+
+
+        </p>
+        <section class="code">
+
+            <pre>
+    <code>&lt;a href="index.html">Home</code>
+    <code>&lt;a href="photos.html">Photos</code>
+    <code>&lt;a href="aboutme.html">About Me</code>
+    </pre>
+
+        </section>
+
+        <p>
+            Now, we are going to set up the photo gallery.
+
+
+        </p>
+        <p>
+            In the photo.html file, we are going to begin by creating some selectors with divider, tags.
+        </p>
+        <p>
+            The first one will be &lt;div class=“webpage”> followed by &lt;div class=“row”> This defines the general
+            aspects of the webpage and the rows of images.
+
+
+        </p>
+        <p>
+            The following lines of code can be copied and repeated for every image you wish to include. These lines
+            of code are just more selectors as well as the image itself.
+
+
+        </p>
+        <section class="code">
+
+            <pre>
+    <code>&lt;div class="webpage"></code>
+    <code>        &lt;div class="row"></code>
+    </pre>
+
+        </section>
+
+        <p>
+            The following lines of code can be copied and repeated for every image you wish to include. These lines
+            of code are just more selectors as well as the image itself.
+
+
+        </p>
+        <section class="code">
+
+            <pre>
+    <code>&lt;div class="column"></code>
+    <code>&lt;div class="content"></code>
+    <code> &lt;img src="rocketship.jpg" style="width:100%"></code>
+    <code> &lt;p class ="photos">Image Description</code>
+    <code>            &lt;/div></code>
+    </pre>
+
+        </section>
+        <p>
+            Now that we have the images in place, we are going to go into the style.css file and style these aspects
+            of the gallery.
+
+
+        </p>
+        <p>
+            We are going to add “div.webpage {” to the style.css.
+
+
+        </p>
+        <section class="code">
+
+            <pre>
+    <code> div.webpage {</code>
+    <code>    max-width: 1000px;</code>
+    <code>    margin: auto;</code>
+    <code>}</code>
+    </pre>
+
+        </section>
+
+        <p>
+            What this does is define the limits of the width of the image and center aspects of the webpage.
+
+
+        </p>
+        <p>
+            Next, we are going to edit the “body” by adding a padding of 20px:
+
+
+        </p>
+        <section class="code">
+
+            <pre>
+    <code> body {</code>
+    <code>    padding: 20px;</code>
+    <code>}</code>
+    </pre>
+
+        </section>
+
+
+
+
+
+
+        <p>
+            Now we are going to style the rows and editing the padding of the rows.
+
+
+        </p>
+        <section class="code">
+
+            <pre>
+    <code> div.row {</code>
+    <code>    margin: 8px -16px;</code>
+    <code>    padding: 8px;</code>
+    <code>}</code>
+    </pre>
+
+        </section>
+
+
+
+        <p>
+            Next, we are going to style the column section.
+
+
+        </p>
+        <section class="code">
+
+            <pre>
+    <code>  div.content {</code>
+    <code>    background-color: white;</code>
+    <code>    padding: 10px;</code>
+    <code>  }</code>
+    </pre>
+
+        </section>
+
+        <p>
+            The new “float” element allows for the alignment of the photos to be one after another.
+
+
+        </p>
+        <p>
+            For the content section, we are going to edit the background color and the padding.
+
+
+        </p>
+        <section class="code">
+
+            <pre>
+    <code>p.photos {</code>
+    <code>    color: black</code>
+    <code> } </code>
+    </pre>
+
+        </section>
+        <p>
+            Finally, we are going to edit the paragraph font:
+
+        </p>
+
+        <img src="HTMLCSSImages/7image10.png" alt="New File">
+
+
+        <p>
+            Now we have a nice polaroid effect for our images!
+
+
+        </p>
+        <p>
+            Finally, for the “About Me” section, we just need to change one of the buttons to home and then we have
+            to delete the tag where it says “Website Name”.
+        </p>
+        <p>
+            Then you write a description about yourself in this section!
+
+
+        </p>
+        <p>
+            Here is the code:
+
+
+        </p>
+        <section class="code">
+
+            <pre>
+    <code>&lt;section>About me...</code>
+    </pre>
+
+        </section>
+
+
+
+        <p>
+            We are done with our website!
+
+
+        </p>
+        <p>
+            You can now apply these skills into any website you hope to develop!
+
+
+        </p>
+        <p>
+            Here is the code for the website:
+
+            <a href="https://github.com/matthewrostkowski/Next-Gen-STEM-Code">Website Code</a>
+        </p>
+
+        <p><b>Upon completion, please send a screenshot of your final project our email to receive your completion
+                certificate!</b></p>
+        <section>
+            <div>
+                <a href="mailto:thenextgenstem@gmail.com"><button
+                        class="email-button">thenextgenstem@gmail.com</button></a>
+            </div>
+        </section>
+
+
+
+
+        <section class="line">
+            <p>
+                ⠀
+            </p>
+        </section>
+
+    </section> 
+
+        <section class="next-previous-wrapper">
+            <a href="html+css6.html">&lt; Previous</a>
+        </section>
+
+    <nav class="course-nav">
+            <ul>
+                <li><a href="htmlcourseinfo.html">Introduction</a></li>
+                <li><a href="html+css1.html">Lesson 1</a></li>
+                <li><a href="html+css2.html">Lesson 2</a></li>
+                <li><a href="html+css3.html">Lesson 3</a></li>
+                <li><a href="html+css4.html">Lesson 4</a></li>
+                <li><a href="html+css5.html">Lesson 5</a></li>
+                <li><a href="html+css6.html">Lesson 6</a></li>
+                <li><a href="html+css7.html">Lesson 7</a></li>
+            </ul>
+        </nav>
+
+    </section>
+
+
+    <footer>
+        <p>
+            NEXT GEN STEM <br> CONNECTICUT, USA
+        </p>
+        <a href="mailto:thenextgenstem@gmail.com"><img src="../images/Mail-Icon-White-on-Grey.jpg" alt="E-mail"
+                style="width:65px; height:65px"></a>
+    </footer>
+</body>
+<!-- TODO: put the stuff below in the <body> tag -->
+
+<div id="app_settings" style="display:none;">
+    <label class='app_text_label'>Chat SiteID: </label>
+    <input class='app_field_input' type="text" name="siteID"><br>
+    <label class='app_text_label info'>* To start receiving chats go to <a href='http://www.tawk.to'
+            target='blank'>tawk.to</a> and get your chat site ID. <br>Tawk dashboard -> Admin (at the top of the
+        dashboard) -> Property Settings -> Site ID. </label>
+</div>
+<div id="app_settings" style="display:none;">
+    <label class='app_text_label'>Chat SiteID: </label>
+    <input class='app_field_input' type="text" name="siteID"><br>
+    <label class='app_text_label info'>* To start receiving chats go to <a href='http://www.tawk.to'
+            target='blank'>tawk.to</a> and get your chat site ID. <br>Tawk dashboard -> Admin (at the top of the
+        dashboard) -> Property Settings -> Site ID. </label>
+</div>
+
+<script type="text/javascript">
+    //*****
+    //Change these params 
+    //Go to tawk.to and sign up for a user, enter your site domain and replace the following URL with the one they give you.
+    var /*<{*/ siteID /*}*/ = /*{*/ "5f29c48fed9d9d2627082f71" /*}>*/ ;
+    var chatSiteURL = 'https://embed.tawk.to/' + siteID + '/default';
+
+    //*****
+
+    // Start of Tawk.to Script
+
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = chatSiteURL;
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+
+    //  End of Tawk.to Script
+</script>
+
+
+</html>
