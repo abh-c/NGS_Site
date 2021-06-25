@@ -1,13 +1,75 @@
 <!DOCTYPE html>
 <html lang="en-US">
+<!-- Note to self: option + shift + f to format code -->
+<!-- Note: maybe implement vw later -->
+
 <head>
-    <meta charset="utf-8"/> 
-    <meta name="keywords" content="HTML, CSS, JavaScript, Java, Python">
-    <meta name="description" content="Free programming tutorials">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Java, Python" />
+    <meta name="description" content="Free programming tutorials" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
     <title>Next Gen Stem</title>
+    <link rel="icon" href="../images/NGT_HEADER.png">
 </head>
+
 <body>
-    
+    <nav class="nav-top">
+        <ul class="nav-top-ul">
+            <!-- TODO: Fill in links -->
+            <li><b><a href="index.html" class="nav-top-link">Home</a></b></li>
+            <li><b><a href="learntocode.html" class="nav-top-link">Learn to Code</a></b></li>
+            <li><b><a href="about.html" class="nav-top-link">About</a></b></li>
+        </ul>
+    </nav>
+    <header class="homepage-header">
+        <div class="video-container">
+            <div class="color"></div>
+            <video playsinline autoplay loop muted poster="images/code_poster.png">
+                <source src="images/code-2.mp4" type="video/mp4">
+            </video>
+        </div>
+        <h1>NEXT GEN STEM</h1>
+        <p>Leading the next generation of STEM students</p>
+        <a href="learntocode.html"><button class="homepage-header-button">Learn to Code</button></a>
+    </header>
+
+    <section>
+        <p class="homepage-p">
+            Next Gen STEM is a completely free resource made to
+            encourage students to learn computer programming,
+            a skill that is indispensable in a world increasingly
+            dependent on software and technology.
+        </p>
+        <p class="homepage-p">
+            Utilizing video and written instruction,
+            Next Gen STEM provides learning resources that fit the needs of any student.
+        </p>
+        <h2 class="homepage-h2">
+            <b>LEARN TO CODE TODAY</b>
+        </h2>
+    </section>
+    <nav class="nav-bottom">
+        <ul class="nav-bottom-ul">
+            <li><a href="javascript/js1.html" class="nav-bottom-link" id="javascript">JAVASCRIPT</a></li>
+
+            <li><a href="htmlcss/htmlcourseinfo.html" class="nav-bottom-link" id="htmlcss">HTML+CSS</a></li>
+
+            <li><a href="python/CourseLandingPage.html" class="nav-bottom-link" id="python">PYTHON</a></li>
+
+            <li><a href="java/Courseinfo.html" class="nav-bottom-link" id="java">JAVA</a></li>
+        </ul>
+    </nav>
+    <footer>
+        <p>
+            NEXT GEN STEM <br> CONNECTICUT, USA
+        </p>
+        <a href="mailto:thenextgenstem@gmail.com">
+        <img src="images/Mail-Icon-White-on-Grey.jpg" style="width:65px; height:65px">
+        </a>
+    </footer>
 </body>
+ 
 </html>

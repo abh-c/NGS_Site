@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Java, Python" />
+    <meta name="description" content="Free programming tutorials" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Next Gen Stem</title>
+    <link rel="icon" href="../images/NGT_HEADER.png">
+
+</head>
+<!-- NOTE to self: alt + w to wrap text in a tag -->
+
+<body>
+    <nav class="nav-top">
+        <ul class="nav-top-ul">
+            <li><b><a href="../index.html" class="nav-top-link">Home</a></b></li>
+            <li><b><a href="../learntocode.html" class="nav-top-link">Learn to Code</a></b></li>
+            <li><b><a href="../about.html" class="nav-top-link">About</a></b></li>
+        </ul>
+    </nav>
+
+    <section class="section-1">
+        <h1>JavaScript - Lesson 1</h1>
+        <hr class="hr-1">
+        <h2>Writing Code in a Simple Text Editor</h2>
+        <h3>MacOS:</h3>
+        <p>This option works with TextEdit, but you could also use a program like TextWrangler for Mac.</p>
+        <p>
+            You can create html files with TextEdit on MacOS, and you can run
+            JavaScript using them. Open TextEdit, go to <code>TextEdit &gt; Preferences</code>,
+            make sure your settings look something like the images below. The spelling and grammar settings are less
+            important, but I recommend turning off smart quotes and dashes.
+        </p>
+
+        <img src="jsimages/TextEdit1.png" alt="Plain text, smart quotes, dashes, links off">
+        <img src="jsimages/TextEdit2.png" alt="Display html files as html code">
+
+        <p>
+            Set up the basic html of a webpage and save the file with the extension <code>.html</code>. Write the
+            JavaScript code between the <code>&lt;script&gt; &lt;/script&gt;</code> tags. You can now open this html
+            file
+            in a browser. Do <code>right click &gt; Open with</code> to choose which browser to use. To continue editing
+            the file, right click it, then <code>Open with &gt; TextEdit</code>.
+        </p>
+
+        <img src="jsimages/img1.png" alt="Image of a basic html file with a script tag">
+
+        <hr class="hr-1">
+
+        <h3>Windows:</h3>
+
+        <p>
+            On windows you can use the default Notepad app or download Notepad++. Save the file with the extension
+            <code>.html</code>. Double click to open the file in a browser or right click and use <code>Open with</code>
+            to choose
+            which browser to use. Here is some example code:
+        </p>
+
+        <img src="jsimages/windowsnotepad.JPG" alt="Image of a basic html file with a script tag">
+        <p>
+            Write JS code between the <code>&lt;script&gt; &lt;/script&gt;</code> tags
+        </p>
+        <hr>
+        <p>
+            Opening the example html file in a browser should look like this:
+        </p>
+
+        <img src="jsimages/img2.png" alt="Image of a blank webpage">
+
+        <p>
+            To open the console, do <code>Command &#43; Alt &#43; J</code> on Chrome,
+            and <code>Command &#43; Alt &#43; K</code> on
+            Firefox. On Safari, go to <code>Safari &gt; Preferences &gt; Advanced</code>
+            and activate <code>Show Develop menu in menu bar</code>. Then you can go to
+            <code>Develop &gt; Show JavaScript Console</code> or <code>Develop &gt; Show Page Source</code>. This is
+            what it should look like
+            on Chrome. Notice the Console has printed <code>Hello World</code> as we coded between the script tags.
+        </p>
+
+        <img src="jsimages/img3.png" alt="Image of browser with 'Hello World' printed in the browser">
+
+        <hr class="hr-1">
+
+        <h3>Setting up with Visual Studio Code</h3>
+
+        <p>
+            VS Code is a free and flexible text editor developed by Microsoft, and it will be the main tool used to
+            teach
+            JS in this course. You don't have to use it to learn the basics, but it will be useful for larger projects.
+        </p>
+
+        <p>Download VS Code from this link: <a href="https://code.visualstudio.com/" target="_blank"
+                rel="noopener">https://code.visualstudio.com/</a>.
+        </p>
+        <p>
+            Get further information on the functionality of the program at this link: <a
+                href="https://code.visualstudio.com/docs/setup/setup-overview" target="_blank"
+                rel="noopener">https://code.visualstudio.com/docs/setup/setup-overview</a>.
+        </p>
+        <p>
+            When you download and open the program, you will see a welcome page. I recommend playing around with some
+            settings and themes you like. Getting used to any IDE takes time, so don’t be afraid to look up things that
+            you don’t understand.
+        </p>
+        <p>
+            I recommend creating a folder where you will store all of the files you will create in this course. I named
+            my folder <code>1TheNextGenStem</code>. For your first program, inside this folder, create a new folder
+            called whatever you want. I called mine <code>JavaScriptTest</code>. Go to <code>Open Folder</code> and open
+            up the <code>JavaScriptTest</code> file, or whatever you named your file.
+        </p>
+        <p>
+            Click the <code>New File</code> button when you want to add a new file, or right-click, then select the
+            <code>New File</code> option.
+        </p>
+        <img src="jsimages/newfile.png" alt="image with highlighted new file button">
+        <p>
+            Name the new file something like <code>JSExample.js</code>. The file extension, in this case
+            <code>.js</code> is important for each file you create. That is how the program knows which language you are
+            writing with.
+        </p>
+        <p>
+            Name another new file <code>index.html</code>. Write some basic html in the file to set up
+            the page. The important line for running JS is the <code>&lt;script src =
+                “JSExample.js”&gt;&lt;/script&gt;</code> line. This runs the <code>JSExample.js</code> file on the html
+            page. You
+            could also write regular JS between the tags without an external file
+        </p>
+        <img src="jsimages/html4.png" alt="image of basic html page">
+        <p>Write some code in the <code>JSExample.js</code> file:</p>
+        <img src="jsimages/HelloWorld2.png" alt="image with hello world code">
+        <p>Open the file in your browser. You should see this:</p>
+        <img src="jsimages/html2.png" alt="image of html file open in web page with some text on it">
+        <p>Open the console to see that the JavaScript did run. “Hello World” was logged to the console.</p>
+        <img src="jsimages/html3.png" alt="image of the html file with the console open">
+        <p>
+            You can also write JavaScript directly in the Console. Try entering <code>console.log(“Hello There”);</code>
+            in the console. You should see “Hello There” appear in the console as output.
+        </p>
+
+        <hr class="hr-1">
+        <h3>Recommendation:</h3>
+        <p>
+            I recommend downloading the extension “Live Server” for VS Code. Right click on the html file <code>&gt;
+                Open with Live
+                Server</code> or click the live server button on the bottom right to
+            use the extension. This opens the file in a way such that the browser will update with code
+            changes without you needing to refresh it. It updates on save. You may want to change your settings to "Save
+            on delay" for updates without you having to manually save. This isn’t necessary, but it is more
+            convenient.
+        </p>
+        <img src="jsimages/liveserver.png" alt="live server install page">
+    </section>
+
+    <section class="next-previous-wrapper">
+        <a href="js1.html">&lt; Previous</a>
+        <a href="js3.html">Next &gt;</a>
+    </section>
+
+    <nav class="course-nav">
+        <ul>
+            <li><a href="js1.html">Introduction</a></li>
+            <li><a href="js2.html">Lesson 1</a></li>
+            <li><a href="js3.html">Lesson 2</a></li>
+            <li><a href="js4.html">Lesson 3</a></li>
+            <li><a href="js5.html">Lesson 4</a></li>
+            <li><a href="js6.html">Game 1</a></li>
+            <li><a href="js7.html">Game 2</a></li>
+            <li><a href="js8.html">Game 3</a></li>
+            <li><a href="js9.html">Game 4</a></li>
+            <li><a href="js10.html">Game 5</a></li>
+            <li><a href="js11.html">Game 6</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>
+            NEXT GEN STEM <br> CONNECTICUT, USA
+        </p>
+              <a href="mailto:thenextgenstem@gmail.com"><img src="../images/Mail-Icon-White-on-Grey.jpg" alt="E-mail" style="width:65px; height:65px"></a>
+
+    </footer>
+</body>
+ 
+</html>

@@ -1,0 +1,952 @@
+* {
+    font-family: Montserrat, Helvetica, arial, sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for videos */
+
+section.video {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Style for course requirements */
+section.course-requirements {
+    background-color: lightgray;
+    padding-bottom: 20px;
+
+}
+
+/* Style for the coding courses header on learn to code page */
+section.courses div {
+    color: #033254;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 35px;
+    padding: 40px;
+    padding-top: 60px;
+}
+
+/* Style for the general coding information on learn to code page*/
+section p.coding-info {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 22px;
+    margin: 40px auto;
+    height: 90%;
+    max-width: 30rem;
+}
+
+/* Style for the general course descriptions on learn to code page*/
+section p.course-descriptions {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    font-size: 25px;
+    justify-content: left;
+    height: 50%;
+    text-indent: 100px;
+
+}
+
+/* Style for the general course descriptions on learn to code page (java specifically to add bottom padding)*/
+section p.course-descriptions-java {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    font-size: 25px;
+    justify-content: left;
+    height: 50%;
+    text-indent: 100px;
+    padding-bottom: 30px;
+}
+
+/* Style for a link*/
+section p.link {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    overflow: hidden;
+    font-size: 18px;
+    margin: 20px auto;
+    max-width: 30rem;
+    height: 90%;
+    padding-bottom: 50px;
+}
+
+/* Style for the feedback section on the about page*/
+section p.feedback2 {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    overflow: hidden;
+    font-size: 25px;
+    margin: 40px auto;
+    max-width: 30rem;
+    height: 90%;
+}
+
+/* Style for the map*/
+section section.map {
+    padding-top: 50px;
+}
+
+/* Style for the feeback on about*/
+section p.feedback {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 30px;
+    margin: 40px;
+    height: 90%;
+}
+
+/* Style for the table title*/
+
+section.the-team {
+    background-color: #033254;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 35px;
+    padding: 40px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+/* Style for the table in about section AS A WHOLE*/
+
+section table.team {
+    background-color: #033254;
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+/*Email button about page*/
+
+section button.email-button-about {
+    font-size: 20px;
+    padding: 7px;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    background-color: ffffff;
+    color: #000000;
+    text-align: center;
+    align-items: center;
+    border: 0px;
+    border-radius: 3px;
+    width: 320px;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    display: flex;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/*Email button hover about page*/
+
+section button.email-button-about:hover {
+    background-color: #9b9b9b;
+    color: #033254;
+    transition-duration: .1s;
+    border-radius: 2px;
+    justify-content: center;
+    display: flex;
+    border-color: black;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+}
+
+/* Style for our names in the table */
+
+section table tr.table-header {
+    color: white;
+    text-align: left;
+    width: 25%;
+    font-size: 20px;
+    text-indent: 10px;
+    padding-bottom: 15px;
+}
+
+/* Style for the information in the table */
+
+section table td.table {
+    color: white;
+    text-align: left;
+    width: 25%;
+    font-size: 18px;
+    padding: 10px;
+    vertical-align: baseline;
+    padding-bottom: 10px;
+
+}
+
+.about-us {
+    background: #033254;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.about-us li {
+    float: left;
+    display: block;
+    background:rgb(249, 249, 249);
+    color: #021e32;
+    text-decoration: none;
+    font-size: 24px;
+    width: 300px;
+    padding: 20px;
+    margin: 5px;
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.21), 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.35s cubic-bezier(.24, .8, .24, 1);
+}
+
+.about-us li b{
+    font-size: 26px;
+}
+
+.about-us li p{
+    padding-top: 10px;
+    line-height: 22px;
+}
+
+/*Email button*/
+
+section button.email-button {
+    font-size: 18px;
+    padding: 7px;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    background-color: lightgray;
+    color: #033254;
+    text-align: center;
+    align-items: center;
+    border: 0px;
+    border-radius: 3px;
+    width: 300px;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/*Email button hover*/
+
+section button.email-button:hover {
+    background-color: #033254;
+    color: #ffffff;
+    transition-duration: .1s;
+    border-radius: 2px;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+/* Style the top nav bar with flexbox */
+.nav-top {
+    background: #033254;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Style the top nav bar links */
+.nav-top-link {
+    float: left;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 3px;
+    font-size: 20px;
+}
+
+/* Change the color of the links when hovered over */
+.nav-top-link:hover {
+    background-color: #ffffff;
+    color: #033254;
+    transition-duration: .1s;
+    border-radius: 2px;
+}
+
+/* Format the lists for the top nav bar (every page) and bottom nav bar (homepage)*/
+.nav-top-ul,
+.nav-bottom-ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.video-container video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.video-container .color {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #033254;
+    opacity: 30%;
+    z-index: -1;
+}
+
+/* Style the header (only for the homepage) */
+.homepage-header {
+    color: rgb(255, 255, 255);
+    position: relative;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* Make header h1 bigger */
+.homepage-header h1 {
+    text-align: center;
+    font-size: 70px;
+    text-shadow: 0 2px 7px #000000;
+}
+
+/* Style the button in the header */
+.homepage-header-button {
+    font-size: 20px;
+    padding: 7px;
+    background-color: #ffffff;
+    color: #033254;
+    text-align: center;
+    align-items: center;
+    border: 0px;
+    border-radius: 3px;
+    width: 190px;
+}
+
+/* Change header color when hovered over */
+.homepage-header-button:hover {
+    background-color: #9b9b9b;
+    color: #033254;
+}
+
+/* For the subtitle below NEXT GEN STEM in the header */
+.homepage-header p {
+    font-size: 24px;
+    color: hsl(0, 0%, 98%);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 7px #000000;
+}
+
+.homepage-p {
+    margin: 30px auto;
+    max-width: 30rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: hsl(0, 0%, 27%);
+}
+
+/* For any header on a webpage link to this css */
+.homepage-h2 {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #033254;
+    font-size: 40px;
+    padding: 30px;
+}
+
+/* Style the bottom nav bar with flexbox */
+.nav-bottom {
+    background: rgb(211, 211, 211);
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Style the bottom nav bar links */
+.nav-bottom-link {
+    float: left;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    width: 300px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 5px;
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.21), 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.35s cubic-bezier(.24, .8, .24, 1);
+}
+
+.nav-bottom-link:hover {
+    box-shadow: 0 4px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background-blend-mode: darken;
+}
+
+/* Additional css for the images of each of the course links*/
+#javascript {
+    background: rgba(0, 0, 0, .25) url(images/4906597504_d3d1ee9274_b.jpg) no-repeat;
+    background-size: cover;
+}
+
+#htmlcss {
+    background: rgba(0, 0, 0, .25) url(images/desk-keyboard-mouse-white.jpg) no-repeat;
+    background-size: cover;
+    background-position-y: center;
+}
+
+#python {
+    background: rgba(0, 0, 0, .25) url(images/laptopngt.jpg) no-repeat;
+    background-size: cover;
+    background-position-y: center;
+}
+
+#java {
+    background: rgba(0, 0, 0, .25) url(images/ordinateur-apple-ipad.jpg) no-repeat;
+    background-size: cover;
+    background-position-y: center;
+}
+
+/* Format the footer (for every page) */
+footer {
+    padding: 20px;
+    background: #033254;
+    text-align: center;
+    color: #f0f8ff;
+}
+
+/* Styling for a lesson page */
+.section-1 p,
+.section-1 h1,
+.section-1 h2,
+.section-1 h3,
+.section-1 ol,
+.section-1 ul,
+.section-1 table,
+.section-2 p,
+.section-2 h1,
+.section-2 h2,
+.section-2 ol {
+    max-width: 30rem;
+    text-align: left;
+    margin: 20px auto;
+}
+
+/* Style a horizontal divider line */
+hr,
+.hr-1 {
+    max-width: 30rem;
+    margin: 10px auto;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgb(96, 96, 96);
+}
+
+.section-1 iframe {
+    display: block;
+    padding: 20px;
+    margin: auto;
+    width: 560px;
+    height: 315px;
+}
+
+/* A kind of section with a white background */
+.section-1 h1 {
+    color: rgb(70, 70, 70);
+    font-size: 35px;
+    line-height: 1.125;
+    letter-spacing: normal;
+}
+
+.section-1 h2 {
+    color: rgb(70, 70, 70);
+    font-size: 28px;
+    line-height: 1.25;
+    letter-spacing: normal;
+}
+
+.section-1 h3 {
+    color: rgb(70, 70, 70);
+    font-size: 20px;
+    line-height: 1.25;
+    letter-spacing: normal;
+}
+
+.section-1 p {
+    color: rgb(96, 96, 96);
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: normal;
+}
+
+.section-1 p em {
+    font-size: inherit;
+}
+
+.section-1 p b {
+    font-size: inherit;
+}
+
+.section-1 p a,
+.section-1 ol li a,
+.section-1 ul li a {
+    font-size: inherit;
+}
+
+.section-1 p code {
+    color: rgb(96, 96, 96);
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: normal;
+}
+
+.section-1 ol {
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 50px;
+    color: rgb(96, 96, 96);
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: normal;
+    list-style-type: decimal;
+}
+
+.section-1 ol li {
+    color: rgb(96, 96, 96);
+    font-size: inherit;
+    line-height: 1.5;
+}
+
+.section-1 table {
+    color: rgb(96, 96, 96);
+    font-size: 18px;
+    border-collapse: collapse;
+    border: 1px solid rgb(200, 200, 200);
+    letter-spacing: normal;
+    flex-flow: column;
+    max-width: 540px;
+}
+
+.section-1 table caption {
+    padding: 5px;
+}
+
+.section-1 td,
+.section-1 th {
+    border: 1px solid rgb(200, 200, 200);
+    padding: 7px 10px;
+    font-size: inherit;
+}
+
+.section-1 th {
+    background-color: rgb(235, 235, 235);
+}
+
+.section-1 ul {
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 50px;
+    color: rgb(96, 96, 96);
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: normal;
+    list-style-type: none;
+}
+
+.section-1 ul li {
+    color: rgb(96, 96, 96);
+    font-size: inherit;
+    line-height: 1.5;
+}
+
+.section-1 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.section-1 video.vid-1 {
+    max-width: 540px;
+    display: block;
+    margin: 10px auto;
+}
+
+.img-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.img-gallery img {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.next-previous-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    max-width: 580px;
+    margin: 20px auto;
+}
+
+.next-previous-wrapper a {
+    background: #033254;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px auto;
+    padding: 8px 16px;
+}
+
+.next-previous-wrapper a:hover {
+    background: rgb(211, 211, 211);
+    color: #033254;
+}
+
+/* Another kind of section with a gray background */
+.section-2 {
+    background: rgb(200, 200, 200);
+}
+
+.section-2 h1 {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgb(35, 35, 35);
+    font-size: 35px;
+    line-height: 1.125;
+    letter-spacing: normal;
+}
+
+.section-2 h2 {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgb(35, 35, 35);
+    font-size: 24px;
+    line-height: 1.25;
+    letter-spacing: normal;
+}
+
+.section-2 p {
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgb(74, 74, 74);
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: normal;
+}
+
+/* TODO: Maybe change the list numbers to images */
+.section-2 ol {
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 50px;
+    color: rgb(74, 74, 74);
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: normal;
+    list-style-type: decimal;
+}
+
+/* Code section */
+/* NOTE: USE THE <code> tag in text */
+.code {
+    background: rgb(230, 230, 230);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: calc(50% - 15rem);
+    margin-right: 0px;
+    padding-right: 0px;
+    border: solid #033254;
+    border-width: 0 0 0 5px;
+    border-radius: 6px 0 0 6px;
+}
+
+.code pre p,
+.code pre code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    color: rgb(58, 58, 58);
+    /* NOTE: Edit white-space in .code code and .code pre to edit left margin */
+    /* white-space: pre-wrap; */
+}
+
+.code pre code span {
+    font-family: inherit;
+    font-size: inherit;
+    /* Fallback solid color */
+    background: rgb(193, 193, 193);
+    background: rgba(152, 152, 152, 0.42);
+}
+
+.code p {
+    display: inline-block;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 2em;
+}
+
+/* Use CSS counters to put line numbers before the code */
+.code pre {
+    white-space: pre;
+    overflow-x: scroll;
+    counter-reset: line;
+}
+
+.code code {
+    padding: 0;
+    /* TODO: maybe use js to set the width with inline-block to extend the highlight  */
+    display: inline;
+    counter-increment: line;
+}
+
+/* Add some padding to the top of the first text line */
+.code pre:first-child {
+    padding-top: 10px;
+}
+
+/* Add the line numbers */
+.code code:before {
+    content: counter(line) ": ";
+    display: inline-block;
+    width: 2em;
+    padding-left: auto;
+    margin-left: auto;
+    text-align: right;
+    -webkit-user-select: none;
+}
+
+/* Styling for highlighted code */
+code.hl {
+    /* Fallback solid color */
+    background: rgb(193, 193, 193);
+    background: rgba(152, 152, 152, 0.42);
+}
+
+.course-nav {
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.course-nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    max-width: 1365;
+}
+
+.course-nav ul a {
+    display: block;
+    color: rgb(96, 96, 96);
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 3px;
+    font-size: 18px;
+    width: 156px;
+    box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.25);
+}
+
+.course-nav ul a:hover {
+    background-color: #033254;
+    color: rgb(255, 255, 255);
+    transition-duration: .1s;
+    border-radius: 2px;
+}
+
+/* TODO: Media querry for bigger screens? */
+/* Change screen when the screen width is smaller than 540px */
+@media only screen and (max-width:540px) {
+
+    /* Change format for smaller screens */
+    .section-1 p,
+    .section-1 h1,
+    .section-1 h2,
+    .section-1 h3,
+    .section-1 ol,
+    .section-2 p,
+    .section-2 h1,
+    .section-2 h2,
+    .section-2 ol {
+        margin: 20px 5%;
+    }
+
+    hr,
+    .hr-1 {
+        margin: 10px 5%;
+    }
+
+    .code {
+        margin-left: 5%;
+    }
+
+    /* Decrease text size for smaller screens */
+    .section-1 h1,
+    .section-2 h1 {
+        font-size: 25px;
+    }
+
+    .section-1 h2,
+    .section-1 h2 {
+        font-size: 20px;
+    }
+
+    .section-1 h3 {
+        font-size: 16;
+    }
+
+    .section-1 p,
+    .section-2 p,
+    .section-1 p code,
+    .section-1 table,
+    .section-1 table caption,
+    .section-1 table tr,
+    .section-1 ol,
+    .section-1 ul,
+    .section-2 ol {
+        font-size: 14px;
+    }
+
+    .section-1 video.vid-1 {
+        width: 100%;
+    }
+
+    /* Make the top nav bar a column */
+    .nav-top-ul {
+        flex-direction: column;
+    }
+
+    /* Decrease the bottom padding of the top mav bar */
+    .nav-top {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .nav-top-link {
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        margin: 3px;
+        font-size: 14px;
+    }
+
+    /* Decrease the text size of the header text */
+    .homepage-header h1 {
+        font-size: 40px;
+    }
+
+    .homepage-header p {
+        font-size: 20px;
+    }
+
+    .homepage-header-button {
+        font-size: 16px;
+    }
+
+    /* Decrease the paragraph text size of the homepage paragraphs */
+    /* TODO: Probably edit later */
+    .homepage-p {
+        font-size: 20px;
+        margin: 6%;
+    }
+
+    .homepage-h2 {
+        font-size: 21px;
+    }
+}
