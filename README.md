@@ -1,6 +1,6 @@
 # Next Gen Stem
 
-html code for nextgenstem.co
+html code for thenextgenstem.net
 
 ## TO CONTRIBUTORS:
 
